@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,6 +32,30 @@ namespace Player
         /// </summary>
         [HideInInspector] public PlayerMelee melee;
         
+        /// <summary>
+        /// The player controls
+        /// </summary>
+        private PlayerControls _playerControls;
+        
+        /// <summary>
+        /// If the character is stopped to aim
+        /// </summary>
+        [HideInInspector] public bool aiming;
+        /// <summary>
+        /// If the character has the menu open
+        /// </summary>
+        [HideInInspector] public bool menuOpen;
+        
+        /// <summary>
+        /// The mouse aim direction
+        /// </summary>
+        [HideInInspector] public Vector2 aim;
+        /// <summary>
+        /// The move direction
+        /// </summary>
+        [HideInInspector] public Vector2 move;
+        
+        
         #region SingleTon
 
         /// <summary>
@@ -54,6 +79,43 @@ namespace Player
                 health = GetComponent<PlayerHealth>();
                 ranged = GetComponent<PlayerRanged>();
                 melee = GetComponent<PlayerMelee>();
+                
+                _playerControls = new PlayerControls();
+
+                _playerControls.Gameplay.Move.performed += ctx => {
+                    if (input.currentControlScheme == "Controller")
+                    {
+                        var value = ctx.ReadValue<Vector2>();
+                        var valueRounded = new Vector2((float)Math.Round(value.x, 2), (float)Math.Round(value.y, 2));
+                        if (valueRounded.magnitude < movement.controllerPushingSensitivity) return;
+                        move = valueRounded;
+                    }
+                    else
+                    {
+                        move = ctx.ReadValue<Vector2>();
+                    }
+                };
+                _playerControls.Gameplay.Move.canceled += _ => { move = Vector2.zero; };
+                _playerControls.Gameplay.Aim.performed += ctx => { 
+                    if (input.currentControlScheme == "Controller")
+                    {
+                        var value = ctx.ReadValue<Vector2>();
+                        var valueRounded = new Vector2((float)Math.Round(value.x, 2), (float)Math.Round(value.y, 2));
+                        if (valueRounded.magnitude < movement.controllerPushingSensitivity) return;
+                        aim = valueRounded;
+                    }
+                    else
+                    {
+                        aim = ctx.ReadValue<Vector2>();
+                    }
+                };
+                _playerControls.Gameplay.Aim.canceled += _ => { aim = Vector2.zero; };
+                _playerControls.Gameplay.UseItem.performed += _ => { };
+                _playerControls.Gameplay.Interact.performed += _ => { };
+                _playerControls.Gameplay.StopToAim.performed += _ => { aiming = true; };
+                _playerControls.Gameplay.StopToAim.canceled += _ => { aiming = false; };
+                _playerControls.Gameplay.RadialMenu.performed += _ => { menuOpen = true; };
+                _playerControls.Gameplay.RadialMenu.canceled += _ => { menuOpen = false; };
             }
             else
             {
@@ -72,6 +134,22 @@ namespace Player
             {
                 Instance = null;
             }
+        }
+        
+        /// <summary>
+        /// Called when [enable].
+        /// </summary>
+        private void OnEnable()
+        {
+            _playerControls.Gameplay.Enable();
+        }
+
+        /// <summary>
+        /// Called when [disable].
+        /// </summary>
+        private void OnDisable()
+        {
+            _playerControls.Gameplay.Disable();
         }
     }
 }
