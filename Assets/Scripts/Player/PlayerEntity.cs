@@ -24,13 +24,9 @@ namespace Player
         /// </summary>
         [HideInInspector] public PlayerHealth health;
         /// <summary>
-        /// The PlayerRanged
+        /// The PlayerHealth
         /// </summary>
-        [HideInInspector] public PlayerRanged ranged;
-        /// <summary>
-        /// The PlayerMelee
-        /// </summary>
-        [HideInInspector] public PlayerMelee melee;
+        [HideInInspector] public PlayerInventory inventory;
         
         /// <summary>
         /// The player controls
@@ -77,12 +73,11 @@ namespace Player
                 input = GetComponent<PlayerInput>();
                 movement = GetComponent<PlayerMovement>();
                 health = GetComponent<PlayerHealth>();
-                ranged = GetComponent<PlayerRanged>();
-                melee = GetComponent<PlayerMelee>();
-                
+                inventory = GetComponent<PlayerInventory>();
+
                 _playerControls = new PlayerControls();
 
-                _playerControls.Gameplay.Move.performed += ctx => {
+                _playerControls.Gameplay.Move.performed += ctx => { 
                     if (input.currentControlScheme == "Controller")
                     {
                         var value = ctx.ReadValue<Vector2>();
@@ -110,7 +105,7 @@ namespace Player
                     }
                 };
                 _playerControls.Gameplay.Aim.canceled += _ => { aim = Vector2.zero; };
-                _playerControls.Gameplay.UseItem.performed += _ => { };
+                _playerControls.Gameplay.UseItem.performed += _ => { inventory.UseItem();};
                 _playerControls.Gameplay.Interact.performed += _ => { };
                 _playerControls.Gameplay.StopToAim.performed += _ => { aiming = true; };
                 _playerControls.Gameplay.StopToAim.canceled += _ => { aiming = false; };

@@ -50,7 +50,7 @@ namespace Player
         /// The angle in the last frame
         /// </summary>
         private float _lastAngle;
-        
+
         /// <summary>
         /// Starts this instance.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Player
             {
                 AimWeapon();
             }
-            else
+            else if (PlayerEntity.Instance.move != Vector2.zero)
             {
                 _lastAngle = _angle;
                 _angle = Mathf.Atan2(PlayerEntity.Instance.move.y, PlayerEntity.Instance.move.x) * Mathf.Rad2Deg;

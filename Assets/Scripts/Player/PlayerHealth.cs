@@ -65,6 +65,11 @@ namespace Player
             DoDamage();
         }
 
+        public void RestoreHealth(int amount)
+        {
+            hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, playerHits);
+        }
+        
         /// <summary>
         /// Deals the damage.
         /// </summary>
