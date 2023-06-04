@@ -84,8 +84,7 @@ namespace Player
         /// </summary>
         private void FixedUpdate()
         {
-            if (PlayerEntity.Instance.menuOpen) return;
-            if (PlayerEntity.Instance.aiming)
+            if (PlayerEntity.Instance.aiming || PlayerEntity.Instance.menuOpen)
             {
                 _body.velocity = Vector2.zero;
                 return;

@@ -1,4 +1,3 @@
-using System;
 using Inventory;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,16 +10,15 @@ namespace UI
 
         public InventoryItem item;
     
-        // Start is called before the first frame update
         private void Start()
         {
             _itemImage = GetComponent<Image>();
             _itemImage.sprite = item.itemSprite;
         }
 
-        private void OnValidate()
+        private void Update()
         {
-            Start();
+            _itemImage.sprite = item.itemSprite;
         }
     }
 }
