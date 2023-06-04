@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicSword
   m_EditorClassIdentifier: 
   name: Basic Sword
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -240953568, guid: 6926e666c1944194d82821a4cad387a6, type: 3}
   damage: 5
   usesLeft: 5
   weaponType: 1
