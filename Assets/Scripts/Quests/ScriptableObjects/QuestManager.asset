@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f46240f240508347a31751e250d6785, type: 3}
+  m_Name: QuestManager
+  m_EditorClassIdentifier: 
+  questlines: []
+  inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
+  winningItem: {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
+  losingItem: {fileID: 11400000, guid: 76b058b03b4f8044ebda555ed28eccc6, type: 2}
+  continueWithStepEvent: {fileID: 11400000, guid: aa80e53ab7503f3498ad5a5d0bdba51f, type: 2}
+  endDialogueEvent: {fileID: 11400000, guid: 7237c89e92700fb47926160fc0fb7996, type: 2}
+  makeWinningChoiceEvent: {fileID: 11400000, guid: 2f1e6dc9fd90fbb4799b49a35d8bdcfb, type: 2}
+  makeLosingChoiceEvent: {fileID: 11400000, guid: 718fa47bc5811e64693f07a63ab3f298, type: 2}
+  playCompletionDialogueEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
+  playIncompleteDialogueEvent: {fileID: 11400000, guid: 93450d794085def4bac153bda69de4bf, type: 2}
+  giveItemEvent: {fileID: 11400000, guid: 1526edc5469699749b68c5be948495ea, type: 2}
+  rewardItemEvent: {fileID: 11400000, guid: ee88dfd500dc0ff41b84174d15b3b420, type: 2}

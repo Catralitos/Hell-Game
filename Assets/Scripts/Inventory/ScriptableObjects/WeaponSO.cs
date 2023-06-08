@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Inventory
+namespace Inventory.ScriptableObjects
 {
     public enum WeaponType
     {
@@ -8,8 +8,8 @@ namespace Inventory
         MELEE
     }
 
-    [CreateAssetMenu]
-    public class Weapon : InventoryItem
+    [CreateAssetMenu(menuName = "Inventory Items/Weapon")]
+    public class WeaponSO : ItemSO
     {
         public int damage;
         public int usesLeft;

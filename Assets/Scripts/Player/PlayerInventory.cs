@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Inventory;
+using Inventory.ScriptableObjects;
 using UI;
 using UnityEngine;
 
@@ -17,13 +18,13 @@ namespace Player
         public GameObject inventorySlotPrefab;
         
         [Header("Items")]
-        private InventoryItem _equippedItem;
+        private ItemSO _equippedItemSo;
         public HeldItem heldItem;
         
         [Header("Inventory")]
         private int _currentItem;
         public int maxInventoryItems = 8;
-        [HideInInspector] public List<InventoryItem> currentItems;
+        [HideInInspector] public List<ItemSO> currentItems;
         
         private Animator _animator;
 
@@ -31,14 +32,14 @@ namespace Player
         {
             _animator = GetComponent<Animator>();
             _radialMenu = inventoryMenu.gameObject.GetComponent<RadialLayout>();
-            List<InventoryItem> auxList = new List<InventoryItem>();
+            List<ItemSO> auxList = new List<ItemSO>();
             for (int i = 0; i < inventoryMenu.childCount; i++)
             {
-                auxList.Add(inventoryMenu.GetChild(i).GetComponent<InventorySlot>().item);
+                auxList.Add(inventoryMenu.GetChild(i).GetComponent<InventorySlot>().itemSo);
             }
-            currentItems = new List<InventoryItem>(auxList);
+            currentItems = new List<ItemSO>(auxList);
             _currentItem = 0;
-            _equippedItem = currentItems[_currentItem];
+            _equippedItemSo = currentItems[_currentItem];
             inventoryCanvas.SetActive(false);
         }
 
@@ -78,32 +79,32 @@ namespace Player
             }
             else
             {
-                heldItem.item = _equippedItem;
+                heldItem.itemSo = _equippedItemSo;
             }
         }
 
-        public bool AddItem(InventoryItem item)
+        public bool AddItem(ItemSO itemSo)
         {
             if (currentItems.Count >= maxInventoryItems || inventoryMenu.childCount >= maxInventoryItems) return false;
             
-            currentItems.Add(item);
+            currentItems.Add(itemSo);
             GameObject spawnedSlot =
                 Instantiate(inventorySlotPrefab, Vector3.zero, Quaternion.identity, inventoryMenu);
             InventorySlot slot = spawnedSlot.GetComponent<InventorySlot>();
-            slot.item = item;
+            slot.itemSo = itemSo;
             _radialMenu.AddItem();
             return true;
         }
         
-        public void RemoveItem(InventoryItem item)
+        public void RemoveItem(ItemSO itemSo)
         {
-            if (!currentItems.Contains(item)) return;
+            if (!currentItems.Contains(itemSo)) return;
             
-            currentItems.Remove(item);
+            currentItems.Remove(itemSo);
             for (int i = 0; i < inventoryMenu.childCount; i++)
             {
                 GameObject child = inventoryMenu.GetChild(i).gameObject;
-                if (child.GetComponent<InventorySlot>().item == item)
+                if (child.GetComponent<InventorySlot>().itemSo == itemSo)
                 {
                     child.transform.parent = null;
                     Destroy(child);
@@ -117,7 +118,7 @@ namespace Player
             {
                 _currentItem = inventoryMenu.childCount - 1;
             }
-            _equippedItem = _currentItem > -1 ? currentItems[_currentItem] : null;
+            _equippedItemSo = _currentItem > -1 ? currentItems[_currentItem] : null;
             return;
         }
 
@@ -154,18 +155,18 @@ namespace Player
                 inventoryMenu.GetChild(i).transform.localRotation = Quaternion.Euler(targetCounterRotation);
             }
 
-            _equippedItem = currentItems[_currentItem];
+            _equippedItemSo = currentItems[_currentItem];
             _isRotating = false;
         }
 
         public void UseItem()
         {
-            switch (_equippedItem)
+            switch (_equippedItemSo)
             {
-                case HealingItem item:
+                case HealingItemSO item:
                     UseHealItem(item);
                     break;
-                case Weapon item:
+                case WeaponSO item:
                 {
                     switch (item.weaponType)
                     {
@@ -183,7 +184,7 @@ namespace Player
             }
         }
         
-        private void UseHealItem(HealingItem item)
+        private void UseHealItem(HealingItemSO item)
         {
             //TODO dar freeze temporário ao player
             
@@ -191,13 +192,13 @@ namespace Player
             PlayerEntity.Instance.health.RestoreHealth(item.hpRestoreValue);
         }
         
-        private  void UseMeleeWeapon(Weapon weapon)
+        private  void UseMeleeWeapon(WeaponSO weapon)
         {
             _animator.SetTrigger(Animator.StringToHash("MeleeSwing"));
             //RemoveItem(heldItem.item);
         }
         
-        private static void UseRangedWeapon(Weapon weapon)
+        private static void UseRangedWeapon(WeaponSO weapon)
         {
             
         }

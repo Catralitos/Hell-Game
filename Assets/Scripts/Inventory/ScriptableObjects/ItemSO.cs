@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Inventory
+namespace Inventory.ScriptableObjects
 {
-    public abstract class InventoryItem : ScriptableObject
+    public abstract class ItemSO : ScriptableObject
     {
         public new string name;
     

@@ -1,5 +1,7 @@
 using Inventory;
+using Inventory.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
@@ -8,17 +10,17 @@ namespace UI
     {
         private Image _itemImage;
 
-        public InventoryItem item;
+        [FormerlySerializedAs("item")] public ItemSO itemSo;
     
         private void Start()
         {
             _itemImage = GetComponent<Image>();
-            _itemImage.sprite = item.itemSprite;
+            _itemImage.sprite = itemSo.itemSprite;
         }
 
         private void Update()
         {
-            _itemImage.sprite = item.itemSprite;
+            _itemImage.sprite = itemSo.itemSprite;
         }
     }
 }
