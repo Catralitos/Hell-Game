@@ -9,7 +9,7 @@ namespace Events.ScriptableObjects
     /// Example: start talking to an actor passed as parameter
     /// </summary>
     
-    [CreateAssetMenu(menuName = "Events/ Dialogue Data Channel")]
+    [CreateAssetMenu(menuName = "Events/Dialogue Data Channel")]
     public class DialogueDataChannelSO : ScriptableObject
     {
         public UnityAction<DialogueDataSO> OnEventRaised;

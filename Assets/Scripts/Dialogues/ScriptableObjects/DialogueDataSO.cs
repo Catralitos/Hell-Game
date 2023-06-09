@@ -47,12 +47,12 @@ namespace Dialogues.ScriptableObjects
 #if UNITY_EDITOR
         private void OnEnable()
         {
-            SetDialogueLines(name);
+            //SetDialogueLines(name);
         }
 
         public DialogueDataSO(string dialogueName)
         {
-            SetDialogueLines(dialogueName);
+            //SetDialogueLines(dialogueName);
         }
 
         private void SetDialogueLines(string dialogueName)

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7909a4ff0d0f45e48b17837adef1acac, type: 3}
-  m_Name: TestNPC
+  m_Name: Protagonist
   m_EditorClassIdentifier: 
-  actorId: 1
+  actorId: 0
   actorName:
     m_TableReference:
       m_TableCollectionName: GUID:9c592d2d4c7fc459f94a645873569195
     m_TableEntryReference:
-      m_KeyId: 87619184212434944
+      m_KeyId: 340307486520078336
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

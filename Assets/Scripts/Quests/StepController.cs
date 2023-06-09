@@ -39,7 +39,7 @@ namespace Quests
 		}
     
 		//start a dialogue when interaction
-		//some Steps need to be instantanious. And do not need the interact button.
+		//some Steps need to be instantaneous. And do not need the interact button.
 		//when interaction again, restart same dialogue.
 		public void InteractWithCharacter()
 		{

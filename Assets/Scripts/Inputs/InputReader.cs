@@ -56,7 +56,6 @@ namespace Inputs
     
         public void OnEnable()
         {
-            Debug.Log("It got enabled");
             if (_gameInput == null)
             {
                 _gameInput = new PlayerControls();

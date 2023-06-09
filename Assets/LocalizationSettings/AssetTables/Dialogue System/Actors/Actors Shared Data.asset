@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: TestNPC
     m_Metadata:
       m_Items: []
+  - m_Id: 340307486520078336
+    m_Key: Protagonist
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

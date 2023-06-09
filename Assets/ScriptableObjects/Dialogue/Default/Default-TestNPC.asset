@@ -12,7 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0fc3052b0343d0889296687bb8295c, type: 3}
   m_Name: Default-TestNPC
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - actorID: 1
+    textList:
+    - m_TableReference:
+        m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+      m_TableEntryReference:
+        m_KeyId: 237832728576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices: []
+  - actorID: 1
+    textList:
+    - m_TableReference:
+        m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+      m_TableEntryReference:
+        m_KeyId: 302123020288
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices: []
   dialogueType: 3
   endOfDialogueEvent: {fileID: 0}
   references:

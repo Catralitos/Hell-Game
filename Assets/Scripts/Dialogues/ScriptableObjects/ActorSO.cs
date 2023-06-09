@@ -5,6 +5,7 @@ namespace Dialogues.ScriptableObjects
 {
     public enum ActorID
     {
+        Protagonist,
         TestNPC
     }
     
