@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Tester, The NPC
     m_Metadata:
       m_Items: []
+  - m_Id: 340307486520078336
+    m_Localized: Protagonist
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

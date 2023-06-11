@@ -13,7 +13,7 @@ namespace Dialogues.ScriptableObjects
         StartDialogue,
         CompletionDialogue,
         IncompletionDialogue,
-        DefaultDialogue,
+        DefaultDialogue
     }
 
     public enum ChoiceActionType
