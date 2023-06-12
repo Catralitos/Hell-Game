@@ -23,10 +23,10 @@ namespace Dialogues
 	public DialogueLineChannelSO openUIDialogueEvent;
 	public DialogueChoicesChannelSO showChoicesUIEvent;
 	public IntEventChannelSO endDialogueWithTypeEvent;
-	public VoidEventChannelSO continueWithStep;
+	public DialogueChoiceChannelSO continueWithStep;
 	public VoidEventChannelSO playIncompleteDialogue;
-	public VoidEventChannelSO makeWinningChoice;
-	public VoidEventChannelSO makeLosingChoice;
+	public DialogueActorChannelSO makeWinningChoice;
+	public DialogueActorChannelSO makeLosingChoice;
 
 	private int _counterDialogue;
 	private int _counterLine;
@@ -34,6 +34,8 @@ namespace Dialogues
 	private bool _reachedEndOfLine { get => _counterLine >= _currentDialogue.lines[_counterDialogue].textList.Count; }
 	private DialogueDataSO _currentDialogue = default;
 
+	private ActorSO _currentActor;
+	
 	private void Start()
 	{
 		startDialogue.OnEventRaised += DisplayDialogueData;
@@ -55,9 +57,9 @@ namespace Dialogues
 
 		if (_currentDialogue.lines != null)
 		{
-			ActorSO currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-			Debug.Log(currentActor);
-			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], currentActor);
+			_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+			Debug.Log(_currentActor);
+			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
 			
 		}
 		else
@@ -81,8 +83,8 @@ namespace Dialogues
 		_counterLine++;
 		if (!_reachedEndOfLine)
 		{
-			ActorSO currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], currentActor);
+			_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
 		}
 		else if (_currentDialogue.lines[_counterDialogue].choices != null
 				&& _currentDialogue.lines[_counterDialogue].choices.Count > 0)
@@ -99,8 +101,8 @@ namespace Dialogues
 			{
 				_counterLine = 0;
 
-				ActorSO currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-				DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], currentActor);
+				_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+				DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
 			}
 			else
 			{
@@ -119,25 +121,26 @@ namespace Dialogues
 
 	private void MakeDialogueChoice(Choice choice)
 	{
+
 		makeDialogueChoiceEvent.OnEventRaised -= MakeDialogueChoice;
 
 		switch (choice.actionType)
 		{
 			case ChoiceActionType.ContinueWithStep:
 				if (continueWithStep != null)
-					continueWithStep.RaiseEvent();
+					continueWithStep.RaiseEvent(choice);
 				if (choice.nextDialogue != null)
 					DisplayDialogueData(choice.nextDialogue);
 				break;
 
 			case ChoiceActionType.WinningChoice:
 				if (makeWinningChoice != null)
-					makeWinningChoice.RaiseEvent();
+					makeWinningChoice.RaiseEvent(_currentActor);
 				break;
 
 			case ChoiceActionType.LosingChoice:
 				if (makeLosingChoice != null)
-					makeLosingChoice.RaiseEvent();
+					makeLosingChoice.RaiseEvent(_currentActor);
 				break;
 
 			case ChoiceActionType.DoNothing:
@@ -155,13 +158,7 @@ namespace Dialogues
 				break;
 		}
 	}
-
-	public void CutsceneDialogueEnded()
-	{
-		if (endDialogueWithTypeEvent != null)
-			endDialogueWithTypeEvent.RaiseEvent((int)DialogueType.DefaultDialogue);
-	}
-
+	
 	private void DialogueEndedAndCloseDialogueUI()
 	{
 		//raise the special event for end of dialogue if any 

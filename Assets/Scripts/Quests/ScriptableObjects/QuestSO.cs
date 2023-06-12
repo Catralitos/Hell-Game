@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using Events.ScriptableObjects;
-using Inventory;
 using Inventory.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Quests.ScriptableObjects
 {
@@ -15,7 +13,10 @@ namespace Quests.ScriptableObjects
         public ItemSO reward;
         public List<StepSO> steps;
 
-        public VoidEventChannelSO endQuestEvent = default;
+        public VoidEventChannelSO endQuestEvent;
+
+        [HideInInspector] public StepSO currentStep;
+        [HideInInspector] public int currentStepIndex; 
         
         public void FinishQuest()
         {

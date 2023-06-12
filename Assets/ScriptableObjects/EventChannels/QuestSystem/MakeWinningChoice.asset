@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfdc7d8419c0dd4aa717f3302e2f9d5, type: 3}
-  m_Name: MakeLosingChoiceEvent
+  m_Script: {fileID: 11500000, guid: b6629df45e4b4d608a731aa5a27f26c2, type: 3}
+  m_Name: MakeWinningChoice
   m_EditorClassIdentifier: 
