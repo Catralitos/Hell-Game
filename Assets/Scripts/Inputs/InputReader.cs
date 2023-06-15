@@ -40,7 +40,7 @@ namespace Inputs
         public event UnityAction CloseRadialMenuEvent = delegate { }; // Used to bring up the inventory
     
         // Shared between menus and dialogues
-        public event UnityAction MoveSelectionEvent = delegate { };
+        public event UnityAction<Vector2> MoveSelectionEvent = delegate { };
 
         // Dialogues
         public event UnityAction AdvanceDialogueEvent = delegate { };
@@ -138,7 +138,6 @@ namespace Inputs
                     CloseRadialMenuEvent.Invoke();
                     break;
             }
-        
         }
 
         public void OnPause(InputAction.CallbackContext context)
@@ -152,12 +151,11 @@ namespace Inputs
         public void OnMoveSelection(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                MoveSelectionEvent.Invoke();
+                MoveSelectionEvent.Invoke(context.ReadValue<Vector2>());
         }
 
         public void OnAdvanceDialogue(InputAction.CallbackContext context)
         {
-
             if (context.phase == InputActionPhase.Performed)
                 AdvanceDialogueEvent.Invoke();
         }

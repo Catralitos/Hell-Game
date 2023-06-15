@@ -10,6 +10,7 @@ namespace Inventory.ScriptableObjects
         [Tooltip("The collection of items and their quantities.")]
         public List<ItemSO> items = new List<ItemSO>();
         public List<ItemSO> defaultItems = new List<ItemSO>();
+        public List<ItemSO> keyItems = new List<ItemSO>();
         
         public void Init()
         {
@@ -21,23 +22,37 @@ namespace Inventory.ScriptableObjects
             }
         }
 
-        public void Add(ItemSO item)
+        public bool Add(ItemSO item)
         {
-            if (items.Count <= maxInventoryItems)
+            if (!item.isKeyItem)
             {
-                return;
+                if (items.Count <= maxInventoryItems)
+                {
+                    return false;
+                }
+
+                items.Add(item);
+                return true;
             }
-            items.Add(item);
+            keyItems.Add(item);
+            return true;
         }
 
-        public void Remove(ItemSO item)
+        public bool Remove(ItemSO item)
         {
-            items.Remove(item);
+            if (!items.Contains(item) || !keyItems.Contains(item)) return false;
+            if (!item.isKeyItem)
+            {
+                items.Remove(item);
+                return true;
+            }
+            keyItems.Remove(item);
+            return true;
         }
         
         public bool Contains(ItemSO item)
         {
-            return items.Contains(item);
+            return items.Contains(item) || keyItems.Contains(item);
         }
 
     }

@@ -1,4 +1,5 @@
 using System;
+using Gameplay.ScriptableObjects;
 using Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,7 +16,7 @@ namespace Player
 	{
 		public InputReader inputReader;
 
-		private Vector2 _moveVector;
+		public Vector2 _moveVector;
 		private Vector2 _aimVector;
 
 		/// <summary>
@@ -52,6 +53,8 @@ namespace Player
 		[NonSerialized] public ControllerColliderHit lastHit;
 		[NonSerialized] public bool isAiming; // Used when using the keyboard to run, brings the normalised speed to 1
 
+		private bool _menuOpen;
+		
 		private void Start()
 		{
 			_body = GetComponent<Rigidbody2D>();
@@ -71,7 +74,8 @@ namespace Player
 			inputReader.AimEvent += onAim;
 			inputReader.AimStartedEvent += OnStartedAiming;
 			inputReader.AimCanceledEvent += OnStoppedAiming;
-			inputReader.UseItemEvent += OnStartedUseItem;
+			inputReader.OpenRadialMenuEvent += OpenMenu;
+			inputReader.CloseRadialMenuEvent += CloseMenu;
 		}
 
 		//Removes all listeners to the events coming from the InputReader script
@@ -81,11 +85,13 @@ namespace Player
 			inputReader.AimEvent -= onAim;
 			inputReader.AimStartedEvent -= OnStartedAiming;
 			inputReader.AimCanceledEvent -= OnStoppedAiming;
-			inputReader.UseItemEvent -= OnStartedUseItem;
+			inputReader.OpenRadialMenuEvent -= OpenMenu;
+			inputReader.CloseRadialMenuEvent -= CloseMenu;
 		}
 
 		private void Update()
 		{
+			if (_menuOpen) return;
 			if (isAiming)
 			{
 				AimWeapon();
@@ -100,7 +106,7 @@ namespace Player
 
 		private void FixedUpdate()
 		{
-			if (isAiming)
+			if (isAiming || _menuOpen)
 			{
 				_body.velocity = Vector2.zero;
 				return;
@@ -142,9 +148,7 @@ namespace Player
 				}
 			}
 		}
-
-	
-
+		
 		//---- EVENT LISTENERS ----
 
 		private void onMove(Vector2 movement)
@@ -157,14 +161,24 @@ namespace Player
 			_aimVector = aiming;
 		}
 		
-		private void OnStoppedAiming() => isAiming = false;
-
 		private void OnStartedAiming() => isAiming = true;
-	
 
-		private void OnStartedUseItem() => useItemInput = true;
+		private void OnStoppedAiming() => isAiming = false;
+		
+		private void OpenMenu()
+		{
+			if (inputReader.gameStateManager.currentGameState == GameState.Gameplay)
+			{
+				_menuOpen = true;
+			}
+		}
 
-		// Triggered from Animation Event
-		public void ConsumeUseItemInput() => useItemInput = false;
+		private void CloseMenu()
+		{
+			if (inputReader.gameStateManager.currentGameState == GameState.Gameplay)
+			{
+				_menuOpen = false;
+			}
+		}
 	}
 }

@@ -16,7 +16,6 @@ namespace UI
         [Header("Scene UI")] public MenuSelectionHandler selectionHandler;
         //public UIPopup popupPanel;
         public UIDialogueManager dialogueController;
-        //public UIInventory inventoryPanel;
         //public UIInteraction interactionPanel;
         //public UIPause pauseScreen;
 
@@ -25,19 +24,21 @@ namespace UI
         public InputReader inputReader;
         public ActorSO mainProtagonist;
 
-        [Header("Listening on")] public VoidEventChannelSO onSceneReady;
+        [Header("Listening on")] 
+        public VoidEventChannelSO onSceneReady;
 
-        [Header("Dialogue Events")] public DialogueLineChannelSO openUIDialogueEvent;
+        [Header("Dialogue Events")] 
+        public DialogueLineChannelSO openUIDialogueEvent;
         public IntEventChannelSO closeUIDialogueEvent;
         
         [Header("Interaction Events")] [SerializeField]
-        private InteractionUIEventChannelSO setInteractionEvent;
+        public InteractionUIEventChannelSO setInteractionEvent;
 
         //[Header("Broadcasting on ")] [SerializeField]
         //private LoadEventChannelSO loadMenuEvent;
 
         [Header("Broadcasting on ")]
-        [SerializeField] private VoidEventChannelSO onInteractionEndedEvent;
+        public VoidEventChannelSO onInteractionEndedEvent;
 
         private void OnEnable()
         {
@@ -47,8 +48,6 @@ namespace UI
             inputReader.MenuPauseEvent +=
                 OpenUIPause; // subscription to open Pause UI event happens in OnEnabled, but the close Event is only subscribed to when the popup is open
             setInteractionEvent.OnEventRaised += SetInteractionPanel;
-            inputReader.OpenRadialMenuEvent += SetInventoryScreen;
-            //inventoryPanel.Closed += CloseInventoryScreen;
         }
 
         private void OnDisable()
@@ -58,8 +57,6 @@ namespace UI
             closeUIDialogueEvent.OnEventRaised -= CloseUIDialogue;
             inputReader.MenuPauseEvent -= OpenUIPause;
             setInteractionEvent.OnEventRaised -= SetInteractionPanel;
-            inputReader.OpenRadialMenuEvent -= SetInventoryScreen;
-            //inventoryPanel.Closed -= CloseInventoryScreen;
         }
 
         private void ResetUI()

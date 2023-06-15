@@ -7,5 +7,7 @@ namespace Inventory.ScriptableObjects
         public new string name;
     
         public Sprite itemSprite;
+
+        public bool isKeyItem;
     }
 }

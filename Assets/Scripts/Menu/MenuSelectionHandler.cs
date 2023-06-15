@@ -54,7 +54,7 @@ namespace Menu
 	/// when the event was fired. The _currentSelection is updated later on, after the EventSystem moves to the
 	/// desired UI element, the UI element will call into UpdateSelection()
 	/// </summary>
-	private void HandleMoveSelection()
+	private void HandleMoveSelection(Vector2 input)
 	{
 		Cursor.visible = false;
 
