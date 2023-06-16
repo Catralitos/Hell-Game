@@ -1,6 +1,6 @@
-﻿using Extensions;
+﻿using System;
+using Extensions;
 using Gameplay;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace Projectiles
@@ -16,6 +16,9 @@ namespace Projectiles
         /// </summary>
         public LayerMask wallsLayer;
 
+        public float bulletLifetime = 5f;
+        private float _timePassed;
+        
         /// <summary>
         /// The explosion prefab
         /// </summary>
@@ -41,6 +44,15 @@ namespace Projectiles
         private void Awake()
         {
             Body = GetComponent<Rigidbody2D>();
+        }
+
+        private void Update()
+        {
+            _timePassed += Time.deltaTime;
+            if (_timePassed >= bulletLifetime)
+            {
+                Destroy(gameObject);
+            }
         }
 
         /// <summary>

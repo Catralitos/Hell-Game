@@ -21,7 +21,7 @@ namespace Projectiles
         /// </summary>
         public override void OnObjectSpawn()
         {
-            Body.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+            Body.AddForce(Quaternion.Euler(0,0,-90) * transform.up * bulletSpeed, ForceMode2D.Impulse);
         }
     }
 }

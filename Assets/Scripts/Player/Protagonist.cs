@@ -116,35 +116,40 @@ namespace Player
 	
 		private void AimWeapon()
 		{
-			
-			//If the player is using a controller, and the stick is not neutral
-			//I'm using magnitude to check, because stick never goes beyond 1.
-			//WASD is usually one or higher
-			Debug.Log(_input.currentControlScheme);
-			if (_input.currentControlScheme == "Controller" && _moveVector != Vector2.zero)
+			switch (_input.currentControlScheme)
 			{
-				_lastAngle = _angle;
-				_angle = Mathf.Atan2(_moveVector.y, _moveVector.x) * Mathf.Rad2Deg;
-				if (Math.Abs(_lastAngle - _angle) > inputReader.controllerRotationSensitivity)
+				//If the player is using a controller, and the stick is not neutral
+				//I'm using magnitude to check, because stick never goes beyond 1.
+				//WASD is usually one or higher
+				case "Controller" when _moveVector != Vector2.zero:
 				{
-					itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
-				}
-			} 
-		    else if (_input.currentControlScheme == "Keyboard")
-			{
-				if (Camera.main != null)
-				{
-					Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.localPosition);
-
-					Vector3 mousePosition = (_aimVector - (Vector2) screenPosition).normalized;
-                    
 					_lastAngle = _angle;
-					_angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
-                    
-					if (Math.Abs(_lastAngle - _angle) > inputReader.mouseRotationSensitivity)
+					_angle = Mathf.Atan2(_moveVector.y, _moveVector.x) * Mathf.Rad2Deg;
+					if (Math.Abs(_lastAngle - _angle) > inputReader.controllerRotationSensitivity)
 					{
 						itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
 					}
+
+					break;
+				}
+				case "Keyboard":
+				{
+					if (Camera.main != null)
+					{
+						Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.localPosition);
+
+						Vector3 mousePosition = (_aimVector - (Vector2) screenPosition).normalized;
+                    
+						_lastAngle = _angle;
+						_angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
+                    
+						if (Math.Abs(_lastAngle - _angle) > inputReader.mouseRotationSensitivity)
+						{
+							itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
+						}
+					}
+
+					break;
 				}
 			}
 		}

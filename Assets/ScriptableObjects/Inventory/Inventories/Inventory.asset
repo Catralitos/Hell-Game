@@ -16,6 +16,7 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
   - {fileID: 11400000, guid: 76b058b03b4f8044ebda555ed28eccc6, type: 2}
+  - {fileID: 11400000, guid: 4fbf61b673fac764fa954427ddf35e83, type: 2}
   defaultItems:
   - {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
   keyItems: []

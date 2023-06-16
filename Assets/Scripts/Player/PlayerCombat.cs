@@ -11,6 +11,7 @@ namespace Player
     public class PlayerCombat : MonoBehaviour
     {
 
+        public Transform itemHolder;
         public HeldItem heldItem;
         
         [Header("Combat parameters")] 
@@ -20,10 +21,12 @@ namespace Player
 
         [Header("Melee Combat")] 
         public float attackRange;
+        public Transform attackSpawnPoint;
+
+        [Header("Ranged Combat")] 
+        public GameObject bulletPrefab;
         public Transform bulletSpawnPoint;
 
-        [Header("Ranged Combat")] public GameObject bulletPrefab;
-        
         [Header("Listening on")] public VoidEventChannelSO attackEvent;
 
         public void OnEnable()
@@ -66,7 +69,7 @@ namespace Player
             Debug.Log("Melee Attack");
             GameObject o = heldItem.gameObject;
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
-                o.transform.position * 1.5f, attackRange, hittables);
+                attackSpawnPoint.position, attackRange, hittables);
 
             foreach (Collider2D hittable in hitObjects)
             {
@@ -80,7 +83,7 @@ namespace Player
         {
             Debug.Log("Ranged Attack");
             GameObject spawnedBullet =
-                Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+                Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             spawnedBullet.GetComponent<StraightBullet>().bulletDamage = weapon.damage;
             _cooldownLeft = attackCooldown;
         }
@@ -88,7 +91,7 @@ namespace Player
         private void OnDrawGizmosSelected()
         {
             GameObject o = heldItem.gameObject;
-            Gizmos.DrawWireSphere(o.transform.position * 1.5f, attackRange);
+            Gizmos.DrawWireSphere(attackSpawnPoint.position, attackRange);
         }
     }
 }

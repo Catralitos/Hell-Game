@@ -114,20 +114,20 @@ namespace UI.Inventory
                 {
                     case > 0.1f:
                     {
-                        _currentItem++;
-                        if (_currentItem >= children)
+                        _currentItem--;
+                        if (_currentItem < 0)
                         {
-                            _currentItem = 0;
+                            _currentItem = children - 1;
                         }
                         StartCoroutine(MenuRotateRoutine(1));
                         break;
                     }
                     case < -0.1f:
                     {
-                        _currentItem--;
-                        if (_currentItem < 0)
+                        _currentItem++;
+                        if (_currentItem >= children)
                         {
-                            _currentItem = children - 1;
+                            _currentItem = 0;
                         }
                         StartCoroutine(MenuRotateRoutine(-1));
                         break;
