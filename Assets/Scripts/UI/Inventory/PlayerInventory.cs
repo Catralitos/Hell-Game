@@ -40,6 +40,8 @@ namespace UI.Inventory
         public ItemEventChannelSO useItemEvent;
         //To restore health
         public IntEventChannelSO restoreHealth;
+        //To attack
+        public VoidEventChannelSO attackEvent;
 
         private void Start()
         {
@@ -204,24 +206,22 @@ namespace UI.Inventory
         
         private void UseHealItem(HealingItemSO item)
         {
-            //TODO dar freeze temporário ao player
+            //TODO dar freeze temporário ao player/tocar animação
             Debug.Log("Used healing item");
-            useItemEvent.RaiseEvent(item);
             restoreHealth.RaiseEvent(item.hpRestoreValue);
+            useItemEvent.RaiseEvent(item);
         }
         
         private void UseMeleeWeapon(WeaponSO weapon)
         {
-            Debug.Log("Used melee item");
-
             _animator.SetTrigger(Animator.StringToHash("MeleeSwing"));
-            //TODO gerar dano
+            attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);
         }
         
         private void UseRangedWeapon(WeaponSO weapon)
         {
-            //TODO disparar projeteis
+            attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);
         }
         
@@ -230,7 +230,6 @@ namespace UI.Inventory
         private void onMoveSelection(Vector2 value)
         {
             _menuInput = value;
-            Debug.Log(_menuInput);
         }
         
         private void OpenMenu()

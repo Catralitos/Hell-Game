@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443424406555257663}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ItemHinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1811758623517568667}
   - component: {fileID: 316967513600213455}
   - component: {fileID: 6969090850982002938}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 2690610698775722956}
   - component: {fileID: 8072417537199143648}
   - component: {fileID: 6650823757743544786}
+  - component: {fileID: 2819429049786188024}
+  - component: {fileID: 22109830361469905}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -170,7 +172,7 @@ Transform:
   - {fileID: 2306047439721703419}
   - {fileID: 5189767263215607725}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -428,6 +430,7 @@ MonoBehaviour:
   updateInventoryEvent: {fileID: 11400000, guid: 9b731ef7c3e95164abd2cbdba143f4fb, type: 2}
   useItemEvent: {fileID: 11400000, guid: fbf3c5d69f08f044685d3f35936019fe, type: 2}
   restoreHealth: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
+  attackEvent: {fileID: 11400000, guid: 9adbe6b11f87b944e951e8f542397aa6, type: 2}
 --- !u!95 &8072417537199143648
 Animator:
   serializedVersion: 5
@@ -467,6 +470,48 @@ MonoBehaviour:
   toggleInteractionUI: {fileID: 11400000, guid: 6f06a5c6deea6134abaea6c2d79bed7b, type: 2}
   onInteractionEnded: {fileID: 11400000, guid: 525e9e8a8c6d2aa4190194af25c99e08, type: 2}
   currentInteractionType: 0
+--- !u!114 &2819429049786188024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ee8fb9ecaef7d4e862a224640478e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMaterial: {fileID: 0}
+  maxHits: 5
+  hitsLeft: 5
+  invincibilityFrames: 0
+  damagers:
+    serializedVersion: 2
+    m_Bits: 1792
+  collisionDamage: 0
+  restoreHealthEvent: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
+--- !u!114 &22109830361469905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcc96c5273549e7a2d51893a073a152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heldItem: {fileID: 6969090850982002938}
+  attackCooldown: 2
+  hittables:
+    serializedVersion: 2
+    m_Bits: 256
+  attackRange: 0.5
+  bulletSpawnPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  attackEvent: {fileID: 11400000, guid: 9adbe6b11f87b944e951e8f542397aa6, type: 2}
 --- !u!1 &5722804494960067855
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +600,7 @@ GameObject:
   - component: {fileID: 9144312706992366681}
   - component: {fileID: 1590412668182936767}
   - component: {fileID: 4951483108275833749}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: InteractionDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508113649789760079}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ItemHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,6 +838,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339026694527412126, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5279240715727978412, guid: 23803e15537b95c419b1abe444aca333, type: 3}
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1
@@ -836,6 +905,10 @@ PrefabInstance:
     - target: {fileID: 8807779175797026946, guid: 23803e15537b95c419b1abe444aca333, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807779175797026946, guid: 23803e15537b95c419b1abe444aca333, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

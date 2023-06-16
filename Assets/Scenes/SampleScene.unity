@@ -2820,81 +2820,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 80902953250967193, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135394487671156216, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425883168846407007, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690610698775722956, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: gameState
-      value: 
-      objectReference: {fileID: 11400000, guid: 73ab1dff21e8c284cbaa0a5945d9a758, type: 2}
-    - target: {fileID: 3091823912379760676, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4811805767676476648, guid: adeb8adef1f373f429899b86c1206942, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606398357034236644, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651755374231716454, guid: adeb8adef1f373f429899b86c1206942, type: 3}
       propertyPath: m_Camera
@@ -2948,10 +2876,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 80902953250967193, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-    - {fileID: 3091823912379760676, guid: adeb8adef1f373f429899b86c1206942, type: 3}
-    - {fileID: 7479421016062587269, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
