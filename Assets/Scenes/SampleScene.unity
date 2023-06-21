@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 57755372}
   - component: {fileID: 57755371}
   - component: {fileID: 57755373}
+  - component: {fileID: 57755374}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -200,6 +201,21 @@ MonoBehaviour:
   giveItemEvent: {fileID: 11400000, guid: 1526edc5469699749b68c5be948495ea, type: 2}
   addItemEvent: {fileID: 11400000, guid: 1d0c2bd30f4b88a49979c2b33327c33e, type: 2}
   updateInventoryEvent: {fileID: 11400000, guid: 9b731ef7c3e95164abd2cbdba143f4fb, type: 2}
+--- !u!114 &57755374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57755370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3918947e1a6d4752851a67bf4b7eb625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayInMinutes: 30
+  numberOfHours: 66
+  hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
 --- !u!1 &158207292
 GameObject:
   m_ObjectHideFlags: 0
