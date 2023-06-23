@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Events
+namespace Events.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Events/Time Event Channel")]
     public class TimeChannelSO : ScriptableObject
