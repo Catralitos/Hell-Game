@@ -73,10 +73,13 @@ namespace UI.Inventory
         
         private void UpdateUI()
         {
+            Debug.Log("Chamou Update UI");
             //Clear all children
-            for (int i = 0; i < inventoryMenu.childCount; i++)
+            for (int i = inventoryMenu.childCount - 1; i >= 0; i--)
             {
-                _radialMenu.RemoveItem();
+                Transform c = inventoryMenu.GetChild(i);
+                c.SetParent(null);
+                Destroy(c.gameObject);
             }
 
             //Create the new ones
@@ -98,8 +101,8 @@ namespace UI.Inventory
                         slot.rightText.text = weapon.usesLeft.ToString();
                         break;
                 }
-                _radialMenu.AddItem();
             }
+            _radialMenu.CalculateRadial();
         }
  
         private void Update()
@@ -107,6 +110,8 @@ namespace UI.Inventory
             if (inventoryCanvas.activeSelf)
             {
                 int children = inventoryMenu.childCount;
+                int currentItems = currentInventory.items.Count;
+                //if (children != currentItems) Debug.Log("DEU MERDA");
                 if (_isRotating || children < 2 || currentInventory.items.Count < 2) return;
                 
                 float x = _menuInput.x;
@@ -117,7 +122,7 @@ namespace UI.Inventory
                         _currentItem--;
                         if (_currentItem < 0)
                         {
-                            _currentItem = children - 1;
+                            _currentItem = currentInventory.items.Count - 1;
                         }
                         StartCoroutine(MenuRotateRoutine(1));
                         break;
@@ -125,7 +130,7 @@ namespace UI.Inventory
                     case < -0.1f:
                     {
                         _currentItem++;
-                        if (_currentItem >= children)
+                        if (_currentItem >= currentInventory.items.Count)
                         {
                             _currentItem = 0;
                         }
@@ -144,6 +149,7 @@ namespace UI.Inventory
         
         private IEnumerator MenuRotateRoutine(int direction)
         {
+            Debug.Log(_currentItem);
             _isRotating = true;
 
             int children = inventoryMenu.childCount;

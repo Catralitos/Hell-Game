@@ -36,6 +36,21 @@ namespace Quests.ScriptableObjects
         //public SaveSystem saveSystem;
 
         private StepSO _lastStepChecked;
+
+        public void Init()
+        {
+            foreach (QuestSO q in quests)
+            {
+                foreach (StepSO s in q.steps)
+                {
+                    s.isDone = false;
+                }
+
+                q.isDone = false;
+            }
+
+            _lastStepChecked = null;
+        }
         
         public void OnDisable()
         {

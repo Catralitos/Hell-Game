@@ -40,6 +40,7 @@ namespace Inventory
         
         private void AddItem(ItemSO item)
         {
+            Debug.Log("Chamou AddItem");
             if (currentInventory.Add(item))
             {
                 //_saveSystem.SaveDataToDisk();

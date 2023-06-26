@@ -6,6 +6,11 @@ namespace Management.ScriptableObjects
     public class EnemyTrackerSO : ScriptableObject
     {
         public int[] angelsKilled;
+
+        public void Init()
+        {
+            angelsKilled = new int [8];
+        }
         
         public void AddAngel(int batch)
         {

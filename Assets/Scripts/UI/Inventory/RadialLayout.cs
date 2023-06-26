@@ -30,8 +30,6 @@ namespace UI.Inventory
         private float MaxAngle = 315.0f; 
         [Range(0f, 360f)] 
         private float StartAngle = 90.0f;
-
-        private int _numItems = 1;
         
         protected override void OnEnable() { base.OnEnable(); CalculateRadial(); }
         public override void SetLayoutHorizontal()
@@ -52,42 +50,26 @@ namespace UI.Inventory
         protected override void OnValidate()
         {
             base.OnValidate();
-            _numItems = transform.childCount;
-            MaxAngle = 360 - 360.0f / _numItems;
+            MaxAngle = 360 - 360.0f / transform.childCount;
             CalculateRadial();
         }
 #endif
         protected override void Start()
         {
             base.Start();
-            _numItems = transform.childCount;
             MinAngle = 0.0f;
-            MaxAngle = 360 - 360.0f / _numItems;
+            MaxAngle = 360 - 360.0f / transform.childCount;
             StartAngle = 90.0f;
             CalculateRadial();
         }
-
-        public void AddItem()
-        {
-            _numItems++;
-            MaxAngle = 360 - 360.0f / _numItems;
-            CalculateRadial();
-        }
-        
-        public void RemoveItem()
-        {
-            _numItems--;
-            MaxAngle = 360 - 360.0f / _numItems;
-            CalculateRadial();
-        }
-        
-        void CalculateRadial()
+        public void CalculateRadial()
         {
             m_Tracker.Clear();
             if (transform.childCount == 0)
                 return;
+            
+            MaxAngle = 360 - 360.0f / transform.childCount;
             float fOffsetAngle = ((MaxAngle - MinAngle)) / (transform.childCount -1);
-        
             float fAngle = StartAngle;
             for (int i = 0; i < transform.childCount; i++)
             {

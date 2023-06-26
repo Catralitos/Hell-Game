@@ -18,7 +18,7 @@ namespace Inventory.ScriptableObjects
             items.Clear();
             foreach (ItemSO item in defaultItems)
             {
-                items.Add(item);
+                items.Add(Instantiate(item));
             }
         }
 
@@ -26,15 +26,15 @@ namespace Inventory.ScriptableObjects
         {
             if (!item.isKeyItem)
             {
-                if (items.Count <= maxInventoryItems)
+                if (items.Count >= maxInventoryItems)
                 {
                     return false;
                 }
 
-                items.Add(item);
+                items.Add(Instantiate(item));
                 return true;
             }
-            keyItems.Add(item);
+            keyItems.Add(Instantiate(item));
             return true;
         }
 

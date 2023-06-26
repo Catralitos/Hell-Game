@@ -230,6 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2372109327448588987}
+  - component: {fileID: 8149316047559065230}
   - component: {fileID: 5849559484832737469}
   - component: {fileID: 8622040803236614388}
   - component: {fileID: 7024490861761706356}
@@ -259,6 +260,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8149316047559065230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195222313727358193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5fb781592c462fa760a046f1c8f161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questManager: {fileID: 11400000, guid: 3538fcf9cc09acb46a7a694423659aae, type: 2}
+  inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
+  enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
 --- !u!114 &5849559484832737469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af14efc214f4dd89a685ddf05278409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
   hoursBetweenRespawns: 3
   angelKilledEvent: {fileID: 11400000, guid: 934b5783cd77a40479c68cb775dfa77c, type: 2}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}

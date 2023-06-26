@@ -16,5 +16,6 @@ MonoBehaviour:
   itemSprite: {fileID: 1677212186, guid: c56e9b3c34392fa4d82438868147981b, type: 3}
   isKeyItem: 0
   damage: 5
+  defaultUses: 5
   usesLeft: 5
   weaponType: 0
