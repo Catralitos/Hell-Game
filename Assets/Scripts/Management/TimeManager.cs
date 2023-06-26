@@ -30,6 +30,7 @@ namespace Management
             int numberOfSeconds = dayInMinutes * 60;
             float hourLength = 1.0f * numberOfSeconds / numberOfHours;
             float minuteLength = hourLength / 60;
+            ppv.weight = 1;
             InvokeRepeating(nameof(PassHour), hourLength, hourLength);
             InvokeRepeating(nameof(ControlPPV), 1f, 1f);
             InvokeRepeating(nameof(IncreaseMinute), minuteLength, minuteLength);
