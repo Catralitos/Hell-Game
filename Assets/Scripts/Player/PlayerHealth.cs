@@ -20,16 +20,20 @@ namespace Player
 
         public int collisionDamage;
 
-        [Header("Listening on")] public IntEventChannelSO restoreHealthEvent;
+        [Header("Listening on")] 
+        public IntEventChannelSO restoreHealthEvent;
+        public IntEventChannelSO enemyAttackedEvent;
 
         public void OnEnable()
         {
             restoreHealthEvent.OnEventRaised += RestoreHealth;
+            enemyAttackedEvent.OnEventRaised += LoseHealth;
         }
 
         private void OnDisable()
         {
             restoreHealthEvent.OnEventRaised -= RestoreHealth;
+            enemyAttackedEvent.OnEventRaised -= LoseHealth;
         }
 
         /// <summary>
@@ -46,6 +50,11 @@ namespace Player
         private void RestoreHealth(int amount)
         {
             hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, maxHits);
+        }
+
+        private void LoseHealth(int amount)
+        {
+            hitsLeft = Mathf.Clamp(hitsLeft - amount, 0, maxHits);
         }
     }
 }

@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 22109830361469905}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ Transform:
   - {fileID: 2306047439721703419}
   - {fileID: 5189767263215607725}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -522,6 +522,7 @@ MonoBehaviour:
     m_Bits: 1792
   collisionDamage: 0
   restoreHealthEvent: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
+  enemyAttackedEvent: {fileID: 11400000, guid: c3cfd8fd7455f874db9dbe8370ce0210, type: 2}
 --- !u!114 &22109830361469905
 MonoBehaviour:
   m_ObjectHideFlags: 0
