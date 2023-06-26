@@ -73,7 +73,6 @@ namespace UI.Inventory
         
         private void UpdateUI()
         {
-            Debug.Log("Chamou Update UI");
             //Clear all children
             for (int i = inventoryMenu.childCount - 1; i >= 0; i--)
             {
