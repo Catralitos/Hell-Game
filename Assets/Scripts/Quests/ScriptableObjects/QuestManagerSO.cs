@@ -5,6 +5,7 @@ using Dialogues.ScriptableObjects;
 using Events.ScriptableObjects;
 using Events.ScriptableObjects.UI;
 using Inventory.ScriptableObjects;
+using Management.ScriptableObjects;
 using UnityEngine;
 
 namespace Quests.ScriptableObjects
@@ -15,8 +16,11 @@ namespace Quests.ScriptableObjects
         [Header("Data")]
         public List<QuestSO> quests;
         public InventorySO inventory;
+        public EnemyTrackerSO enemyTracker;
+        /*[Tooltip("Item the NPC gives out on winning")]
         public ItemSO winningItem;
-        public ItemSO losingItem;
+        [Tooltip("Item the NPC gives out on losing")]
+        public ItemSO losingItem;*/
 
         [Header("Listening to channels")]
         public DialogueChoiceChannelSO continueWithStepEvent;
@@ -42,7 +46,7 @@ namespace Quests.ScriptableObjects
         }
 
         
-        public void StartGame()
+        public void OnEnable()
         {
             continueWithStepEvent.OnEventRaised += CheckStepValidity;
             endDialogueEvent.OnEventRaised += EndDialogue;
@@ -99,7 +103,7 @@ namespace Quests.ScriptableObjects
             if (currentStep != null)
             {
                 _lastStepChecked = currentStep;
-                currentStep.item = winningItem;
+                //currentStep.item = winningItem;
                 CheckStepValidity(currentStep);
             }
         }
@@ -110,7 +114,7 @@ namespace Quests.ScriptableObjects
             if (currentStep != null)
             {
                 _lastStepChecked = currentStep;
-                currentStep.item = losingItem;
+                //currentStep.item = losingItem;
                 CheckStepValidity(currentStep);
             }
         }
@@ -165,7 +169,15 @@ namespace Quests.ScriptableObjects
 
                         break;
                     case StepType.KillEnemy:
-                        //TODO ver como fazer para inimigo morto
+                        if (enemyTracker.GetNumAngels(currentStep.angelBatch) >= currentStep.angelCount)
+                        {
+                            playCompletionDialogueEvent.RaiseEvent();
+                        }
+                        else
+                        {
+                            //trigger lose dialogue
+                            playIncompleteDialogueEvent.RaiseEvent();
+                        }
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

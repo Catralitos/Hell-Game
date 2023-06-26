@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
-  winningItem: {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
-  losingItem: {fileID: 11400000, guid: 76b058b03b4f8044ebda555ed28eccc6, type: 2}
+  enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
   continueWithStepEvent: {fileID: 11400000, guid: aa80e53ab7503f3498ad5a5d0bdba51f, type: 2}
   endDialogueEvent: {fileID: 11400000, guid: 7237c89e92700fb47926160fc0fb7996, type: 2}
   makeWinningChoiceEvent: {fileID: 11400000, guid: 9441e9a804448454cb16512eab2f27f7, type: 2}
