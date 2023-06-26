@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: cdfcbf8ef4ae4824ab98c876f767e2aa
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 6b9546b499827d7458f0d05eef618ca6
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 052baa58fdd6a954882583f29aba8a81
+  - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity
+    guid: ac9283ef305a9e645877b85e27eefb7a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: dd31620cb6c2c8347b674dcebc27edfb, type: 2}
     com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: 188f14961b3b3334fb1c27a8f7be0c0f, type: 2}

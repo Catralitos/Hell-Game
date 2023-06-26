@@ -109,8 +109,6 @@ namespace UI.Inventory
             if (inventoryCanvas.activeSelf)
             {
                 int children = inventoryMenu.childCount;
-                int currentItems = currentInventory.items.Count;
-                //if (children != currentItems) Debug.Log("DEU MERDA");
                 if (_isRotating || children < 2 || currentInventory.items.Count < 2) return;
                 
                 float x = _menuInput.x;
