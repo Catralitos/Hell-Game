@@ -11,7 +11,8 @@ namespace Management
         public int spawnerRange;
         public int maxAngels;
         public int angelBatch;
-        public bool respawns = true;
+        public bool hasTimedRespawns = true;
+        public bool listensToGeneralEvent = true;
         public LayerMask spawnObstacles;
         public GameObject angelPrefab;
         
@@ -19,15 +20,29 @@ namespace Management
         private int _numOfRespawns;
         
         [Header("Listening On")] public VoidEventChannelSO spawnAngelsEvent;
-
+        public VoidEventChannelSO specificSpawnAngelsEvent;
         public void OnEnable()
         {
-            spawnAngelsEvent.OnEventRaised += SpawnAngels;
+            if (listensToGeneralEvent)
+            {
+                spawnAngelsEvent.OnEventRaised += SpawnAngels;
+            }
+            else
+            {
+                specificSpawnAngelsEvent.OnEventRaised += SpawnAngels;
+            }
         }
 
         public void OnDisable()
         {
-            spawnAngelsEvent.OnEventRaised -= SpawnAngels;
+            if (listensToGeneralEvent)
+            {
+                spawnAngelsEvent.OnEventRaised -= SpawnAngels;
+            }
+            else
+            {
+                specificSpawnAngelsEvent.OnEventRaised -= SpawnAngels;
+            }
         }
 
         private void Start()
@@ -37,7 +52,7 @@ namespace Management
 
         private void SpawnAngels()
         {
-            if (_numOfRespawns > 0 && !respawns) return;
+            if (_numOfRespawns > 0 && !hasTimedRespawns) return;
             List<Angel> aux = _spawnedAngels.Where(a => a != null && a.gameObject != null).ToList();
             _spawnedAngels = aux;
             int numAngelsToSpawn = maxAngels - aux.Count;
