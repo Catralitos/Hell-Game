@@ -10,6 +10,7 @@ using Characters.BehaviorTrees.Trees;
 public class Angel : Enemy
 {
     public Vector3 SignalSpot;
+    public int angelBatch;
 
     public Angel()
     {

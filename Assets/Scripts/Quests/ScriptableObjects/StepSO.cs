@@ -32,7 +32,12 @@ namespace Quests.ScriptableObjects
         public bool hasReward;
         [Tooltip("The item to reward if any")]
         public ItemSO rewardItem;
+        [Tooltip("How many angels to kill if it's a kill enemy step")]
+        public int angelCount;
+        [Tooltip("Which angels to kill if it's a kill enemy step")]
+        public int angelBatch;
         public bool isDone;
+        [Tooltip("Specific event which happens when step is done")]
         public VoidEventChannelSO endStepEvent;
 
         
