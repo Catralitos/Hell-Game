@@ -21,7 +21,7 @@ public class Angel : Enemy
         this.DmgRoll = () => RandomHelper.RollD10() + 2;
         this.enemyStats.SimpleDamage = 5;
         this.enemyStats.AwakeDistance = 10;
-        this.enemyStats.WeaponRange = 3;
+        this.enemyStats.WeaponRange = 1;
         this.MainBehaviourTree = null;
     }
 
