@@ -1,5 +1,4 @@
-﻿using System;
-using Inventory.ScriptableObjects;
+﻿using Inventory.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
