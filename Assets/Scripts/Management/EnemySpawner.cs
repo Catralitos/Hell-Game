@@ -53,9 +53,17 @@ namespace Management
         private void SpawnAngels()
         {
             if (_numOfRespawns > 0 && !hasTimedRespawns) return;
-            List<Angel> aux = _spawnedAngels.Where(a => a != null && a.gameObject != null).ToList();
-            _spawnedAngels = aux;
-            int numAngelsToSpawn = maxAngels - aux.Count;
+            int numAngelsToSpawn;
+            if (_spawnedAngels.Count > 0)
+            {
+                List<Angel> aux = _spawnedAngels.Where(a => a != null && a.gameObject != null).ToList();
+                _spawnedAngels = aux;
+                numAngelsToSpawn = maxAngels - aux.Count;
+            }
+            else
+            {
+                numAngelsToSpawn = maxAngels;
+            }
             int numSpawnedAngels = 0;
             int cycleAttempts = 0;
 
