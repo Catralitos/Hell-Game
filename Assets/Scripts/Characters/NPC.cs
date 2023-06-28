@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.AI;
 using Characters.BehaviorTrees;
+using Events.ScriptableObjects;
+using Management;
+using Random = UnityEngine.Random;
 
 namespace Characters
 {
@@ -21,6 +25,17 @@ namespace Characters
 
     public class NPC : MonoBehaviour
     {
+        [Serializable]
+        public class Pair
+        {
+            public TimeStep time;
+            public Transform transform;
+        }
+
+        [SerializeField] public List<Pair> targetsByTime;
+        [Header("Listening To")] public TimeChannelSO hourPassedEvent;
+        private Transform _currentTarget;
+        
         protected GameObject character;
 
         public BehaviorTreeType currBehaviorTreeType
@@ -30,6 +45,25 @@ namespace Characters
 
         public Task currBehaviorTree
         { get; set; }
+
+        private void OnEnable()
+        {
+            hourPassedEvent.OnEventRaised += CheckNewTarget;
+        }
+        
+        private void OnDisable()
+        {
+            hourPassedEvent.OnEventRaised -= CheckNewTarget;
+        }
+
+        private void CheckNewTarget(TimeStep time)
+        {
+            foreach (Pair pair in targetsByTime.Where(pair => pair.time.day == time.day && pair.time.hour == time.hour))
+            {
+                _currentTarget = pair.transform;
+            }
+        }
+        
 
         // Pathfinding
         public void ChangeBehaviourTree(Task newTree, BehaviorTreeType newTreeType)
