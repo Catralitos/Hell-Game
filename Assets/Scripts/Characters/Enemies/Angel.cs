@@ -13,6 +13,7 @@ public class Angel : Enemy
     public Vector3 SignalSpot;
     public int angelBatch;
     private AIDestinationSetter AIDestinationSetter;
+    private IAstarAI ai;
 
 
     // Start is called before the first frame update
@@ -31,7 +32,16 @@ public class Angel : Enemy
         this.combat.cooldownLeft = 0;
         this.MainBehaviourTree = null;
         this.AIDestinationSetter = GetComponentInParent<AIDestinationSetter>();
+        this.ai = this.AIDestinationSetter.GetComponent<IAstarAI>();
         this.AIDestinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    public void Update()
+    {
+        if (this.ai.reachedDestination)
+        {
+            AttackPlayer();
+        }
     }
 
     public override void InitializeBehaviourTree()

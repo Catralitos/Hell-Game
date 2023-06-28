@@ -20,9 +20,8 @@ namespace Enemies
         protected override void Die()
         {
             Destroy(transform.parent.gameObject);
-            Debug.Log("Parent destroyed");
+            //Debug.Log("Parent destroyed");
             base.Die();
-            Debug.Log("Current object destroyed");
         }
     }
 }
