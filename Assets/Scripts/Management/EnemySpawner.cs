@@ -78,7 +78,7 @@ namespace Management
                 if (collider2Ds.Length == 0)
                 {
                     GameObject spawnedAngel = Instantiate(angelPrefab, positionToSpawn, Quaternion.identity, transform);
-                    Angel angel = spawnedAngel.GetComponent<Angel>();
+                    Angel angel = spawnedAngel.GetComponentInChildren<Angel>();
                     angel.angelBatch = angelBatch;
                     _spawnedAngels.Add(angel);
                     numSpawnedAngels++;

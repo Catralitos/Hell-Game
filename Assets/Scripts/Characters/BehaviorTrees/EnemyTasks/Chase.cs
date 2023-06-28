@@ -26,7 +26,10 @@ namespace Characters.BehaviorTrees.EnemyTasks
         public override Result Run()
         {
             if (Target == null)
+            {
+                //Debug.Log("CHASE(" + Character.gameObject.name + ") Unreal target.");
                 return Result.Failure;
+            }
 
             Debug.Log("CHASE(" + Character.gameObject.name + "). Target = " + Target.name + ". Pos: " + Target.transform.position.ToString());
 

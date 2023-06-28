@@ -77,7 +77,7 @@ namespace Gameplay
         /// <summary>
         /// Kill the player
         /// </summary>
-        private void Die()
+        protected virtual void Die()
         {
             Destroy(gameObject);
         }

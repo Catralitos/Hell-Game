@@ -21,7 +21,7 @@ public class Enemy : NPC
     [HideInInspector] public EnemyHealth health;
 
     protected float decisionRate = 2.0f;
-    protected NavMeshAgent agent;
+    //protected NavMeshAgent agent;
     public GameObject Target { get; set; }
 
     // Start is called before the first frame update
@@ -32,13 +32,6 @@ public class Enemy : NPC
         this.info = new EnemyInfo();
         this.Target = GameObject.FindGameObjectWithTag("Player");
 
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (this.currBehaviorTree != null)
-            this.currBehaviorTree.Run();
     }
 
     public virtual void InitializeBehaviourTree()
@@ -58,8 +51,8 @@ public class Enemy : NPC
 
             else
             {
-                PursuePlayer();
-                Invoke("CheckPlayerPosition", 0.5f);
+                //PursuePlayer();
+                //Invoke("CheckPlayerPosition", 0.5f);
             }
         }
         else
@@ -68,20 +61,8 @@ public class Enemy : NPC
         }
     }
 
-    public void PursuePlayer()
-    {
-        if (agent != null)
-            this.agent.SetDestination(this.Target.transform.position);
-    }
-
     public void AttackPlayer()
     {
         combat.Attack();
-    }
-
-    public void MoveTo(Vector3 targetPosition)
-    {
-        if (agent != null)
-            this.agent.SetDestination(targetPosition);
     }
 }
