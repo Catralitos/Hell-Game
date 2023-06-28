@@ -1,8 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using Events.ScriptableObjects;
 using Gameplay.ScriptableObjects;
 using Inputs;
 using Inventory;
+using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
 using UnityEngine;
 
@@ -19,14 +21,15 @@ namespace UI.Inventory
         public GameObject inventorySlotPrefab;
         
         [Header("Items")]
-        private ItemSO _equippedItemSo;
+        private Item _equippedItemSo;
         public HeldItem heldItem;
         
         [Header("Inventory")]
         private int _currentItem;
 
         private Animator _animator;
-
+        private static readonly int Attack = Animator.StringToHash("Attack");
+        
         public InputReader inputReader;
         public InventorySO currentInventory;
 
@@ -42,6 +45,7 @@ namespace UI.Inventory
         public IntEventChannelSO restoreHealth;
         //To attack
         public VoidEventChannelSO attackEvent;
+        private static readonly int Heal = Animator.StringToHash("Heal");
 
         private void Start()
         {
@@ -82,20 +86,20 @@ namespace UI.Inventory
             }
 
             //Create the new ones
-            foreach (ItemSO item in currentInventory.items)
+            foreach (Item item in currentInventory.items)
             {
                 GameObject spawnedSlot =
                     Instantiate(inventorySlotPrefab, Vector3.zero, Quaternion.identity, inventoryMenu);
                 InventorySlot slot = spawnedSlot.GetComponent<InventorySlot>();
-                slot.itemSo = item;
+                slot.item = item;
                 slot.itemImage.sprite = item.itemSprite;
                 switch (item)
                 {
-                    case HealingItemSO heal:
+                    case HealingItem heal:
                         slot.leftText.text = heal.hpRestoreValue.ToString();
                         slot.rightText.text = "HP";
                         break;
-                    case WeaponSO weapon:
+                    case Weapon weapon:
                         slot.leftText.text = weapon.damage.ToString();
                         slot.rightText.text = weapon.usesLeft.ToString();
                         break;
@@ -138,11 +142,9 @@ namespace UI.Inventory
             }
             else
             {
-                heldItem.itemSo = _equippedItemSo;
+                heldItem.item = _equippedItemSo;
             }
         }
-
-       
         
         private IEnumerator MenuRotateRoutine(int direction)
         {
@@ -179,6 +181,7 @@ namespace UI.Inventory
             }
 
             _equippedItemSo = currentInventory.items[_currentItem];
+            heldItem.item = _equippedItemSo;
             _isRotating = false;
         }
 
@@ -186,10 +189,10 @@ namespace UI.Inventory
         {
             switch (_equippedItemSo)
             {
-                case HealingItemSO item:
+                case HealingItem item:
                     UseHealItem(item);
                     break;
-                case WeaponSO item:
+                case Weapon item:
                 {
                     switch (item.weaponType)
                     {
@@ -207,22 +210,21 @@ namespace UI.Inventory
             }
         }
         
-        private void UseHealItem(HealingItemSO item)
+        private void UseHealItem(HealingItem item)
         {
-            //TODO dar freeze temporário ao player/tocar animação
-            Debug.Log("Used healing item");
+            _animator.SetTrigger(Heal);
             restoreHealth.RaiseEvent(item.hpRestoreValue);
             useItemEvent.RaiseEvent(item);
         }
         
-        private void UseMeleeWeapon(WeaponSO weapon)
+        private void UseMeleeWeapon(Weapon weapon)
         {
-            _animator.SetTrigger(Animator.StringToHash("MeleeSwing"));
+            _animator.SetTrigger(Attack);
             attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);
         }
         
-        private void UseRangedWeapon(WeaponSO weapon)
+        private void UseRangedWeapon(Weapon weapon)
         {
             attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);

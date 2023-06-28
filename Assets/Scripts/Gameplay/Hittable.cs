@@ -48,7 +48,7 @@ namespace Gameplay
         /// <summary>
         /// Deals the damage.
         /// </summary>
-        public void DoDamage(int damage)
+        public virtual void DoDamage(int damage)
         {
             if (_invincible) return;
             //Else deal damage

@@ -15,13 +15,14 @@ namespace Management
 
         private int _currentDay = 1;
         private int _currentHour = 6;
-        private int _currentMinutes;
+        private int _currentMinutes = 0;
         
         public Volume ppv; // this is the post processing volume
         public bool activateLights; // checks if lights are on
         public GameObject[] lights; // all the lights we want on when its dark
 
         [Header("Broadcasting on")]
+        public TimeChannelSO minutePassedEvent;
         public TimeChannelSO hourPassedEvent;
         
         
@@ -31,26 +32,27 @@ namespace Management
             float hourLength = 1.0f * numberOfSeconds / numberOfHours;
             float minuteLength = hourLength / 60;
             ppv.weight = 1;
-            InvokeRepeating(nameof(PassHour), hourLength, hourLength);
-            InvokeRepeating(nameof(ControlPPV), 1f, 1f);
             InvokeRepeating(nameof(IncreaseMinute), minuteLength, minuteLength);
+            InvokeRepeating(nameof(PassHour), hourLength, hourLength);
         }
 
         private void IncreaseMinute()
         {
             _currentMinutes++;
+            minutePassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
+            ControlPPV();
         }
 
         private void PassHour()
         {
-            hourPassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour));
             _currentHour++;
             _currentMinutes = 0;
             if (_currentHour > 24)
             {
                 _currentDay++;
                 _currentHour = 1;
-            }
+            }            
+            hourPassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
             Debug.Log("Passed hour. It's " + _currentHour + " of the " + _currentDay + "th day.");
         }
         

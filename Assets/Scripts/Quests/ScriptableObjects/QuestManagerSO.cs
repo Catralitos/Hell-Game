@@ -32,7 +32,7 @@ namespace Quests.ScriptableObjects
         public VoidEventChannelSO playCompletionDialogueEvent;
         public VoidEventChannelSO playIncompleteDialogueEvent;
         public ItemEventChannelSO giveItemEvent;
-        public ItemEventChannelSO rewardItemEvent;
+        public ItemSOEventChannelSO rewardItemSoEvent;
         //public SaveSystem saveSystem;
 
         private StepSO _lastStepChecked;
@@ -160,7 +160,7 @@ namespace Quests.ScriptableObjects
                     case StepType.GiveItem:
                         if (inventory.Contains(currentStep.item))
                         {
-                            giveItemEvent.RaiseEvent(currentStep.item);
+                            giveItemEvent.RaiseEvent(inventory.GetKeyItem(currentStep.item));
                             playCompletionDialogueEvent.RaiseEvent();
                         }
                         else
@@ -225,7 +225,7 @@ namespace Quests.ScriptableObjects
                     case StepType.GiveItem:
                         if (inventory.Contains(currentStep.item))
                         {
-                            giveItemEvent.RaiseEvent(currentStep.item);
+                            giveItemEvent.RaiseEvent(inventory.GetKeyItem(currentStep.item));
                             playCompletionDialogueEvent.RaiseEvent();
                         }
                         else
@@ -268,7 +268,7 @@ namespace Quests.ScriptableObjects
                 case DialogueType.CompletionDialogue:
                     if (_lastStepChecked.hasReward && _lastStepChecked.rewardItem != null)
                     {
-                        rewardItemEvent.RaiseEvent(_lastStepChecked.rewardItem);
+                        rewardItemSoEvent.RaiseEvent(_lastStepChecked.rewardItem);
                     }
                     EndStep(_lastStepChecked);
                     break;

@@ -2,6 +2,7 @@
 using Events.ScriptableObjects;
 using Gameplay;
 using Inventory;
+using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
 using Projectiles;
 using UnityEngine;
@@ -28,15 +29,15 @@ namespace Player
         public Transform bulletSpawnPoint;
 
         [Header("Listening on")] public VoidEventChannelSO attackEvent;
-
+        
         public void OnEnable()
         {
-            attackEvent.OnEventRaised += Attack;
+            attackEvent.OnEventRaised += Attacking;
         }
 
         public void OnDisable()
         {
-            attackEvent.OnEventRaised -= Attack;
+            attackEvent.OnEventRaised -= Attacking;
         }
 
         private void Update()
@@ -44,13 +45,12 @@ namespace Player
             _cooldownLeft -= Time.deltaTime;
         }
 
-        private void Attack()
+        private void Attacking()
         {
             if (_cooldownLeft >= 0) return;
             //I can do this cast, because this event is only called when a weapon is equipped
-            WeaponSO weapon = heldItem.itemSo as WeaponSO;
 
-            if (weapon != null)
+            if (heldItem.item is Weapon weapon)
                 switch (weapon.weaponType)
                 {
                     case WeaponType.MELEE:
@@ -64,23 +64,20 @@ namespace Player
                 }
         }
 
-        private void MeleeAttack(WeaponSO weapon)
+        private void MeleeAttack(Weapon weapon)
         {
-            //Debug.Log("Melee Attack");
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
                 attackSpawnPoint.position, attackRange, hittables);
-
+            
             foreach (Collider2D hittable in hitObjects)
             {
                 hittable.gameObject.GetComponent<Hittable>().DoDamage(weapon.damage);
             }
-
             _cooldownLeft = attackCooldown;
         }
 
-        private void RangedAttack(WeaponSO weapon)
+        private void RangedAttack(Weapon weapon)
         {
-            Debug.Log("Ranged Attack");
             GameObject spawnedBullet =
                 Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             spawnedBullet.GetComponent<StraightBullet>().bulletDamage = weapon.damage;
@@ -89,7 +86,6 @@ namespace Player
 
         private void OnDrawGizmosSelected()
         {
-            GameObject o = heldItem.gameObject;
             Gizmos.DrawWireSphere(attackSpawnPoint.position, attackRange);
         }
     }

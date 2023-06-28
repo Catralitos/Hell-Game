@@ -1,4 +1,5 @@
 ﻿using Events.ScriptableObjects;
+using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
 using UnityEngine;
 
@@ -12,35 +13,34 @@ namespace Inventory
 
         [Header("Listening on")]
         //When you use an item and need to see if it is removed
-        public ItemEventChannelSO useItemEvent;
+        public ItemEventChannelSO useItemSoEvent;
         //when a step/quest rewards you
-        public ItemEventChannelSO rewardItemEvent;
+        public ItemSOEventChannelSO rewardItemSoEvent;
         //when you give an NPC an object
-        public ItemEventChannelSO giveItemEvent;
+        public ItemEventChannelSO giveItemSoEvent;
         //When you pick up an object
-        public ItemEventChannelSO addItemEvent;
+        public ItemSOEventChannelSO addItemSoEvent;
 
         [Header("Broadcasting on")] public VoidEventChannelSO updateInventoryEvent;
         
         private void OnEnable()
         {
-            useItemEvent.OnEventRaised += UseItemEventRaised;
-            addItemEvent.OnEventRaised += AddItem;
-            rewardItemEvent.OnEventRaised += AddItem;
-            giveItemEvent.OnEventRaised += RemoveItem;
+            useItemSoEvent.OnEventRaised += UseItemEventRaised;
+            addItemSoEvent.OnEventRaised += AddItem;
+            rewardItemSoEvent.OnEventRaised += AddItem;
+            giveItemSoEvent.OnEventRaised += RemoveItem;
         }
 
         private void OnDisable()
         {
-            useItemEvent.OnEventRaised -= UseItemEventRaised;
-            addItemEvent.OnEventRaised -= AddItem;
-            rewardItemEvent.OnEventRaised -= AddItem;
-            giveItemEvent.OnEventRaised -= RemoveItem;
+            useItemSoEvent.OnEventRaised -= UseItemEventRaised;
+            addItemSoEvent.OnEventRaised -= AddItem;
+            rewardItemSoEvent.OnEventRaised -= AddItem;
+            giveItemSoEvent.OnEventRaised -= RemoveItem;
         }
         
         private void AddItem(ItemSO item)
         {
-            Debug.Log("Chamou AddItem");
             if (currentInventory.Add(item))
             {
                 //_saveSystem.SaveDataToDisk();
@@ -48,7 +48,7 @@ namespace Inventory
             }
         }
 
-        private void RemoveItem(ItemSO item)
+        private void RemoveItem(Item item)
         {
             if (currentInventory.Remove(item))
             {
@@ -57,9 +57,9 @@ namespace Inventory
             }
         }
         
-        private void UseItemEventRaised(ItemSO item)
+        private void UseItemEventRaised(Item item)
         {
-            if (item is WeaponSO weapon)
+            if (item is Weapon weapon)
             {
                 //Raise event for combat
                 weapon.usesLeft--;

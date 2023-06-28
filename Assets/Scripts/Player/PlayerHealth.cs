@@ -18,9 +18,13 @@ namespace Player
 
         public int collisionDamage;
 
+        [Header("Broadcasting on")] 
+        public IntEventChannelSO playerHealthEvent;
+        
         [Header("Listening on")] 
         public IntEventChannelSO restoreHealthEvent;
-
+        
+        
         public void OnEnable()
         {
             restoreHealthEvent.OnEventRaised += RestoreHealth;
@@ -42,9 +46,16 @@ namespace Player
             DoDamage(collisionDamage);
         }
 
+        public override void DoDamage(int damage)
+        {
+            base.DoDamage(damage);
+            playerHealthEvent.RaiseEvent(hitsLeft);
+        }
+        
         private void RestoreHealth(int amount)
         {
             hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, maxHits);
+            playerHealthEvent.RaiseEvent(hitsLeft);
         }
     }
 }

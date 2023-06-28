@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5663644950f44b35bd210812d009b764, type: 3}
-  m_Name: GiveItemEvent
+  m_Script: {fileID: 11500000, guid: 9fb482ed6cbf4eb5a118a93c39605e6f, type: 3}
+  m_Name: PlayerHealthEvent
   m_EditorClassIdentifier: 
