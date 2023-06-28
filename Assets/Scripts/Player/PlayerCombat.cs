@@ -67,7 +67,6 @@ namespace Player
         private void MeleeAttack(WeaponSO weapon)
         {
             //Debug.Log("Melee Attack");
-            GameObject o = heldItem.gameObject;
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
                 attackSpawnPoint.position, attackRange, hittables);
 
