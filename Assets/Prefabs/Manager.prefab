@@ -337,6 +337,7 @@ MonoBehaviour:
   ppv: {fileID: 6754398001298720632}
   activateLights: 0
   lights: []
+  minutePassedEvent: {fileID: 11400000, guid: 0ae251a347e5f5e4b965ba6a3e713cf8, type: 2}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
 --- !u!114 &9190808101964460968
 MonoBehaviour:

@@ -8,11 +8,13 @@ namespace Management
     {
         [Range(1,3)] public int day;
         public int hour;
+        public int minute;
 
-        public TimeStep(int day, int hour)
+        public TimeStep(int day, int hour, int minute)
         {
             this.day = day;
             this.hour = hour;
+            this.minute = minute;
         }
     }
 }
