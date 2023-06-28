@@ -12,23 +12,22 @@ public class Angel : Enemy
     public Vector3 SignalSpot;
     public int angelBatch;
 
-    public Angel()
-    {
-        this.enemyStats.Type = "Angel";
-        this.enemyStats.AC = 14;
-        this.enemyStats.HP = 15;
-        // TODO decide if we're keeping rndm rolls  
-        this.DmgRoll = () => RandomHelper.RollD10() + 2;
-        this.enemyStats.SimpleDamage = 5;
-        this.enemyStats.AwakeDistance = 10;
-        this.enemyStats.WeaponRange = 1;
-        this.MainBehaviourTree = null;
-    }
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        this.Target = GameObject.FindGameObjectWithTag("Player");
+        base.Start();
+        this.info.Type = "Angel";
+        // TODO decide if we're keeping rndm rolls  
+        //        this.DmgRoll = () => RandomHelper.RollD10() + 2;
+        this.combat.simpleDamage = 5;
+        this.combat.DmgRoll = () => this.combat.simpleDamage;
+        this.info.awakeDistance = 10;
+        this.combat.attackRange = 1;
+        this.combat.AC = 20;
+        this.combat.attackCooldown = 2;
+        this.combat.cooldownLeft = 0;
+        this.MainBehaviourTree = null;
         InitializeBehaviourTree();
     }
 
