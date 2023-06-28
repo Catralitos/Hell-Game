@@ -28,21 +28,24 @@ namespace Characters.BehaviorTrees.EnemyTasks
             if (Target == null)
                 return Result.Failure;
 
+            Debug.Log("CHASE(" + Character.gameObject.name + "). Target = " + Target.name + ". Pos: " + Target.transform.position.ToString());
+
             if (Vector3.Distance(Character.transform.position, this.Target.transform.position) <= rangeMin)
             {
-                Debug.Log("Reached Destination: " + this.Target.transform.position.x + "|" + this.Target.transform.position.y + "|" + this.Target.transform.position.z);
+                Debug.Log("CHASE(" + Character.gameObject.name + "). Reached Destination: " + Target.transform.position.ToString());
                 return Result.Success;
             }
 
             else if (Vector3.Distance(Character.transform.position, this.Target.transform.position) >= rangeMax)
             {
-                Debug.Log("Target out of range: " + this.Target.transform.position.x + "|" + this.Target.transform.position.y + "|" + this.Target.transform.position.z);
+                Debug.Log("CHASE(" + Character.gameObject.name + "). Target out of range: " + Target.transform.position.ToString());
                 Character.StartPathfinding(Character.transform.position);
                 return Result.Failure;
             }
 
             else
             {
+                Debug.Log("CHASE(" + Character.gameObject.name + "). Still moving: " + Target.transform.position.ToString());
                 Character.StartPathfinding(Target.transform.position);
                 return Result.Running;
             }

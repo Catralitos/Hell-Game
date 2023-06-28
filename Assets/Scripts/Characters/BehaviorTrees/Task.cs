@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Characters.BehaviorTrees
 {
-    public class Task : MonoBehaviour
+    public class Task
     {
         public enum Result { Running, Failure, Success }
         public Task() { }

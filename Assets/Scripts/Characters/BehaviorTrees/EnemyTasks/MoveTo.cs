@@ -25,13 +25,17 @@ namespace Characters.BehaviorTrees.EnemyTasks
             if (Target == null)
                 return Result.Failure;
 
+            Debug.Log("MOVE_TO(" + Character.gameObject.name + "). Target = " + Target.name + ". Pos: " + Target.transform.position.ToString());
+
+
             if (Vector3.Distance(Character.transform.position, this.Target.transform.position) <= range)
             {
-                Debug.Log("Reached Destination: " + this.Target.transform.position.x + "|" + this.Target.transform.position.y + "|" + this.Target.transform.position.z);
+                Debug.Log("MOVE_TO(" + Character.gameObject.name + ").Reached Destination: " + Target.transform.position.ToString());
                 return Result.Success;
             }
             else
             {
+                Debug.Log("MOVE_TO(" + Character.gameObject.name + "). Still moving: " + Target.transform.position.ToString());
                 Character.StartPathfinding(Target.transform.position);
                 return Result.Running;
             }
