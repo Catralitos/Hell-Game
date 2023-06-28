@@ -37,6 +37,8 @@ namespace Player
 		/// The player input
 		/// </summary>
 		private PlayerInput _input;
+
+		private Animator _animator;
         
 		/// <summary>
 		/// The current angle of the character
@@ -54,11 +56,15 @@ namespace Player
 		[NonSerialized] public bool isAiming; // Used when using the keyboard to run, brings the normalised speed to 1
 
 		private bool _menuOpen;
-		
+		private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+		private static readonly int Vertical = Animator.StringToHash("Vertical");
+		private static readonly int Speed = Animator.StringToHash("Speed");
+
 		private void Start()
 		{
 			_body = GetComponent<Rigidbody2D>();
 			_input = GetComponent<PlayerInput>();
+			_animator = GetComponent<Animator>();
 		}
 
 		private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -96,7 +102,10 @@ namespace Player
 			{
 				AimWeapon();
 			}
-			else if (_moveVector != Vector2.zero)
+			_animator.SetFloat(Horizontal, _moveVector.x);
+			_animator.SetFloat(Vertical, _moveVector.y);
+            _animator.SetFloat(Speed, _moveVector.sqrMagnitude);
+			if (_moveVector != Vector2.zero)
 			{
 				_lastAngle = _angle;
 				_angle = Mathf.Atan2(_moveVector.y, _moveVector.x) * Mathf.Rad2Deg;

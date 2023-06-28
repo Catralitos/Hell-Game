@@ -246,7 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1932769967, guid: 96b6304a89e49c1409f675e4938c05b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -512,7 +512,6 @@ MonoBehaviour:
     m_Bits: 1792
   collisionDamage: 0
   restoreHealthEvent: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
-  enemyAttackedEvent: {fileID: 11400000, guid: c3cfd8fd7455f874db9dbe8370ce0210, type: 2}
 --- !u!114 &22109830361469905
 MonoBehaviour:
   m_ObjectHideFlags: 0
