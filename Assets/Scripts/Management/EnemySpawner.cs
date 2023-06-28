@@ -54,6 +54,10 @@ namespace Management
         {
             if (_numOfRespawns > 0 && !hasTimedRespawns) return;
             int numAngelsToSpawn;
+
+            if (_spawnedAngels == null)
+                _spawnedAngels = new List<Angel>();
+
             if (_spawnedAngels.Count > 0)
             {
                 List<Angel> aux = _spawnedAngels.Where(a => a != null && a.gameObject != null).ToList();
