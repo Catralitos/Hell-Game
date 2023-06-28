@@ -8,7 +8,7 @@ namespace Inventory.InstancedItems
     {
         public int hpRestoreValue;
         
-        public HealingItem(string itemName, Sprite itemSprite, bool isKeyItem, int hpRestoreValue) : base(itemName, itemSprite, isKeyItem)
+        public HealingItem(string itemName, Sprite itemSprite, int hpRestoreValue) : base(itemName, itemSprite)
         {
             this.hpRestoreValue = hpRestoreValue;
         }

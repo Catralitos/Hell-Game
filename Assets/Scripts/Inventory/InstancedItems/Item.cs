@@ -8,13 +8,11 @@ namespace Inventory.InstancedItems
     {
         public string itemName;
         public Sprite itemSprite;
-        public bool isKeyItem;
 
-        public Item(string itemName, Sprite itemSprite, bool isKeyItem)
+        public Item(string itemName, Sprite itemSprite)
         {
             this.itemName = itemName;
             this.itemSprite = itemSprite;
-            this.isKeyItem = isKeyItem;
         }
     }
 }

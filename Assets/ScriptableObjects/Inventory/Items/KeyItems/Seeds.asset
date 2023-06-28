@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906080782eeb6bd4289a70fed09f0c7b, type: 3}
+  m_Script: {fileID: 11500000, guid: fed88fbb170d43dc89101be90a7096cb, type: 3}
   m_Name: Seeds
   m_EditorClassIdentifier: 
   name: Seeds
   itemSprite: {fileID: 0}
-  isKeyItem: 1
