@@ -12,7 +12,7 @@ namespace Inventory.InstancedItems
 
         public WeaponType weaponType;
 
-        public Weapon(string itemName, Sprite itemSprite, bool isKeyItem, int damage, int usesLeft, WeaponType weaponType) : base(itemName, itemSprite, isKeyItem)
+        public Weapon(string itemName, Sprite itemSprite, int damage, int usesLeft, WeaponType weaponType) : base(itemName, itemSprite)
         {
             this.damage = damage;
             this.usesLeft = usesLeft;

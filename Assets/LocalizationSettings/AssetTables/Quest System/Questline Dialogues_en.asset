@@ -35,11 +35,365 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237832728576
-    m_Localized: This is something an NPC might say.
+    m_Localized: Oh hello. Do you need my help with anything?
     m_Metadata:
       m_Items: []
   - m_Id: 302123020288
-    m_Localized: And then he might say this!
+    m_Localized: You should get some sleep. You need to be well rested to fight those
+      angels haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683034500263936
+    m_Localized: "Aw, \xC1gathe looks so cute tod- Oh, you're here\u2026You didn't
+      hear anything! Right?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683422515326976
+    m_Localized: Nights can be really dark around here, watch where you step!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683505331859456
+    m_Localized: Hmm. Yes, hello. I would like to be left alone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683587905122304
+    m_Localized: "I wonder when they\u2019ll arrive\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683635552415744
+    m_Localized: Woof woof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683707300179968
+    m_Localized: Woooof...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683886409543680
+    m_Localized: (sigh)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684217256243200
+    m_Localized: Oh hello, I did not see you there. Is there anything I can help
+      you with?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684266241519616
+    m_Localized: "Hello! I\u2019m just looking around.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684317147787264
+    m_Localized: "New here aren\u2019t you?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684406603902976
+    m_Localized: "Yes, I just arrived\u2026uh\u2026 fell\u2026 here today. Hmm, you
+      look a bit gloomy. Is there something hell is hiding from me?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684483032510464
+    m_Localized: " Oh, no no. Hell is fine. I won\u2019t bother you with my troubles.
+      Forgive me but I must take my leave."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684546014179328
+    m_Localized: "No, wait! Please! Let me help you! It\u2019s the least I can do.
+      Everyone has been so welcoming. Please."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684598149378048
+    m_Localized: "(sigh) Well, hmm. There\u2019s a lot going on, things you cannot
+      assist me with. However\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684710841937920
+    m_Localized: "If you are so\u2026 insistent\u2026 there is something you can
+      help me with. \xC1gathe forced me into last week\u2019s potluck\u2026 I always
+      managed to dodge those but, wrong place, wrong time."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684850625507328
+    m_Localized: "The food there was\u2026 something, and the casserole I took disappeared
+      without me even touching it. Even worse, \xC1gathe never returned my Tupperware."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684885362733056
+    m_Localized: "And let me tell you, they are expensive down here, really expensive.
+      So, if you really want to help me, please go get my Tupperware from \xC1gathe.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684948004663296
+    m_Localized: "Will do!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685059891916800
+    m_Localized: "\xC1gathe! There you are."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685084101439488
+    m_Localized: Here I am.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685178418753536
+    m_Localized: "Do you still happen to have the Tupperware that that gloomy man
+      over there brought to last week\u2019s potluck? He really wants it back."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685537346318336
+    m_Localized: "Gloomy man? I\u2019m guessing that\u2019s good ol\u2019 Leonard.
+      We call him old, but honestly, Satan knows how old he is. Tougher to kill than
+      a demon probably\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685649455869952
+    m_Localized: "Oh, look at the time, I have to prepare for the patrol tomorrow.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685793744121856
+    m_Localized: "\xC1gathe. The Tupperware.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685831220228096
+    m_Localized: "Yeah\u2026 about that\u2026 We might have a slight problem\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685903668441088
+    m_Localized: Did you lose it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685995070713856
+    m_Localized: "Well, not exactly lost it\u2026 He, hmm\u2026 left."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7686953687281664
+    m_Localized: What do you mean he left? Are you saying he gained legs and walked
+      away?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7687414263803904
+    m_Localized: "Uh, he probably ran away, but yes. That.  As some things in Hell
+      do.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7687997964120064
+    m_Localized: "\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688223651229696
+    m_Localized: 'Did you see where it went?
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688274691715072
+    m_Localized: "No, it left in the dead of night; both Jilaiya and I were sleeping.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688326743027712
+    m_Localized: That Tupperware has to be somewhere.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688751265312768
+    m_Localized: Thank you so much.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688801391439872
+    m_Localized: "Let\u2019s get you home.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688864352137216
+    m_Localized: "I found it!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688908396523520
+    m_Localized: "\xC1gathe lost it, didn\u2019t she?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689023152680960
+    m_Localized: Actually, it gained sentience and left on its own.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689063048900608
+    m_Localized: "\u2026 Either way, it doesn\u2019t matter. Thank you. Hope you
+      are glad you helped me. Now, please shoo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689204413722624
+    m_Localized: "But\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689270679531520
+    m_Localized: "Shoo, shooo\u2026. Go on, leave\u2026 Look, I made some casserole
+      yesterday. If I give it to you, will you leave?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689404867899392
+    m_Localized: "(Whispering to herself) Oh no, not again\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689521779929088
+    m_Localized: '(Yelled) WHERE ARE YOU!?
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689635995021312
+    m_Localized: "Are you okay? What\u2019s wrong?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689811413397504
+    m_Localized: " Please help me! I\u2019m going insane! Fluffy ran off again! I\u2019ve
+      looked for him everywhere."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689850470756352
+    m_Localized: "Fluffy?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689881370193920
+    m_Localized: "Yes, yes my beautiful rock. Just go look for him already. If you\u2019re
+      not planning on helping me, just back off. I need to find him."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690045619138560
+    m_Localized: " Hey, hey, calm down. There\u2019s no need to be rude. Where did
+      you last see him?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690068104802304
+    m_Localized: "I\u2019m sorry\u2026 He ran away from our house this evening. He
+      always does this when \xC1gathe is out scouting, but he always gets lost."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690129542967296
+    m_Localized: "Last time, he got really hurt by some\u2026 angel\u2026 That thing
+      didn\u2019t have a nice time after that."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690252285079552
+    m_Localized: ' I will do my best!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690283255820288
+    m_Localized: "\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690330232025088
+    m_Localized: "I found him by my house actually. He doesn\u2019t look injured.
+      He looks very happy!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690382207840256
+    m_Localized: "Fluffy! You\u2019re okay! Don\u2019t ever scare me like that ever
+      again."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690461027201024
+    m_Localized: "(Whispering to Fluffy) Someone\u2019s getting extra treats today."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690563254972416
+    m_Localized: "I don\u2019t know how to thank you! Sorry for being so nasty before\u2026
+      I was just so worried."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690580950740992
+    m_Localized: " It\u2019s okay, I get it. Fluffy deserves the concern. He\u2019s
+      a cutie!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690611489468416
+    m_Localized: "(chuckles) We\u2019ve had him since he was born, he is a great
+      friend. Hmm, you know what?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690687955824640
+    m_Localized: "Have these hmm\u2026 Ninja stars. I have no use for them anymore.
+      It\u2019s the least I can give you!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690963806810112
+    m_Localized: "Well, have you rested up enough? You did have quite the harsh fall.
+      I\u2019m \xC1gathe, and you are\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691685298401280
+    m_Localized: "Arlie, I\u2019m Arlie. Ouch, my head really hurts\u2026 Did I make
+      it down? To Hell?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691722438963200
+    m_Localized: Yup. You are in Hell! The greatest place ever in my opinion. Although
+      I have never left haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691768345620480
+    m_Localized: "Oh, were you born here? I didn\u2019t know you could do that.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691820216578048
+    m_Localized: "Oh, were you born here? I didn\u2019t know you could do that.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691998424166400
+    m_Localized: "Yes. Some are, some aren\u2019t. Doesn\u2019t matter. We\u2019re
+      friendly down here. Place is great."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7692719978672128
+    m_Localized: "Only problem is the angels. They are not friendly. They don\u2019t
+      like us, hell-dwellers."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7692863218348032
+    m_Localized: "Oh, I guess that makes sense. Would you mind if I stayed here then?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693081699643392
+    m_Localized: "No, of course not! Hmm, but since you\u2019re here to stay. Have
+      you ever killed an angel?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693122795433984
+    m_Localized: Kill? An angel?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693166462332928
+    m_Localized: "That\u2019s a no. Don\u2019t worry I\u2019ll teach you how."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693204232040448
+    m_Localized: "Now that I think about it, the best learning method is immersion!
+      Just swing that sword if you\xB4re close to him, and shoot the gun if you are
+      far away."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693489482461184
+    m_Localized: Some angels are tougher than others, you have to be careful. Now,
+      kill those two over there!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693527398969344
+    m_Localized: You were great for a first timer. Not even my girlfriend could kill
+      an angel like you just did. Good job!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693834254249984
+    m_Localized: "Thanks. I\u2019m exhausted."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7694037959012352
+    m_Localized: You will get used to it. Since some angels are harder, you may need
+      some higher-grade weapons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7694074130690048
+    m_Localized: "If you\u2019re nice to people and look around with a sharp enough
+      eye you\u2019ll come across some really nice ones.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7695302663303168
+    m_Localized: Ooh, also, take this Hell Fruit! It will make you feel better when
+      those angels hurt you.
     m_Metadata:
       m_Items: []
   references:

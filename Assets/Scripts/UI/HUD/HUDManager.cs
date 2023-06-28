@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Events.ScriptableObjects;
+using Inventory.ScriptableObjects;
 using Management;
 using TMPro;
 using UnityEngine;
@@ -10,16 +10,21 @@ namespace UI.HUD
 {
     public class HUDManager : MonoBehaviour
     {
+        public InventorySO inventory;
+        
         public List<GameObject> hearts;
         public TextMeshProUGUI timeText;
         public Image timeImage;
 
+        public List<KeyItemDisplayer> keyItems;
+        
         private const int StartingHours = 24 + 24 + 18;
         private int _currentHours;
         
         [Header("Listening on")] public IntEventChannelSO playerHealthEvent;
         public TimeChannelSO minutePassedEvent;
         public TimeChannelSO hourPassedEvent;
+        public VoidEventChannelSO updateInventoryEvent;
 
         private void Start()
         {
@@ -31,6 +36,7 @@ namespace UI.HUD
             playerHealthEvent.OnEventRaised += UpdateHealth;
             minutePassedEvent.OnEventRaised += UpdateTimeText;
             hourPassedEvent.OnEventRaised += UpdateTimeFillEvent;
+            updateInventoryEvent.OnEventRaised += UpdateKeyItems;
         }
 
         private void OnDisable()
@@ -38,6 +44,7 @@ namespace UI.HUD
             playerHealthEvent.OnEventRaised -= UpdateHealth;
             minutePassedEvent.OnEventRaised -= UpdateTimeText;
             hourPassedEvent.OnEventRaised -= UpdateTimeFillEvent;
+            updateInventoryEvent.OnEventRaised -= UpdateKeyItems;
         }
 
         private void UpdateHealth(int health)
@@ -53,7 +60,7 @@ namespace UI.HUD
             int hours = time.hour;
             int minutes = time.minute;
             
-            string niceTime = string.Format("{0:00}:{1:00}", hours, minutes);
+            string niceTime = $"{hours:00}:{minutes:00}";
             
             timeText.text = "Day " + time.day + " - " + niceTime;
         }
@@ -62,6 +69,21 @@ namespace UI.HUD
         {
             _currentHours--;
             timeImage.fillAmount = 1.0f * _currentHours / StartingHours;
+        }
+
+        private void UpdateKeyItems()
+        {
+            foreach (KeyItemDisplayer k in keyItems)
+            {
+                bool isIn = inventory.Contains(k.keyItem);
+                if (isIn)
+                {
+                    if (!k.obtained) k.obtained = true;
+                }
+
+                k.inInventory = isIn;
+                k.UpdateImage();
+            }
         }
     }
 }
