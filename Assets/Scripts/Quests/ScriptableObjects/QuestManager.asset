@@ -22,4 +22,4 @@ MonoBehaviour:
   playCompletionDialogueEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
   playIncompleteDialogueEvent: {fileID: 11400000, guid: 93450d794085def4bac153bda69de4bf, type: 2}
   giveItemEvent: {fileID: 11400000, guid: 1526edc5469699749b68c5be948495ea, type: 2}
-  rewardItemEvent: {fileID: 11400000, guid: ee88dfd500dc0ff41b84174d15b3b420, type: 2}
+  rewardItemSoEvent: {fileID: 11400000, guid: ee88dfd500dc0ff41b84174d15b3b420, type: 2}

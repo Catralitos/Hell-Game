@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Extensions;
+using Inventory.InstancedItems;
 using UnityEngine;
 
 namespace Inventory.ScriptableObjects
@@ -8,37 +11,50 @@ namespace Inventory.ScriptableObjects
     {
         public int maxInventoryItems;
         [Tooltip("The collection of items and their quantities.")]
-        public List<ItemSO> items = new List<ItemSO>();
+        public List<Item> items = new List<Item>();
+        public List<Item> keyItems = new List<Item>();
         public List<ItemSO> defaultItems = new List<ItemSO>();
-        public List<ItemSO> keyItems = new List<ItemSO>();
         
         public void Init()
         {
-            items ??= new List<ItemSO>();
+            items ??= new List<Item>();
             items.Clear();
             foreach (ItemSO item in defaultItems)
             {
-                items.Add(Instantiate(item));
+                switch (item)
+                {
+                    case HealingItemSO heal:
+                        items.Add(new HealingItem(heal.name, heal.itemSprite, false, heal.hpRestoreValue));
+                        break;
+                    case WeaponSO weapon:
+                        items.Add(new Weapon(weapon.name, weapon.itemSprite, false, weapon.damage, weapon.usesLeft, weapon.weaponType));
+                        break;
+                    default:
+                        keyItems.Add(new Item(item.name, item.itemSprite, true));
+                        break;
+                }
             }
         }
 
         public bool Add(ItemSO item)
         {
-            if (!item.isKeyItem)
+            switch (item)
             {
-                if (items.Count >= maxInventoryItems)
-                {
-                    return false;
-                }
-
-                items.Add(Instantiate(item));
-                return true;
+                case HealingItemSO heal:
+                    if (items.Count >= maxInventoryItems) return false;
+                    items.Add(new HealingItem(heal.name, heal.itemSprite, false, heal.hpRestoreValue));
+                    return true;
+                case WeaponSO weapon:
+                    if (items.Count >= maxInventoryItems) return false;
+                    items.Add(new Weapon(weapon.name, weapon.itemSprite, false, weapon.damage, weapon.usesLeft, weapon.weaponType));
+                    return true;
+                default:
+                    keyItems.Add(new Item(item.name, item.itemSprite, true));
+                    return true;
             }
-            keyItems.Add(Instantiate(item));
-            return true;
         }
 
-        public bool Remove(ItemSO item)
+        public bool Remove(Item item)
         {
             if (!items.Contains(item) || !keyItems.Contains(item)) return false;
             if (!item.isKeyItem)
@@ -50,10 +66,20 @@ namespace Inventory.ScriptableObjects
             return true;
         }
         
-        public bool Contains(ItemSO item)
+        public bool Contains(Item item)
         {
             return items.Contains(item) || keyItems.Contains(item);
         }
+        
+        public bool Contains(ItemSO item)
+        {
+            List<Item> aux = items.Union(keyItems).ToList();
+            return aux.Any(i => i.itemName == item.name);
+        }
 
+        public Item GetKeyItem(ItemSO item)
+        {
+            return keyItems.FirstOrDefault(k => k.itemName == item.name);
+        }
     }
 }

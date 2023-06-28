@@ -97,7 +97,11 @@ namespace Player
 
 		private void Update()
 		{
-			if (_menuOpen) return;
+			if (_menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay)
+			{
+				_animator.SetFloat(Speed, 0.0f);
+				return;
+			}
 			if (isAiming)
 			{
 				AimWeapon();
@@ -110,12 +114,14 @@ namespace Player
 				_lastAngle = _angle;
 				_angle = Mathf.Atan2(_moveVector.y, _moveVector.x) * Mathf.Rad2Deg;
 				itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
+				int y = itemHolder.transform.rotation.z is > 90 or < -90 ? -1 : 1;
+				itemHolder.transform.localScale = new Vector3(1, y, 1);
 			}
 		}
 
 		private void FixedUpdate()
 		{
-			if (isAiming || _menuOpen)
+			if (isAiming || _menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay)
 			{
 				_body.velocity = Vector2.zero;
 				return;
@@ -138,7 +144,8 @@ namespace Player
 					{
 						itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
 					}
-
+					int y = itemHolder.transform.rotation.z is > 90 or < -90 ? -1 : 1;
+					itemHolder.transform.localScale = new Vector3(1, y, 1);
 					break;
 				}
 				case "Keyboard":
@@ -156,8 +163,9 @@ namespace Player
 						{
 							itemHolder.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
 						}
+						int y = itemHolder.transform.rotation.z is > 90 or < -90 ? -1 : 1;
+						itemHolder.transform.localScale = new Vector3(1, y, 1);
 					}
-
 					break;
 				}
 			}

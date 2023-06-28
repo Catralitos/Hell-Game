@@ -1,20 +1,15 @@
-﻿using Inventory.ScriptableObjects;
+﻿using Inventory.InstancedItems;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Events.ScriptableObjects
 {
-    /// <summary>
-    /// This class is used for Item interaction events.
-    /// Example: Pick up an item passed as paramater
-    /// </summary>
-
     [CreateAssetMenu(menuName = "Events/UI/Item Event Channel")]
     public class ItemEventChannelSO : ScriptableObject
     {
-        public UnityAction<ItemSO> OnEventRaised;
+        public UnityAction<Item> OnEventRaised;
 	
-        public void RaiseEvent(ItemSO item)
+        public void RaiseEvent(Item item)
         {
             OnEventRaised?.Invoke(item);
         }

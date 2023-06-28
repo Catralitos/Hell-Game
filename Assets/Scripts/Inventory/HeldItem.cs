@@ -1,6 +1,5 @@
-using Inventory.ScriptableObjects;
+using Inventory.InstancedItems;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Inventory
 {
@@ -8,17 +7,17 @@ namespace Inventory
     {
         private SpriteRenderer _itemImage;
 
-        [FormerlySerializedAs("item")] public ItemSO itemSo;
+        public Item item;
         
         private void Start()
         {
             _itemImage = GetComponent<SpriteRenderer>();
-            _itemImage.sprite = itemSo.itemSprite;
+            if (item != null) _itemImage.sprite = item.itemSprite;
         }
 
         private void Update()
         {
-            _itemImage.sprite = itemSo != null ? itemSo.itemSprite : null;
+            _itemImage.sprite = item?.itemSprite;
         }
     }
 }

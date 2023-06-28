@@ -18,7 +18,7 @@ namespace Interaction
 
 		//Events for the different interaction types
 		[Header("Broadcasting on")]
-		public ItemEventChannelSO onObjectPickUp;
+		public ItemSOEventChannelSO onObjectPickUp;
 		public DialogueActorChannelSO startTalking;
 		public InteractionUIEventChannelSO toggleInteractionUI;
 		

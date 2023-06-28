@@ -2,6 +2,7 @@
 using Events.ScriptableObjects;
 using Gameplay;
 using Inventory;
+using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
 using Projectiles;
 using UnityEngine;
@@ -48,9 +49,8 @@ namespace Player
         {
             if (_cooldownLeft >= 0) return;
             //I can do this cast, because this event is only called when a weapon is equipped
-            WeaponSO weapon = heldItem.itemSo as WeaponSO;
 
-            if (weapon != null)
+            if (heldItem.item is Weapon weapon)
                 switch (weapon.weaponType)
                 {
                     case WeaponType.MELEE:
@@ -64,7 +64,7 @@ namespace Player
                 }
         }
 
-        private void MeleeAttack(WeaponSO weapon)
+        private void MeleeAttack(Weapon weapon)
         {
             //Debug.Log("Melee Attack");
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
@@ -78,7 +78,7 @@ namespace Player
             _cooldownLeft = attackCooldown;
         }
 
-        private void RangedAttack(WeaponSO weapon)
+        private void RangedAttack(Weapon weapon)
         {
             Debug.Log("Ranged Attack");
             GameObject spawnedBullet =
@@ -89,7 +89,6 @@ namespace Player
 
         private void OnDrawGizmosSelected()
         {
-            GameObject o = heldItem.gameObject;
             Gizmos.DrawWireSphere(attackSpawnPoint.position, attackRange);
         }
     }
