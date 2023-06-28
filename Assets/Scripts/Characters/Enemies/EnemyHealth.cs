@@ -16,5 +16,13 @@ namespace Enemies
             this.hitsLeft = 3;
             this.invincibilityFrames = 0; // Cannot be invincible by default
         }
+
+        protected override void Die()
+        {
+            Destroy(transform.parent.gameObject);
+            Debug.Log("Parent destroyed");
+            base.Die();
+            Debug.Log("Current object destroyed");
+        }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Pickable
+  - TTest
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - PlayerAttack
   - Wall
   - Pickable
-  - 
+  - TTest
   - 
   - 
   - 

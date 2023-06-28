@@ -6,11 +6,13 @@ using System;
 using Characters;
 using Assets.Scripts.Utils;
 using Characters.BehaviorTrees.Trees;
+using Pathfinding;
 
 public class Angel : Enemy
 {
     public Vector3 SignalSpot;
     public int angelBatch;
+    private AIDestinationSetter AIDestinationSetter;
 
 
     // Start is called before the first frame update
@@ -28,14 +30,8 @@ public class Angel : Enemy
         this.combat.attackCooldown = 2;
         this.combat.cooldownLeft = 0;
         this.MainBehaviourTree = null;
-        InitializeBehaviourTree();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (this.MainBehaviourTree != null)
-            this.MainBehaviourTree.Run();
+        this.AIDestinationSetter = GetComponentInParent<AIDestinationSetter>();
+        this.AIDestinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public override void InitializeBehaviourTree()

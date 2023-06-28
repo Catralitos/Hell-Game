@@ -46,6 +46,11 @@ namespace Characters
 
         public void SetupNavmesh()
         {
+            // DO NOTHING
+        }
+
+        public void DoNotSetupNavmesh()
+        {
             previousTarget = new Vector3(0.0f, 0.0f, 0.0f);
             this.character = this.gameObject;
             navMeshAgent = this.GetComponent<NavMeshAgent>();
@@ -53,10 +58,22 @@ namespace Characters
 
         public void StartPathfinding(Vector3 targetPosition)
         {
+            // DO NOTHING
+        }
+
+        public void DoNotStartPathfinding(Vector3 targetPosition)
+        {
+            if (targetPosition == null)
+            {
+                Debug.Log("Target position does not exist");
+                return;
+            }
+
             //if the targetPosition received is the same as a previous target, then this a request for the same target
             //no need to redo the pathfinding search
             if (!this.previousTarget.Equals(targetPosition))
             {
+                //Debug.Log("Prev Target: " + previousTarget.ToString() + "New target: " + targetPosition.ToString());
 
                 this.previousTarget = targetPosition;
 
@@ -67,10 +84,22 @@ namespace Characters
 
         public void StopPathfinding()
         {
+            // DO NOTHING
+        }
+
+        public void DoNotStopPathfinding()
+        {
             navMeshAgent.isStopped = true;
         }
 
         public float GetDistanceToTarget(Vector3 originalPosition, Vector3 targetPosition)
+        {
+            // DO NOTHING
+            return 50.0f;
+        }
+
+
+        public float DoNotGetDistanceToTarget(Vector3 originalPosition, Vector3 targetPosition)
         {
             var distance = 0.0f;
 
