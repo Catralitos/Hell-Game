@@ -547,7 +547,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 229786026613544643, guid: ed25bcb6a9aba044982cfda886ab7089, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 229786026613544643, guid: ed25bcb6a9aba044982cfda886ab7089, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4715,9 +4715,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4239302559843136041, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239302559843136041, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239302559843136041, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1029339715
+      objectReference: {fileID: 0}
     - target: {fileID: 4980594151969157546, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
       propertyPath: m_Name
       value: LeonardHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742936699609094871, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742936699609094871, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742936699609094871, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1029339715
       objectReference: {fileID: 0}
     - target: {fileID: 5910929004614283376, guid: 7f6df40b41540404d932bf21f5510b1f, type: 3}
       propertyPath: m_RootOrder
@@ -4969,7 +4993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565401187187027521, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7231062648923516474, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: m_RootOrder
