@@ -16,11 +16,11 @@ namespace Characters.BehaviorTrees.Trees
             // Additionally it is possible to create more complex behaviour by combining different tasks and composite tasks...
             this.children = new List<Task>()
                 {
-                    new IsCharacterNearTarget(character, target, character.enemyStats.AwakeDistance),
+                    new IsCharacterNearTarget(character, target, character.info.awakeDistance),
                     new SignalAngels(character, backupTarget),
                     new Chase(character, target,
-                        character.enemyStats.WeaponRange,
-                        1.5f * character.enemyStats.AwakeDistance)
+                        character.combat.attackRange,
+                        1.5f * character.info.awakeDistance)
                 };
 
         }

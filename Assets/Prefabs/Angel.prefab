@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5815974456478291133}
   - component: {fileID: 5648227320458870930}
   - component: {fileID: 425065492810882123}
+  - component: {fileID: 6508549250853047047}
+  - component: {fileID: 8051185239355364116}
   m_Layer: 8
   m_Name: Angel
   m_TagString: Untagged
@@ -172,11 +174,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68e0270f5cd26d4880476a43b23d23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainBehaviourTree: {fileID: 0}
   npcState: 0
   talkingTo: []
-  onEnemyAttacked: {fileID: 11400000, guid: c3cfd8fd7455f874db9dbe8370ce0210, type: 2}
+  combat: {fileID: 0}
+  health: {fileID: 0}
   SignalSpot: {x: 0, y: 0, z: 0}
+  angelBatch: 0
+--- !u!114 &6508549250853047047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dc9d7829c9f2d458b4511e631f20fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 3
+  cooldownLeft: 0
+  simpleDamage: 3
+  hittables:
+    serializedVersion: 2
+    m_Bits: 64
+  AC: 0
+  attackRange: 2
+  attackSpawnPoint: {fileID: 8537431291700789406}
+--- !u!114 &8051185239355364116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a0bdf1a0e7e104fb59c88c7f289756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMaterial: {fileID: 0}
+  maxHits: 3
+  hitsLeft: 3
+  invincibilityFrames: 0
 --- !u!1 &8098618739491265484
 GameObject:
   m_ObjectHideFlags: 0

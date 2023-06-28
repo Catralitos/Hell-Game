@@ -17,9 +17,9 @@ namespace Characters.BehaviorTrees.Trees
                         new SearchForTarget(
                             character,
                             target,
-                            character.enemyStats.AwakeDistance,
+                            character.info.awakeDistance,
                             patrolPoints[i],
-                            character.enemyStats.WeaponRange
+                            character.combat.attackRange
                          )
                  );
             }

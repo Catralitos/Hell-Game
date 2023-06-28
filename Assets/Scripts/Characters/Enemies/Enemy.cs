@@ -4,38 +4,34 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 using Characters;
-using Events.ScriptableObjects;
+using Enemies;
+using Gameplay;
 
 public class Enemy : NPC
 {
-
-    [Header("Broadcasting on")]
-    public IntEventChannelSO onEnemyAttacked;
-    public struct EnemyStats
+    public struct EnemyInfo
     {
         public string Type;
-        public int AC;
-        public int SimpleDamage;
-        public float AwakeDistance;
-        public float WeaponRange;
-        public float AttackCooldown;
-        public float HP;
+        public float awakeDistance;
     }
+
+    public EnemyInfo info;
+
+    [HideInInspector] public EnemyCombat combat;
+    [HideInInspector] public EnemyHealth health;
 
     protected float decisionRate = 2.0f;
     protected NavMeshAgent agent;
     public GameObject Target { get; set; }
 
-    public EnemyStats enemyStats;
-
-    public Func<int> DmgRoll;
-
-
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
+        this.combat = GetComponent<EnemyCombat>();
+        this.health = GetComponent<EnemyHealth>();
+        this.info = new EnemyInfo();
         this.Target = GameObject.FindGameObjectWithTag("Player");
-        InitializeBehaviourTree();
+
     }
 
     // Update is called once per frame
@@ -52,10 +48,10 @@ public class Enemy : NPC
 
     void CheckPlayerPosition()
     {
-        if (Vector3.Distance(this.transform.position, this.Target.transform.position) < enemyStats.AwakeDistance)
+        if (Vector3.Distance(this.transform.position, this.Target.transform.position) < info.awakeDistance)
         {
 
-            if (Vector3.Distance(this.transform.position, this.Target.transform.position) <= enemyStats.WeaponRange)
+            if (Vector3.Distance(this.transform.position, this.Target.transform.position) <= combat.attackRange)
             {
                 AttackPlayer();
             }
@@ -80,8 +76,7 @@ public class Enemy : NPC
 
     public void AttackPlayer()
     {
-        if (onEnemyAttacked != null)
-            onEnemyAttacked.RaiseEvent(this.enemyStats.SimpleDamage);
+        combat.Attack();
     }
 
     public void MoveTo(Vector3 targetPosition)
