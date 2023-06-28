@@ -28,7 +28,8 @@ namespace UI.Inventory
         private int _currentItem;
 
         private Animator _animator;
-
+        private static readonly int Attack = Animator.StringToHash("Attack");
+        
         public InputReader inputReader;
         public InventorySO currentInventory;
 
@@ -44,6 +45,7 @@ namespace UI.Inventory
         public IntEventChannelSO restoreHealth;
         //To attack
         public VoidEventChannelSO attackEvent;
+        private static readonly int Heal = Animator.StringToHash("Heal");
 
         private void Start()
         {
@@ -210,15 +212,14 @@ namespace UI.Inventory
         
         private void UseHealItem(HealingItem item)
         {
-            //TODO dar freeze temporário ao player/tocar animação
-            Debug.Log("Used healing item");
+            _animator.SetTrigger(Heal);
             restoreHealth.RaiseEvent(item.hpRestoreValue);
             useItemEvent.RaiseEvent(item);
         }
         
         private void UseMeleeWeapon(Weapon weapon)
         {
-            _animator.SetTrigger(Animator.StringToHash("MeleeSwing"));
+            _animator.SetTrigger(Attack);
             attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);
         }

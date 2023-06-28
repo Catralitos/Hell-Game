@@ -97,7 +97,7 @@ namespace Player
 
 		private void Update()
 		{
-			if (_menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay)
+			if (_menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
 			{
 				_animator.SetFloat(Speed, 0.0f);
 				return;
@@ -121,7 +121,7 @@ namespace Player
 
 		private void FixedUpdate()
 		{
-			if (isAiming || _menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay)
+			if (isAiming || _menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
 			{
 				_body.velocity = Vector2.zero;
 				return;

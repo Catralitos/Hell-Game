@@ -129,7 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bb790c4a3f910499ac4567832a7786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSo: {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
+  item:
+    itemName: 
+    itemSprite: {fileID: 0}
+    isKeyItem: 0
 --- !u!1 &4253422927061628453
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,13 +507,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMaterial: {fileID: 0}
-  maxHits: 5
-  hitsLeft: 5
+  maxHits: 10
+  hitsLeft: 10
   invincibilityFrames: 0
   damagers:
     serializedVersion: 2
     m_Bits: 1792
-  collisionDamage: 0
+  collisionDamage: 1
   restoreHealthEvent: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
 --- !u!114 &22109830361469905
 MonoBehaviour:
@@ -526,7 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemHolder: {fileID: 1508113649789760079}
   heldItem: {fileID: 6969090850982002938}
-  attackCooldown: 2
+  attackCooldown: 0.75
   hittables:
     serializedVersion: 2
     m_Bits: 256

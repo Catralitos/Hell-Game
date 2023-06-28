@@ -4799,6 +4799,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22109830361469905, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: attackCooldown
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819429049786188024, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: maxHits
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819429049786188024, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: hitsLeft
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819429049786188024, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: collisionDamage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4811805767676476648, guid: adeb8adef1f373f429899b86c1206942, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4952,7 +4968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565401187187027521, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231062648923516474, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: m_RootOrder
