@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b110c070d9c29274d904a2acf3a26db4, type: 3}
-  m_Name: TestGun
+  m_Script: {fileID: 11500000, guid: 6f1c48f31ae2d6a4f85da756ca0f8bc0, type: 3}
+  m_Name: HellSmoothie
   m_EditorClassIdentifier: 
-  name: TestGun
-  itemSprite: {fileID: 1677212186, guid: c56e9b3c34392fa4d82438868147981b, type: 3}
+  name: "Hell\u2019s Smoothie of Hot Brimstone  "
+  itemSprite: {fileID: 0}
   isKeyItem: 0
-  damage: 5
-  defaultUses: 5
-  usesLeft: 5
-  weaponType: 0
+  hpRestoreValue: 0
