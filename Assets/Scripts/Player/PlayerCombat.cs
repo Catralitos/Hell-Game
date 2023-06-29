@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using Events.ScriptableObjects;
 using Gameplay;
 using Inventory;
@@ -29,6 +30,13 @@ namespace Player
         public Transform bulletSpawnPoint;
 
         [Header("Listening on")] public VoidEventChannelSO attackEvent;
+       
+        private AudioManager _audioManager;
+
+        private void Start()
+        {
+            _audioManager = GetComponent<AudioManager>();
+        }
         
         public void OnEnable()
         {
@@ -66,6 +74,7 @@ namespace Player
 
         private void MeleeAttack(Weapon weapon)
         {
+            _audioManager.Play("MeleeAttack");
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
                 attackSpawnPoint.position, attackRange, hittables);
             
@@ -78,6 +87,7 @@ namespace Player
 
         private void RangedAttack(Weapon weapon)
         {
+            _audioManager.Play("RangedAttack");
             GameObject spawnedBullet =
                 Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             spawnedBullet.GetComponent<StraightBullet>().bulletDamage = weapon.damage;

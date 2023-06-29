@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Audio;
 using Gameplay.ScriptableObjects;
 using Inventory.ScriptableObjects;
 using Management.ScriptableObjects;
@@ -14,12 +16,19 @@ namespace Management
         public InventorySO inventory;
         public EnemyTrackerSO enemyTracker;
 
+        private AudioManager _audioManager;
         private void Awake()
         {
             gameState.Init();
             inventory.Init();
             enemyTracker.Init();
             questManager.Init();
+        }
+
+        private void Start()
+        {
+            _audioManager = GetComponent<AudioManager>();
+            _audioManager.Play("GameMusic");
         }
     }
 }

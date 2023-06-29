@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 6650823757743544786}
   - component: {fileID: 2819429049786188024}
   - component: {fileID: 22109830361469905}
+  - component: {fileID: 4501983427892987169}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -205,7 +206,7 @@ Transform:
   - {fileID: 2306047439721703419}
   - {fileID: 5189767263215607725}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -505,10 +506,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ee8fb9ecaef7d4e862a224640478e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitMaterial: {fileID: 0}
-  maxHits: 10
-  hitsLeft: 10
-  invincibilityFrames: 0
+  hitMaterial: {fileID: 2100000, guid: 09dbcd79d6bbad54cab7b1e57ccd2df2, type: 2}
+  maxHits: 20
+  hitsLeft: 20
+  invincibilityFrames: 180
   damagers:
     serializedVersion: 2
     m_Bits: 1792
@@ -538,6 +539,55 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3316231279154497515, guid: 43fee2591d4baaa4da162c957e1583b8, type: 3}
   bulletSpawnPoint: {fileID: 5506823040303264307}
   attackEvent: {fileID: 11400000, guid: 9adbe6b11f87b944e951e8f542397aa6, type: 2}
+--- !u!114 &4501983427892987169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f3021410de84c46870b132e1bdb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MeleeAttack
+    clip: {fileID: 8300000, guid: 052b4375262692642a17838018debf0e, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: 57cb4e9c32803c9479aaaee58ce69fee, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: fc85dd93508dbb04fa03ed3a930873db, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: RangedAttack
+    clip: {fileID: 8300000, guid: b339be55acf17f24e87f3894e25a6725, type: 3}
+    volume: 0
+    pitch: 0.10087
+    loop: 0
+    source: {fileID: 0}
+  - name: ItemPickUp
+    clip: {fileID: 8300000, guid: 71d88ec531031714d9a0dee81ee00e3f, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: f42f8008f9f5d6744be067091329b828, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &5722804494960067855
 GameObject:
   m_ObjectHideFlags: 0

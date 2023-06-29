@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Audio;
 using Events.ScriptableObjects;
 using Inputs;
 using Inventory;
@@ -29,6 +31,13 @@ namespace Interaction
 
 		private LinkedList<Interaction> _potentialInteractions = new LinkedList<Interaction>(); //To store the objects we the player could potentially interact with
 
+		private AudioManager _audioManager;
+
+		private void Start()
+		{
+			_audioManager = GetComponent<AudioManager>();
+		}
+
 		private void OnEnable()
 		{
 			inputReader.InteractEvent += OnInteractionButtonPress;
@@ -48,6 +57,7 @@ namespace Interaction
 
 			if (onObjectPickUp != null)
 			{
+				_audioManager.Play("ItemPickUp");
 				ItemSO currentItem = itemObject.GetComponent<CollectableItem>().GetItem();
 				onObjectPickUp.RaiseEvent(currentItem);
 			}

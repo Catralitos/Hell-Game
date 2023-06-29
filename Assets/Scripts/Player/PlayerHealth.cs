@@ -1,7 +1,9 @@
+using Audio;
 using Events.ScriptableObjects;
 using Extensions;
 using Gameplay;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -23,7 +25,13 @@ namespace Player
         
         [Header("Listening on")] 
         public IntEventChannelSO restoreHealthEvent;
-        
+
+        private AudioManager _audioManager;
+
+        private void Start()
+        {
+            _audioManager = GetComponent<AudioManager>();
+        }
         
         public void OnEnable()
         {
@@ -49,13 +57,22 @@ namespace Player
         public override void DoDamage(int damage)
         {
             base.DoDamage(damage);
+            _audioManager.Play("Hit");
             playerHealthEvent.RaiseEvent(hitsLeft);
         }
         
         private void RestoreHealth(int amount)
         {
             hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, maxHits);
+            _audioManager.Play("Heal");
             playerHealthEvent.RaiseEvent(hitsLeft);
+        }
+        
+        protected override void Die()
+        {
+            _audioManager.Play("Death");
+            SceneManager.LoadScene(2);
+           base.Die();
         }
     }
 }
