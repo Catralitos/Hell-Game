@@ -9,7 +9,7 @@ using Management;
 using Random = UnityEngine.Random;
 using Pathfinding;
 
-namespace Characters
+namespace CharacterPathfinding
 {
     public class PathfindingEntity: MonoBehaviour
     {

@@ -9,7 +9,6 @@ using Pathfinding;
 
 public class Angel : Enemy
 {
-    public Vector3 SignalSpot;
     public int angelBatch;
 
     // Start is called before the first frame update

@@ -8,6 +8,7 @@ using Events.ScriptableObjects;
 using Management;
 using Random = UnityEngine.Random;
 using Pathfinding;
+using CharacterPathfinding;
 
 namespace Characters
 {
@@ -20,14 +21,8 @@ namespace Characters
 
     public class NPC : PathfindingEntity
     {
-        [Serializable]
-        public class Pair
-        {
-            public TimeStep time;
-            public Transform transform;
-        }
 
-        [SerializeField] public List<Pair> targetsByTime;
+        [SerializeField] public List<TimedPathfindingPair> targetsByTime;
         [Header("Listening To")] public TimeChannelSO hourPassedEvent;
         
         protected GameObject character;
@@ -44,10 +39,9 @@ namespace Characters
 
         private void CheckNewTarget(TimeStep time)
         {
-            foreach (Pair pair in targetsByTime.Where(pair => pair.time.day == time.day && pair.time.hour == time.hour))
+            foreach (TimedPathfindingPair pair in targetsByTime.Where(pair => pair.time.day == time.day && pair.time.hour == time.hour))
             {
                 AIDestinationSetter.target = pair.transform;
-
             }
         }
         
