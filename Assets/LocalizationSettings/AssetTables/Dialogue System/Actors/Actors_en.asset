@@ -19,23 +19,31 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 87619184212434944
-    m_Localized: Tester, The NPC
-    m_Metadata:
-      m_Items: []
-  - m_Id: 340307486520078336
     m_Localized: Protagonist
     m_Metadata:
       m_Items: []
-  - m_Id: 347441968995446784
-    m_Localized: Hi! Please help me find my tupperware!!!
+  - m_Id: 340307486520078336
+    m_Localized: Leonard, the NPC
     m_Metadata:
       m_Items: []
-  - m_Id: 347442179050385408
-    m_Localized: Did you find my tupperware?
+  - m_Id: 347565674842918912
+    m_Localized: Fluffy, the NPC pet rock
     m_Metadata:
       m_Items: []
-  - m_Id: 347442274961534976
-    m_Localized: OMG THX
+  - m_Id: 347565671885934592
+    m_Localized: Jilaiya, the NPC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347565507683127296
+    m_Localized: "\xC1gathe, the NPC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347565679066583040
+    m_Localized: Petey, the NPC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347566866604068864
+    m_Localized: TestNPC, the NPC
     m_Metadata:
       m_Items: []
   references:
