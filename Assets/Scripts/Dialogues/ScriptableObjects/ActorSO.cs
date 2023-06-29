@@ -10,7 +10,8 @@ namespace Dialogues.ScriptableObjects
         Leonard,
         Agathe,
         Jilaiya,
-        Fluffy
+        Fluffy,
+        Petey
     }
     
     [CreateAssetMenu(menuName = "Dialogues/Actor")]

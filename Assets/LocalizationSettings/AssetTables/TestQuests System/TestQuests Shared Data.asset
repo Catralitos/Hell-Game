@@ -10,47 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Actors Shared Data
+  m_Name: TestQuests Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Actors
-  m_TableCollectionNameGuidString: 9c592d2d4c7fc459f94a645873569195
+  m_TableCollectionName: TestQuests
+  m_TableCollectionNameGuidString: 5a83381b80fc68542acf31e6f7c77e52
   m_Entries:
-  - m_Id: 87619184212434944
-    m_Key: Protagonist
+  - m_Id: 200397656064
+    m_Key: QTT-D01-L01
     m_Metadata:
       m_Items: []
-  - m_Id: 340307486520078336
-    m_Key: Leonard
+  - m_Id: 232664436736
+    m_Key: QTT-D01-L02
     m_Metadata:
       m_Items: []
-  - m_Id: 347565507683127296
-    m_Key: "\xC1gathe"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 347565671885934592
-    m_Key: Jilaiya
-    m_Metadata:
-      m_Items: []
-  - m_Id: 347565674842918912
-    m_Key: Fluffy
-    m_Metadata:
-      m_Items: []
-  - m_Id: 347565679066583040
-    m_Key: Petey
-    m_Metadata:
-      m_Items: []
-  - m_Id: 347566866604068864
-    m_Key: TestNPC
+  - m_Id: 235881467904
+    m_Key: QTT-D01-L03
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 0
+    rid: 8217349256966045698
   references:
     version: 2
     RefIds:
-    - rid: 0
+    - rid: 8217349256966045698
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1605193945319
+        m_CustomEpoch: 1688059879069
