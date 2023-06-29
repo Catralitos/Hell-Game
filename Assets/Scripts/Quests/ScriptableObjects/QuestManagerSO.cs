@@ -76,9 +76,7 @@ namespace Quests.ScriptableObjects
             if (quests == null)
             {
                 quests = new List<QuestSO>();
-                Debug.Log("Quests was null");
             }
-            Debug.Log("Quests len = " + quests.Count);
 
             foreach (QuestSO quest in quests)
             {
