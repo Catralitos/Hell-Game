@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 425065492810882123}
   - component: {fileID: 6508549250853047047}
   - component: {fileID: 8051185239355364116}
+  - component: {fileID: 7244373369900516593}
   m_Layer: 8
   m_Name: Angel
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8396226, g: 0.122774996, b: 0.122774996, a: 1}
+  m_Sprite: {fileID: 1857557497, guid: 62c3ada30f6990648acc476bb97a977c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -173,12 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68e0270f5cd26d4880476a43b23d23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcState: 0
-  talkingTo: []
   combat: {fileID: 0}
   health: {fileID: 0}
-  SignalSpot: {x: 0, y: 0, z: 0}
   angelBatch: 0
+  angelDiedEvent: {fileID: 11400000, guid: 934b5783cd77a40479c68cb775dfa77c, type: 2}
 --- !u!114 &6508549250853047047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +195,7 @@ MonoBehaviour:
   simpleDamage: 1
   hittables:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 2112
   AC: 0
   attackRange: 1.01
   attackSpawnPoint: {fileID: 8537431291700789406}
@@ -216,3 +215,24 @@ MonoBehaviour:
   maxHits: 3
   hitsLeft: 3
   invincibilityFrames: 0
+--- !u!95 &7244373369900516593
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811805767676476648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a412a41fa2a635e48b78b03c9515c21b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

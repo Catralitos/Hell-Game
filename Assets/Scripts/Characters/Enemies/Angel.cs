@@ -5,12 +5,15 @@ using UnityEngine.AI;
 using System;
 using Characters;
 using Assets.Scripts.Utils;
+using Events.ScriptableObjects;
 using Pathfinding;
 
 public class Angel : Enemy
 {
     public int angelBatch;
 
+    public IntEventChannelSO angelDiedEvent;
+    
     // Start is called before the first frame update
     public override void Start()
     {
@@ -33,5 +36,10 @@ public class Angel : Enemy
         {
             AttackPlayer();
         }
+    }
+
+    private void OnDestroy()
+    {
+        angelDiedEvent.RaiseEvent(angelBatch);
     }
 }

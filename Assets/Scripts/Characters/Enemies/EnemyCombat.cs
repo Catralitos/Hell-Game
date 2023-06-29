@@ -23,6 +23,14 @@ namespace Enemies
         public float attackRange;
         public Transform attackSpawnPoint;
 
+        private Animator _animator;
+
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+            Debug.Log(_animator);
+        }
+
         private void Update()
         {
             cooldownLeft -= Time.deltaTime;
@@ -35,13 +43,16 @@ namespace Enemies
 
         private void MeleeAttack()
         {
-            //Debug.Log("Enemy - used Melee Attack");
-            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
-                attackSpawnPoint.position, attackRange, hittables);
-
-            foreach (Collider2D hittable in hitObjects)
+            if (cooldownLeft <= 0)
             {
-                hittable.gameObject.GetComponent<Hittable>().DoDamage(simpleDamage);
+                _animator.SetTrigger("Attack");
+                Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
+                    attackSpawnPoint.position, attackRange, hittables);
+
+                foreach (Collider2D hittable in hitObjects)
+                {
+                    hittable.gameObject.GetComponent<Hittable>().DoDamage(simpleDamage);
+                }
             }
 
             cooldownLeft = attackCooldown;
