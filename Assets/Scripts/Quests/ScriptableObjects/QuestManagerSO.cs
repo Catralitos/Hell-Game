@@ -73,7 +73,26 @@ namespace Quests.ScriptableObjects
         
         private StepSO HasStep(ActorSO actorToCheckWith)
         {
-            return (from quest in quests where quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
+            if (quests == null)
+            {
+                quests = new List<QuestSO>();
+                Debug.Log("Quests was null");
+            }
+            Debug.Log("Quests len = " + quests.Count);
+
+            foreach (QuestSO quest in quests)
+            {
+                StepSO step = quest.currentStep;
+                ActorSO actor = step.actor;
+
+                if (actor == actorToCheckWith)
+                {
+                    return step;
+                }
+            }
+
+            return null;
+            //return (from quest in quests where quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
         }
 
         private QuestSO GetStepQuest(StepSO step)

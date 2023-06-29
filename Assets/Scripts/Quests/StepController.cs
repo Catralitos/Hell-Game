@@ -46,7 +46,7 @@ namespace Quests
 			if (gameStateManager.currentGameState == GameState.Gameplay)
 			{
 				DialogueDataSO displayDialogue = questData.InteractWithCharacter(actor, false, false);
-				//Debug.Log("dialogue " + displayDialogue + "actor" + _actor);
+				Debug.Log("dialogue " + displayDialogue + "actor" + actor);
 				if (displayDialogue != null)
 				{
 					_currentDialogue = displayDialogue;

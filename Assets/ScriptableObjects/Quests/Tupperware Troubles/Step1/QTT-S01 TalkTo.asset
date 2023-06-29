@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d3a067643624c92a213a0a0221e3a4d, type: 3}
-  m_Name: S1-QTT
+  m_Name: QTT-S01 TalkTo
   m_EditorClassIdentifier: 
-  actor: {fileID: 0}
+  actor: {fileID: 11400000, guid: c19c12603accc6d40a6538cf35a01949, type: 2}
   dialogueBeforeStep: {fileID: 0}
-  completeDialogue: {fileID: 0}
+  completeDialogue: {fileID: 11400000, guid: 9af86038f39621944802908bb7eae311, type: 2}
   incompleteDialogue: {fileID: 0}
   type: 0
   item: {fileID: 0}
@@ -23,4 +23,4 @@ MonoBehaviour:
   angelCount: 0
   angelBatch: 0
   isDone: 0
-  endStepEvent: {fileID: 0}
+  endStepEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
