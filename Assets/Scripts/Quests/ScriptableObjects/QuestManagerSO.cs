@@ -5,6 +5,7 @@ using Dialogues.ScriptableObjects;
 using Events.ScriptableObjects;
 using Events.ScriptableObjects.UI;
 using Inventory.ScriptableObjects;
+using Management;
 using Management.ScriptableObjects;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ namespace Quests.ScriptableObjects
         public List<QuestSO> quests;
         public InventorySO inventory;
         public EnemyTrackerSO enemyTracker;
+        public TimeTrackerSO timeTracker;
         /*[Tooltip("Item the NPC gives out on winning")]
         public ItemSO winningItem;
         [Tooltip("Item the NPC gives out on losing")]
@@ -73,53 +75,53 @@ namespace Quests.ScriptableObjects
 
         private StepSO HasStep(ActorSO actorToCheckWith)
         {
-            return (from quest in quests where !quest.isDone && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
+            return (from quest in quests where !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
         }
 
         private QuestSO GetStepQuest(StepSO step)
         {
-            return quests.FirstOrDefault(quest => !quest.isDone && quest.steps.Contains(step));
+            return quests.FirstOrDefault(quest => !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.steps.Contains(step));
         }
 
         private StepSO GetStepWithChoice(Choice choice)
         {
             if (_lastStepChecked != null)
             {
-                if (_lastStepChecked.dialogueBeforeStep.lines.Any(l => l.choices.Contains(choice)))
+                if (_lastStepChecked.dialogueBeforeStep.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                 {
                     return _lastStepChecked;
                 }
                 if (_lastStepChecked.completeDialogue != null)
                 {
-                    if (_lastStepChecked.completeDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    if (_lastStepChecked.completeDialogue.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                     {
                         return _lastStepChecked;
                     }
                 }
                 if (_lastStepChecked.incompleteDialogue != null)
                 {
-                    if (_lastStepChecked.incompleteDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    if (_lastStepChecked.incompleteDialogue.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                     {
                         return _lastStepChecked;
                     }
                 }
             }
-            foreach (var step in quests.Where(q => !q.isDone).SelectMany(q => q.steps))
+            foreach (var step in quests.Where(q => !q.isDone && q.QuestIsAvailable(timeTracker.time)).SelectMany(q => q.steps))
             {
-                if (step.dialogueBeforeStep.lines.Any(l => l.choices.Contains(choice)))
+                if (step.dialogueBeforeStep.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                 {
                     return step;
                 }
                 if (step.completeDialogue != null)
                 {
-                    if (_lastStepChecked.completeDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    if (_lastStepChecked.completeDialogue.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                     {
                         return step;
                     }
                 }
                 if (step.incompleteDialogue != null)
                 {
-                    if (_lastStepChecked.incompleteDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    if (_lastStepChecked.incompleteDialogue.GetLinesByHour(timeTracker.time).Any(l => l.choices.Contains(choice)))
                     {
                         return step;
                     }

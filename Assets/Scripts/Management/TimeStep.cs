@@ -16,5 +16,23 @@ namespace Management
             this.hour = hour;
             this.minute = minute;
         }
+
+        public int Compare(TimeStep time)
+        {
+            if (day == time.day)
+            {
+                return hour.CompareTo(time.hour);
+            } 
+            if (day < time.day)
+            {
+                return -1;
+            } 
+            if (day > time.day)
+            {
+                return 1;
+            }
+
+            return -1;
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace UI.HUD
 {
     public class HUDManager : MonoBehaviour
     {
+        public TimeTrackerSO timeTracker;
         public InventorySO inventory;
         
         public List<GameObject> hearts;
@@ -22,7 +23,6 @@ namespace UI.HUD
         private int _currentHours;
         
         [Header("Listening on")] public IntEventChannelSO playerHealthEvent;
-        public TimeChannelSO minutePassedEvent;
         public TimeChannelSO hourPassedEvent;
         public VoidEventChannelSO updateInventoryEvent;
 
@@ -34,7 +34,6 @@ namespace UI.HUD
         private void OnEnable()
         {
             playerHealthEvent.OnEventRaised += UpdateHealth;
-            minutePassedEvent.OnEventRaised += UpdateTimeText;
             hourPassedEvent.OnEventRaised += UpdateTimeFillEvent;
             updateInventoryEvent.OnEventRaised += UpdateKeyItems;
         }
@@ -42,7 +41,6 @@ namespace UI.HUD
         private void OnDisable()
         {
             playerHealthEvent.OnEventRaised -= UpdateHealth;
-            minutePassedEvent.OnEventRaised -= UpdateTimeText;
             hourPassedEvent.OnEventRaised -= UpdateTimeFillEvent;
             updateInventoryEvent.OnEventRaised -= UpdateKeyItems;
         }
@@ -55,14 +53,14 @@ namespace UI.HUD
             }
         }
 
-        private void UpdateTimeText(TimeStep time)
+        private void Update()
         {
-            int hours = time.hour;
-            int minutes = time.minute;
+            int hours = timeTracker.time.hour;
+            int minutes = timeTracker.time.minute;
             
             string niceTime = $"{hours:00}:{minutes:00}";
             
-            timeText.text = "Day " + time.day + " - " + niceTime;
+            timeText.text = "Day " + timeTracker.time.day + " - " + niceTime;
         }
 
         private void UpdateTimeFillEvent(TimeStep time)
