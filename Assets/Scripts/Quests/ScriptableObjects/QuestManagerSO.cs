@@ -268,7 +268,15 @@ namespace Quests.ScriptableObjects
 
                         break;
                     case StepType.KillEnemy:
-                        //TODO ver como fazer para inimigo morto
+                        if (enemyTracker.GetNumAngels(currentStep.angelBatch) >= currentStep.angelCount)
+                        {
+                            playCompletionDialogueEvent.RaiseEvent();
+                        }
+                        else
+                        {
+                            //trigger lose dialogue
+                            playIncompleteDialogueEvent.RaiseEvent();
+                        }
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
