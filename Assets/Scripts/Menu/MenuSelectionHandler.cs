@@ -117,11 +117,11 @@ namespace Menu
 	}
 
 	// Debug
-	// private void OnGUI()
-	// {
-	//	 	GUILayout.Box($"_currentSelection: {(_currentSelection != null ? _currentSelection.name : "null")}");
-	//	 	GUILayout.Box($"_mouseSelection: {(_mouseSelection != null ? _mouseSelection.name : "null")}");
-	// }
+	 private void OnGUI()
+	 {
+		 	GUILayout.Box($"_currentSelection: {(currentSelection != null ? currentSelection.name : "null")}");
+		 	GUILayout.Box($"_mouseSelection: {(mouseSelection != null ? mouseSelection.name : "null")}");
+	 }
 	private void Update()
 	{
 		if ((EventSystem.current != null) && (EventSystem.current.currentSelectedGameObject == null) && (currentSelection != null))

@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 6354373362239457023}
   - component: {fileID: 2202393546748247292}
   - component: {fileID: 3938602643989052901}
+  - component: {fileID: 3755731989269365502}
   m_Layer: 5
   m_Name: TextChoice
   m_TagString: Untagged
@@ -1207,6 +1208,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!225 &3755731989269365502
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369690627859785342}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2432009295870899805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1233,7 @@ GameObject:
   - component: {fileID: 746901117571801888}
   - component: {fileID: 9176486504750124730}
   m_Layer: 5
-  m_Name: ButtonToClick
+  m_Name: ButtonToClick2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1327,19 +1340,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746901117571801888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7853463762536734058}
-        m_TargetAssemblyTypeName: UI.Dialogue.UIDialogueChoiceFiller, Assembly-CSharp
-        m_MethodName: ButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   IsSelected: 0
 --- !u!1 &2815403622116664436
 GameObject:
@@ -1545,10 +1546,10 @@ RectTransform:
   m_Father: {fileID: 7276070382511051804}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 197.54846, y: -43.2}
-  m_SizeDelta: {x: 395.09692, y: 86.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 148.69797, y: 0}
+  m_SizeDelta: {x: 297.39594, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7416127869893730773
 MonoBehaviour:
@@ -4205,10 +4206,10 @@ RectTransform:
   m_Father: {fileID: 7276070382511051804}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 612.6454, y: -43.2}
-  m_SizeDelta: {x: 395.09692, y: 86.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 466.0939, y: 0}
+  m_SizeDelta: {x: 297.39594, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7853463762536734058
 MonoBehaviour:
@@ -4318,6 +4319,7 @@ GameObject:
   - component: {fileID: 6916003717557633884}
   - component: {fileID: 4235219972030488420}
   - component: {fileID: 7472013266665302488}
+  - component: {fileID: 1780046414802895441}
   m_Layer: 5
   m_Name: TextChoice
   m_TagString: Untagged
@@ -4482,6 +4484,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!225 &1780046414802895441
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373148732869901092}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &8499326240609490879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,7 +4585,7 @@ GameObject:
   - component: {fileID: 637754241108289636}
   - component: {fileID: 962480977085626629}
   m_Layer: 5
-  m_Name: ButtonToClick
+  m_Name: ButtonToClick1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4678,19 +4692,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637754241108289636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7416127869893730773}
-        m_TargetAssemblyTypeName: UI.Dialogue.UIDialogueChoiceFiller, Assembly-CSharp
-        m_MethodName: ButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   IsSelected: 0
 --- !u!1 &8963526895774630762
 GameObject:
