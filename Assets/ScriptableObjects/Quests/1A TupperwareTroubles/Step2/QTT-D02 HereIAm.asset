@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0fc3052b0343d0889296687bb8295c, type: 3}
+  m_Name: QTT-D02 HereIAm
+  m_EditorClassIdentifier: 
+  dialoguePerTime:
+  - FirstMember: 1
+    SecondMember:
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685059891916800
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685084101439488
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685178418753536
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685537346318336
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685649455869952
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685793744121856
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685831220228096
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685903668441088
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7685995070713856
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7686953687281664
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7687414263803904
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7687997964120064
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7688223651229696
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 3
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7688274691715072
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 7688326743027712
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
+  dialogueType: 0
+  endOfDialogueEvent: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []

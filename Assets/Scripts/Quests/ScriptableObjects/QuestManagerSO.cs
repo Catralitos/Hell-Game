@@ -324,7 +324,7 @@ namespace Quests.ScriptableObjects
             QuestSO quest = GetStepQuest(step);
 
             quest.currentStepIndex++;
-            quest.currentStep.isDone = true;
+            quest.currentStep.FinishStep();
 
             if (quest.currentStepIndex >= quest.steps.Count)
             {

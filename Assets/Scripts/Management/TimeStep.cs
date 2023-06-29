@@ -23,11 +23,11 @@ namespace Management
             {
                 return hour.CompareTo(time.hour);
             } 
-            if (day < time.day)
+            if (day > time.day)
             {
                 return -1;
             } 
-            if (day > time.day)
+            if (day < time.day)
             {
                 return 1;
             }

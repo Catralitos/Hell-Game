@@ -222,8 +222,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7689270679531520
-    m_Localized: "Shoo, shooo\u2026. Go on, leave\u2026 Look, I made some casserole
-      yesterday. If I give it to you, will you leave?\r"
+    m_Localized: "Shoo, shooo\u2026. Go on, leave\u2026 Look, I built a bazooka yesterday.
+      If I give it to you, will you leave?\r"
     m_Metadata:
       m_Items: []
   - m_Id: 7689404867899392
@@ -394,6 +394,30 @@ MonoBehaviour:
   - m_Id: 7695302663303168
     m_Localized: Ooh, also, take this Hell Fruit! It will make you feel better when
       those angels hurt you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7905893346500608
+    m_Localized: I think I can hear that poor tupperware crying...Is everything okay?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029130765471744
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029220842344448
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029248738660352
+    m_Localized: Oh, nice, it's not crying anymore!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8033813907214336
+    m_Localized: So? Do you have the tupperware?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8038554368315392
+    m_Localized: Hi! Nice to meet you.
     m_Metadata:
       m_Items: []
   references:

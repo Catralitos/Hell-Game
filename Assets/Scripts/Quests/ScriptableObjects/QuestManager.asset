@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: QuestManager
   m_EditorClassIdentifier: 
   quests:
-  - {fileID: 11400000, guid: 2d9de08dcdfd2c24a90aa30507cf982d, type: 2}
+  - {fileID: 11400000, guid: fc8e137840e9b7c479fc730a6609492c, type: 2}
   inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
   enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
   continueWithStepEvent: {fileID: 11400000, guid: aa80e53ab7503f3498ad5a5d0bdba51f, type: 2}
   endDialogueEvent: {fileID: 11400000, guid: 7237c89e92700fb47926160fc0fb7996, type: 2}
   makeWinningChoiceEvent: {fileID: 11400000, guid: 9441e9a804448454cb16512eab2f27f7, type: 2}

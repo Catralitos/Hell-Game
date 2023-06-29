@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0fc3052b0343d0889296687bb8295c, type: 3}
-  m_Name: Default-TestNPC
+  m_Name: QTT-ST4-D02-No
   m_EditorClassIdentifier: 
   dialoguePerTime:
   - FirstMember: 1
     SecondMember:
-    - actorID: 0
+    - actorID: 2
       textList:
       - m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 8029220842344448
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       choices: []
-  dialogueType: 3
+  dialogueType: 2
   endOfDialogueEvent: {fileID: 0}
   references:
     version: 2
