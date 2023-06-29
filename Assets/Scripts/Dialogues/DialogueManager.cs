@@ -46,7 +46,6 @@ namespace Dialogues
 	/// </summary>
 	public void DisplayDialogueData(DialogueDataSO dialogueDataSO)
 	{
-		Debug.Log("Entrou");
 		gameState.UpdateGameState(GameState.Dialogue);
 
 		_counterDialogue = 0;
@@ -58,7 +57,6 @@ namespace Dialogues
 		if (_currentDialogue.lines != null)
 		{
 			_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-			Debug.Log(_currentActor);
 			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
 			
 		}

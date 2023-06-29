@@ -44473,6 +44473,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1824315870440591293, guid: eb1c4b1cc6c4e55409afc3d13c2ee141, type: 3}
   m_PrefabInstance: {fileID: 1206817896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1197479509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3938602643989052901, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
+  m_PrefabInstance: {fileID: 7861768308967478060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1200543972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1824315870440591293, guid: eb1c4b1cc6c4e55409afc3d13c2ee141, type: 3}
@@ -49148,6 +49159,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1824315870440591293, guid: eb1c4b1cc6c4e55409afc3d13c2ee141, type: 3}
   m_PrefabInstance: {fileID: 1774140622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1550039030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176486504750124730, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
+  m_PrefabInstance: {fileID: 7861768308967478060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d164528b1e5c4af78ff9bf96ec9df2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1554265393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54534,12 +54556,12 @@ MonoBehaviour:
   targetsByTime:
   - time:
       day: 1
-      hour: 7
+      hour: 23
       minute: 0
     transform: {fileID: 1400382980}
   - time:
       day: 1
-      hour: 10
+      hour: 24
       minute: 0
     transform: {fileID: 1442683442}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
@@ -58446,6 +58468,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7853463762536734058, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
+      propertyPath: choiceText
+      value: 
+      objectReference: {fileID: 1197479509}
+    - target: {fileID: 7853463762536734058, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
+      propertyPath: actionButton
+      value: 
+      objectReference: {fileID: 1550039030}
+    - target: {fileID: 7853463762536734058, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
+      propertyPath: onChoiceMade
+      value: 
+      objectReference: {fileID: 11400000, guid: 24154964fb031ea42bf02fe4b2d7313f, type: 2}
     - target: {fileID: 7958750232598486985, guid: 6520792e9ed016a47b9e1376a0f4b090, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -18,13 +18,35 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:9c592d2d4c7fc459f94a645873569195
       m_TableEntryReference:
-        m_KeyId: 347442179050385408
+        m_KeyId: 347441968995446784
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    choices: []
-  dialogueType: 2
+    choices:
+    - response:
+        m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 191896711168
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      nextDialogue: {fileID: 0}
+      actionType: 1
+    - response:
+        m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 154449965056
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      nextDialogue: {fileID: 0}
+      actionType: 4
+  dialogueType: 0
   endOfDialogueEvent: {fileID: 0}
   references:
     version: 2
