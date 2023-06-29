@@ -8,7 +8,8 @@ namespace Management
 {
     public class TimeManager : MonoBehaviour
     {
-
+        public TimeTrackerSO timeTracker;
+        
         [Header("Day Duration")]
         public int dayInMinutes = 30;
         public int numberOfHours = 24 + 24 + 18;
@@ -22,7 +23,6 @@ namespace Management
         public GameObject[] lights; // all the lights we want on when its dark
 
         [Header("Broadcasting on")]
-        public TimeChannelSO minutePassedEvent;
         public TimeChannelSO hourPassedEvent;
         
         
@@ -39,7 +39,8 @@ namespace Management
         private void IncreaseMinute()
         {
             _currentMinutes++;
-            minutePassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
+            timeTracker.time = new TimeStep(_currentDay, _currentHour, _currentMinutes);
+            //minutePassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
             ControlPPV();
         }
 
@@ -51,8 +52,10 @@ namespace Management
             {
                 _currentDay++;
                 _currentHour = 1;
-            }            
-            hourPassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
+            }
+
+            TimeStep ts = timeTracker.time = new TimeStep(_currentDay, _currentHour, _currentMinutes);
+            hourPassedEvent.RaiseEvent(ts);
             Debug.Log("Passed hour. It's " + _currentHour + " of the " + _currentDay + "th day.");
         }
         

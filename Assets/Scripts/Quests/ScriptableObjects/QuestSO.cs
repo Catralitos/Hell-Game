@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Events.ScriptableObjects;
+using Extensions;
 using Inventory.ScriptableObjects;
+using Management;
 using UnityEngine;
 
 namespace Quests.ScriptableObjects
@@ -8,6 +10,7 @@ namespace Quests.ScriptableObjects
     [CreateAssetMenu(menuName = "Quests/Quest")]
     public class QuestSO : ScriptableObject
     {
+        public Pair<TimeStep, TimeStep> availableWindow;
         public string questName;
         public bool isDone;
         public ItemSO reward;
@@ -16,7 +19,12 @@ namespace Quests.ScriptableObjects
         public VoidEventChannelSO endQuestEvent;
 
         [HideInInspector] public StepSO currentStep;
-        [HideInInspector] public int currentStepIndex; 
+        [HideInInspector] public int currentStepIndex;
+
+        public bool QuestIsAvailable(TimeStep time)
+        {
+            return availableWindow.FirstMember.Compare(time) >= 0 && availableWindow.SecondMember.Compare(time) <= 0;
+        }
         
         public void FinishQuest()
         {

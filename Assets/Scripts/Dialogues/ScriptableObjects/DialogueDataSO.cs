@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Events.ScriptableObjects;
+using Extensions;
+using Management;
 using UnityEditor.Localization;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -33,7 +36,7 @@ namespace Dialogues.ScriptableObjects
     [CreateAssetMenu(menuName = "Dialogues/DialogueData")]
     public class DialogueDataSO : ScriptableObject
     {
-        public List<Line> lines;
+        public List<Pair<int, List<Line>>> dialoguePerTime;
         public DialogueType dialogueType;
         public VoidEventChannelSO endOfDialogueEvent;
 
@@ -43,47 +46,26 @@ namespace Dialogues.ScriptableObjects
                 endOfDialogueEvent.RaiseEvent();
         }
 
-
-#if UNITY_EDITOR
-        private void OnEnable()
+        public List<Line> GetLinesByHour(TimeStep time)
         {
-            //SetDialogueLines(name);
-        }
-
-        public DialogueDataSO(string dialogueName)
-        {
-            //SetDialogueLines(dialogueName);
-        }
-
-        private void SetDialogueLines(string dialogueName)
-        {
-            lines ??= new List<Line>();
-
-            lines.Clear();
-            int dialogueIndex = 0;
-            Line dialogueLine = new Line();
-
-            do
+            List<Line> toReturn = null;
+            foreach (var pair in dialoguePerTime.Where(pair => time.hour >= pair.FirstMember))
             {
-                dialogueIndex++;
-                dialogueLine = new Line("D" + dialogueIndex + "-" + dialogueName);
-                if (dialogueLine.textList != null)
-                    lines.Add(dialogueLine);
+                toReturn = pair.SecondMember;
+            }
 
-            } while (dialogueLine.textList != null);
-
-#endif
+            return toReturn;
         }
     }
-    
+
     [Serializable]
     public class Choice
     {
-        
+
         public LocalizedString response;
         public DialogueDataSO nextDialogue;
         public ChoiceActionType actionType;
-	
+
         public void SetNextDialogue(DialogueDataSO dialogue)
         {
             nextDialogue = dialogue;
@@ -103,7 +85,8 @@ namespace Dialogues.ScriptableObjects
 
         public void SetChoiceAction(Comment comment)
         {
-            actionType = (ChoiceActionType)Enum.Parse(typeof(ChoiceActionType), comment.CommentText);;
+            actionType = (ChoiceActionType)Enum.Parse(typeof(ChoiceActionType), comment.CommentText);
+            ;
         }
     }
 
@@ -127,7 +110,8 @@ namespace Dialogues.ScriptableObjects
 #if UNITY_EDITOR
         public Line(string name)
         {
-            StringTableCollection collection = LocalizationEditorSettings.GetStringTableCollection("Questline Dialogue");
+            StringTableCollection collection =
+                LocalizationEditorSettings.GetStringTableCollection("Questline Dialogue");
             textList = null;
             if (collection != null)
             {
@@ -142,7 +126,8 @@ namespace Dialogues.ScriptableObjects
                     {
 
                         SetActor(collection.SharedData.GetEntry(key).Metadata.GetMetadata<Comment>());
-                        dialogueLine = new LocalizedString() { TableReference = "Questline Dialogue", TableEntryReference = key };
+                        dialogueLine = new LocalizedString()
+                            { TableReference = "Questline Dialogue", TableEntryReference = key };
                         textList ??= new List<LocalizedString>();
                         textList.Add(dialogueLine);
                     }
@@ -162,7 +147,8 @@ namespace Dialogues.ScriptableObjects
 
                     if (collection.SharedData.Contains(key))
                     {
-                        LocalizedString choiceLine = new LocalizedString() { TableReference = "Questline Dialogue", TableEntryReference = key };
+                        LocalizedString choiceLine = new LocalizedString()
+                            { TableReference = "Questline Dialogue", TableEntryReference = key };
                         choice = new Choice(choiceLine);
                         choice.SetChoiceAction(collection.SharedData.GetEntry(key).Metadata.GetMetadata<Comment>());
 

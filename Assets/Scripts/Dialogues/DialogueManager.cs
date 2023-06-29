@@ -4,13 +4,16 @@ using Events.ScriptableObjects;
 using Events.ScriptableObjects.UI;
 using Gameplay.ScriptableObjects;
 using Inputs;
+using Management;
 using UnityEngine;
 using UnityEngine.Localization;
 
 namespace Dialogues
 {
     public class DialogueManager : MonoBehaviour
-{
+    {
+	    
+	public TimeTrackerSO timeTracker;
 	public List<ActorSO> actorsList;
 	public InputReader inputReader;
 	public GameStateSO gameState;
@@ -30,8 +33,6 @@ namespace Dialogues
 
 	private int _counterDialogue;
 	private int _counterLine;
-	private bool _reachedEndOfDialogue { get => _counterDialogue >= _currentDialogue.lines.Count; }
-	private bool _reachedEndOfLine { get => _counterLine >= _currentDialogue.lines[_counterDialogue].textList.Count; }
 	private DialogueDataSO _currentDialogue = default;
 
 	private ActorSO _currentActor;
@@ -55,11 +56,12 @@ namespace Dialogues
 		inputReader.AdvanceDialogueEvent += OnAdvance;
 		_currentDialogue = dialogueDataSO;
 
-		if (_currentDialogue.lines != null)
+		List<Line> lines = _currentDialogue.GetLinesByHour(timeTracker.time);
+		if (lines != null)
 		{
-			_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+			_currentActor = actorsList.Find(o => o.actorId == lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
 			Debug.Log(_currentActor);
-			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
+			DisplayDialogueLine(lines[_counterDialogue].textList[_counterLine], _currentActor);
 			
 		}
 		else
@@ -80,29 +82,31 @@ namespace Dialogues
 
 	private void OnAdvance()
 	{
+		List<Line> lines = _currentDialogue.GetLinesByHour(timeTracker.time);
+
 		_counterLine++;
-		if (!_reachedEndOfLine)
+		if (!(_counterLine >= lines[_counterDialogue].textList.Count))
 		{
-			_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-			DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
+			_currentActor = actorsList.Find(o => o.actorId == lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+			DisplayDialogueLine(lines[_counterDialogue].textList[_counterLine], _currentActor);
 		}
-		else if (_currentDialogue.lines[_counterDialogue].choices != null
-				&& _currentDialogue.lines[_counterDialogue].choices.Count > 0)
+		else if (lines[_counterDialogue].choices != null
+				&& lines[_counterDialogue].choices.Count > 0)
 		{
-			if (_currentDialogue.lines[_counterDialogue].choices.Count > 0)
+			if (lines[_counterDialogue].choices.Count > 0)
 			{
-				DisplayChoices(_currentDialogue.lines[_counterDialogue].choices);
+				DisplayChoices(lines[_counterDialogue].choices);
 			}
 		}
 		else
 		{
 			_counterDialogue++;
-			if (!_reachedEndOfDialogue)
+			if (!(_counterDialogue >= lines.Count))
 			{
 				_counterLine = 0;
 
-				_currentActor = actorsList.Find(o => o.actorId == _currentDialogue.lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
-				DisplayDialogueLine(_currentDialogue.lines[_counterDialogue].textList[_counterLine], _currentActor);
+				_currentActor = actorsList.Find(o => o.actorId == lines[_counterDialogue].actorID); // we don't add a controle, because we need a null reference exeption if the actor is not in the list
+				DisplayDialogueLine(lines[_counterDialogue].textList[_counterLine], _currentActor);
 			}
 			else
 			{

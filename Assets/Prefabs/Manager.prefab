@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1eed9adc4740d8a1474faffae7ad2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
   actorsList:
   - {fileID: 11400000, guid: c19c12603accc6d40a6538cf35a01949, type: 2}
   - {fileID: 11400000, guid: a47dade50654b414982da7d18a5fb6d3, type: 2}
@@ -332,12 +333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3918947e1a6d4752851a67bf4b7eb625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTracker: {fileID: 0}
   dayInMinutes: 30
   numberOfHours: 66
   ppv: {fileID: 6754398001298720632}
   activateLights: 0
   lights: []
-  minutePassedEvent: {fileID: 11400000, guid: 0ae251a347e5f5e4b965ba6a3e713cf8, type: 2}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
 --- !u!114 &9190808101964460968
 MonoBehaviour:

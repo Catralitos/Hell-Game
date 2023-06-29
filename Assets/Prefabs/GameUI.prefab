@@ -2297,6 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05535a8e01a4f9dbe887eba1dc21c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
   inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
   hearts:
   - {fileID: 5568678562081853813}
@@ -2335,7 +2336,6 @@ MonoBehaviour:
   - {fileID: 8397432031227908188}
   - {fileID: 6044577644415913599}
   playerHealthEvent: {fileID: 11400000, guid: f3c90fa0369711943b275a9594035e41, type: 2}
-  minutePassedEvent: {fileID: 11400000, guid: 0ae251a347e5f5e4b965ba6a3e713cf8, type: 2}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
   updateInventoryEvent: {fileID: 11400000, guid: 9b731ef7c3e95164abd2cbdba143f4fb, type: 2}
 --- !u!1 &4345845636443033893
