@@ -1196,6 +1196,7 @@ GameObject:
   - component: {fileID: 1049957925}
   - component: {fileID: 1049957924}
   - component: {fileID: 1049957928}
+  - component: {fileID: 1049957929}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1310,6 +1311,25 @@ MonoBehaviour:
   titleScreen: {fileID: 1521070537}
   storyScreen: {fileID: 1278734861}
   tutorialScreen: {fileID: 648860195}
+--- !u!114 &1049957929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049957923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f3021410de84c46870b132e1bdb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MenuMusc
+    clip: {fileID: 8300000, guid: 3ecc2abb7ee89334ca106127f1d1342f, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &1184034177
 GameObject:
   m_ObjectHideFlags: 0
