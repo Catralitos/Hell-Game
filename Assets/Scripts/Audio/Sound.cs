@@ -21,7 +21,7 @@ namespace Audio
         /// The volume
         /// </summary>
         [Range(0f, 1f)]
-        public float volume = 1f;
+        public float volume = 0.2f;
         /// <summary>
         /// The pitch
         /// </summary>

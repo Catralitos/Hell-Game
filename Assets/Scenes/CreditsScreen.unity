@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 1652192426}
   - component: {fileID: 1652192425}
   - component: {fileID: 1652192424}
+  - component: {fileID: 1652192429}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -990,6 +991,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1652192429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652192423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f3021410de84c46870b132e1bdb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: 6e0b1ee169a50be409a0bfe8d809c98a, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &1899825336
 GameObject:
   m_ObjectHideFlags: 0

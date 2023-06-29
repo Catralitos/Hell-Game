@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 8622040803236614388}
   - component: {fileID: 7024490861761706356}
   - component: {fileID: 9190808101964460968}
+  - component: {fileID: 563828415399950723}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3918947e1a6d4752851a67bf4b7eb625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTracker: {fileID: 0}
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
   dayInMinutes: 30
   numberOfHours: 66
   ppv: {fileID: 6754398001298720632}
@@ -358,6 +359,25 @@ MonoBehaviour:
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
   spawnAngelsEvent: {fileID: 11400000, guid: 49779c37e0f45c240be1bc12bbfe924a, type: 2}
   numAngelBatches: 8
+--- !u!114 &563828415399950723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195222313727358193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f3021410de84c46870b132e1bdb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GameMusic
+    clip: {fileID: 8300000, guid: ebc14bbffdc50494a9cd49f2ac4ed7c0, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &8518775444028816722
 GameObject:
   m_ObjectHideFlags: 0

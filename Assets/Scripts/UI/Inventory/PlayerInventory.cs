@@ -77,6 +77,7 @@ namespace UI.Inventory
         
         private void UpdateUI()
         {
+            if (gameObject == null) return;
             //Clear all children
             for (int i = inventoryMenu.childCount - 1; i >= 0; i--)
             {

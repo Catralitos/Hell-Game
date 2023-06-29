@@ -67,8 +67,8 @@ namespace UI.Menus
             backButton1.onClick.AddListener(ShowTitleScreen);
             backButton2.onClick.AddListener(ShowTitleScreen);
             exitButton.onClick.AddListener(ExitGame);
-            //_audioManager = GetComponent<AudioManager>();
-            //_audioManager.Play("MenuMusic");
+            _audioManager = GetComponent<AudioManager>();
+            _audioManager.Play("MenuMusic");
         }
 
         /// <summary>

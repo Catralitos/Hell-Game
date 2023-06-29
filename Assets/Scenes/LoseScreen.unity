@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 364929575}
   - component: {fileID: 364929574}
   - component: {fileID: 364929578}
+  - component: {fileID: 364929579}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -365,6 +366,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   retryButton: {fileID: 188429465}
   backToTitleButton: {fileID: 563324882}
+--- !u!114 &364929579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364929573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f3021410de84c46870b132e1bdb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: 9387400941fb3ba41ae9a470ae660e3c, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &563324880
 GameObject:
   m_ObjectHideFlags: 0

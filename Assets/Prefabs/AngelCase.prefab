@@ -131,18 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Angel
       objectReference: {fileID: 0}
-    - target: {fileID: 5648227320458870930, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5815974456478291133, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
-      propertyPath: m_SleepingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6508549250853047047, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
-      propertyPath: hittables.m_Bits
-      value: 2112
-      objectReference: {fileID: 0}
     - target: {fileID: 8537431291700789406, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
       propertyPath: m_RootOrder
       value: -1
