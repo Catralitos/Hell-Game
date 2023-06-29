@@ -6,6 +6,7 @@ using System;
 using Characters;
 using Enemies;
 using Gameplay;
+using CharacterPathfinding;
 
 public class Enemy : PathfindingEntity
 {
