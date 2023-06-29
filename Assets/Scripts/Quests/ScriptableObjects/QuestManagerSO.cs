@@ -46,6 +46,8 @@ namespace Quests.ScriptableObjects
                     s.isDone = false;
                 }
 
+                q.currentStepIndex = 0;
+                q.currentStep = q.steps[0];
                 q.isDone = false;
             }
 
