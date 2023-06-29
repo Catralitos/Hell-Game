@@ -847,7 +847,7 @@ RectTransform:
   - {fileID: 4118384507028874401}
   - {fileID: 176105833348323551}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1340,7 +1340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746901117571801888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7853463762536734058}
+        m_TargetAssemblyTypeName: UI.Dialogue.UIDialogueChoiceFiller, Assembly-CSharp
+        m_MethodName: ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   IsSelected: 0
 --- !u!1 &2815403622116664436
 GameObject:
@@ -1565,7 +1577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: {fileID: 7472013266665302488}
   actionButton: {fileID: 962480977085626629}
-  onChoiceMade: {fileID: 0}
+  onChoiceMade: {fileID: 11400000, guid: 24154964fb031ea42bf02fe4b2d7313f, type: 2}
 --- !u!1 &3052014061873136083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,9 +4235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b64940fa44648889a1be44025e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choiceText: {fileID: 0}
-  actionButton: {fileID: 0}
-  onChoiceMade: {fileID: 0}
+  choiceText: {fileID: 3938602643989052901}
+  actionButton: {fileID: 9176486504750124730}
+  onChoiceMade: {fileID: 11400000, guid: 24154964fb031ea42bf02fe4b2d7313f, type: 2}
 --- !u!1 &8314858172153361562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,7 +4704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637754241108289636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7416127869893730773}
+        m_TargetAssemblyTypeName: UI.Dialogue.UIDialogueChoiceFiller, Assembly-CSharp
+        m_MethodName: ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   IsSelected: 0
 --- !u!1 &8963526895774630762
 GameObject:

@@ -53,7 +53,7 @@ namespace Quests.ScriptableObjects
 
             _lastStepChecked = null;
         }
-        
+
         public void OnDisable()
         {
             continueWithStepEvent.OnEventRaised -= CheckStepValidity;
@@ -62,7 +62,7 @@ namespace Quests.ScriptableObjects
             makeLosingChoiceEvent.OnEventRaised -= MakeLosingChoice;
         }
 
-        
+
         public void OnEnable()
         {
             continueWithStepEvent.OnEventRaised += CheckStepValidity;
@@ -70,51 +70,65 @@ namespace Quests.ScriptableObjects
             makeWinningChoiceEvent.OnEventRaised += MakeWinningChoice;
             makeLosingChoiceEvent.OnEventRaised += MakeLosingChoice;
         }
-        
+
         private StepSO HasStep(ActorSO actorToCheckWith)
         {
-            if (quests == null)
-            {
-                quests = new List<QuestSO>();
-            }
-
-            foreach (QuestSO quest in quests)
-            {
-                StepSO step = quest.currentStep;
-                ActorSO actor = step.actor;
-
-                if (actor == actorToCheckWith)
-                {
-                    return step;
-                }
-            }
-
-            return null;
-            //return (from quest in quests where quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
+            return (from quest in quests where !quest.isDone && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
         }
 
         private QuestSO GetStepQuest(StepSO step)
         {
-            return quests.FirstOrDefault(quest => quest.steps.Contains(step));
+            return quests.FirstOrDefault(quest => !quest.isDone && quest.steps.Contains(step));
         }
 
         private StepSO GetStepWithChoice(Choice choice)
         {
-            foreach (QuestSO quest in quests)
+            if (_lastStepChecked != null)
             {
-                foreach (StepSO step in quest.steps)
+                if (_lastStepChecked.dialogueBeforeStep.lines.Any(l => l.choices.Contains(choice)))
                 {
-                    IEnumerable<Line> lines = step.dialogueBeforeStep.lines.Concat(step.completeDialogue.lines)
-                        .Concat(step.incompleteDialogue.lines);
-                    foreach (Line line in lines)
+                    return _lastStepChecked;
+                }
+                if (_lastStepChecked.completeDialogue != null)
+                {
+                    if (_lastStepChecked.completeDialogue.lines.Any(l => l.choices.Contains(choice)))
                     {
-                        if (line.choices.Contains(choice)) return step;
+                        return _lastStepChecked;
+                    }
+                }
+                if (_lastStepChecked.incompleteDialogue != null)
+                {
+                    if (_lastStepChecked.incompleteDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    {
+                        return _lastStepChecked;
                     }
                 }
             }
+            foreach (var step in quests.Where(q => !q.isDone).SelectMany(q => q.steps))
+            {
+                if (step.dialogueBeforeStep.lines.Any(l => l.choices.Contains(choice)))
+                {
+                    return step;
+                }
+                if (step.completeDialogue != null)
+                {
+                    if (_lastStepChecked.completeDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    {
+                        return step;
+                    }
+                }
+                if (step.incompleteDialogue != null)
+                {
+                    if (_lastStepChecked.incompleteDialogue.lines.Any(l => l.choices.Contains(choice)))
+                    {
+                        return step;
+                    }
+                }
+            }
+
             return null;
         }
-		
+
         public DialogueDataSO InteractWithCharacter(ActorSO actor, bool isCheckValidity, bool isValid)
         {
             StepSO currentStep = HasStep(actor);
@@ -130,7 +144,7 @@ namespace Quests.ScriptableObjects
             return null;
         }
 
-		
+
         private void MakeWinningChoice(ActorSO actor)
         {
             StepSO currentStep = HasStep(actor);
@@ -152,14 +166,15 @@ namespace Quests.ScriptableObjects
                 CheckStepValidity(currentStep);
             }
         }
-        
+
         // um evento que passa algo. que podemos passar?
         //este evento é raised no dialogue manager em:
         //MakeDialogueChoice, que tem parametro choice
         private void CheckStepValidity(Choice currentChoice)
         {
             StepSO currentStep = GetStepWithChoice(currentChoice);
-            if (currentStep != null){
+            if (currentStep != null)
+            {
                 switch (currentStep.type)
                 {
                     case StepType.CheckItem:
@@ -216,11 +231,9 @@ namespace Quests.ScriptableObjects
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-
-                _lastStepChecked = currentStep;
             }
         }
-        
+
         private void CheckStepValidity(StepSO currentStep)
         {
             if (currentStep != null)
@@ -281,8 +294,6 @@ namespace Quests.ScriptableObjects
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-
-                _lastStepChecked = currentStep;
             }
         }
 
@@ -311,24 +322,25 @@ namespace Quests.ScriptableObjects
             QuestSO quest = GetStepQuest(step);
 
             quest.currentStepIndex++;
+            quest.currentStep.isDone = true;
 
             if (quest.currentStepIndex >= quest.steps.Count)
             {
                 EndQuest(quest);
-                quests.Remove(quest);
             }
             else
             {
                 quest.currentStep = quest.steps[quest.currentStepIndex];
+                _lastStepChecked = quest.currentStep;
             }
         }
-        
+
 
         private static void EndQuest(QuestSO quest)
         {
             quest.FinishQuest();
             //saveSystem.SaveDataToDisk();
         }
-            
+
     }
 }
