@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: PracticeWeapon
   m_EditorClassIdentifier: 
   name: Practice Weapon
-  itemSprite: {fileID: -240953568, guid: 6926e666c1944194d82821a4cad387a6, type: 3}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 638fa30076b8a264abd4269f5668c4c4, type: 3}
   damage: 1
   usesLeft: 8
   weaponType: 1

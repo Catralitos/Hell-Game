@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: SwordSword
   m_EditorClassIdentifier: 
   name: Sword That Fires Swords
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 7bf79e5e7654cec49835d6e5b2b80424, type: 3}
   damage: 5
   usesLeft: 5
   weaponType: 0

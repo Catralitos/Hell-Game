@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   name: Rock
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: a49d6c0a7a0195542b3a61daee835890, type: 3}
   damage: 5
   usesLeft: 5
   weaponType: 0
