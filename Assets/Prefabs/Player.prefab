@@ -132,7 +132,6 @@ MonoBehaviour:
   item:
     itemName: 
     itemSprite: {fileID: 0}
-    isKeyItem: 0
 --- !u!1 &4253422927061628453
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +513,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1792
   collisionDamage: 1
+  playerHealthEvent: {fileID: 11400000, guid: f3c90fa0369711943b275a9594035e41, type: 2}
   restoreHealthEvent: {fileID: 11400000, guid: 38f3979948dba084b934c7ce6d807406, type: 2}
 --- !u!114 &22109830361469905
 MonoBehaviour:

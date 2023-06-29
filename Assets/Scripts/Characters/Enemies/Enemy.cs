@@ -7,7 +7,7 @@ using Characters;
 using Enemies;
 using Gameplay;
 
-public class Enemy : NPC
+public class Enemy : PathfindingEntity
 {
     public struct EnemyInfo
     {
@@ -20,45 +20,15 @@ public class Enemy : NPC
     [HideInInspector] public EnemyCombat combat;
     [HideInInspector] public EnemyHealth health;
 
-    protected float decisionRate = 2.0f;
-    //protected NavMeshAgent agent;
-    public GameObject Target { get; set; }
-
     // Start is called before the first frame update
-    public virtual void Start()
+    public override void Start()
     {
+        base.Start();
         this.combat = GetComponent<EnemyCombat>();
         this.health = GetComponent<EnemyHealth>();
         this.info = new EnemyInfo();
-        this.Target = GameObject.FindGameObjectWithTag("Player");
+        this.AIDestinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
 
-    }
-
-    public virtual void InitializeBehaviourTree()
-    {
-        // TODO but in the children's class
-    }
-
-    void CheckPlayerPosition()
-    {
-        if (Vector3.Distance(this.transform.position, this.Target.transform.position) < info.awakeDistance)
-        {
-
-            if (Vector3.Distance(this.transform.position, this.Target.transform.position) <= combat.attackRange)
-            {
-                AttackPlayer();
-            }
-
-            else
-            {
-                //PursuePlayer();
-                //Invoke("CheckPlayerPosition", 0.5f);
-            }
-        }
-        else
-        {
-            Invoke("CheckPlayerPosition", 3.0f);
-        }
     }
 
     public void AttackPlayer()

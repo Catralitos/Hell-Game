@@ -35,7 +35,7 @@ namespace Enemies
 
         private void MeleeAttack()
         {
-            Debug.Log("Enemy - used Melee Attack");
+            //Debug.Log("Enemy - used Melee Attack");
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(
                 attackSpawnPoint.position, attackRange, hittables);
 
