@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: NinjaStars
   m_EditorClassIdentifier: 
   name: Ninja Stars
-  itemSprite: {fileID: 1677212186, guid: c56e9b3c34392fa4d82438868147981b, type: 3}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 4080eafa73199b84fbf8460e18b556b8, type: 3}
   damage: 5
   usesLeft: 5
   weaponType: 0
