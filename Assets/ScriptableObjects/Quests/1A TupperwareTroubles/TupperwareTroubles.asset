@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TupperwareTroubles
   m_EditorClassIdentifier: 
   questName: Tupperware Troubles
-  isDone: 1
+  isDone: 0
   reward: {fileID: 11400000, guid: 8ade6cdd03a04bd439023e6a3ac40b28, type: 2}
   steps:
   - {fileID: 11400000, guid: 1e417bb9d35f5474ab5a0454ba194e5a, type: 2}
   - {fileID: 11400000, guid: 06ea107cb049b5340ad736dce012ff65, type: 2}
-  endQuestEvent: {fileID: 0}
-  currentStep: {fileID: 11400000, guid: 06ea107cb049b5340ad736dce012ff65, type: 2}
-  currentStepIndex: 2
+  endQuestEvent: {fileID: 11400000, guid: 9b731ef7c3e95164abd2cbdba143f4fb, type: 2}
+  currentStep: {fileID: 0}
+  currentStepIndex: 0

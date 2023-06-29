@@ -23,4 +23,4 @@ MonoBehaviour:
   angelCount: 0
   angelBatch: 0
   isDone: 0
-  endStepEvent: {fileID: 0}
+  endStepEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}

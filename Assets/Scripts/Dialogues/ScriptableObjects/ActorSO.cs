@@ -6,7 +6,11 @@ namespace Dialogues.ScriptableObjects
     public enum ActorID
     {
         Protagonist,
-        TestNPC
+        TestNPC,
+        Leonard,
+        Agathe,
+        Jilaiya,
+        Fluffy
     }
     
     [CreateAssetMenu(menuName = "Dialogues/Actor")]
