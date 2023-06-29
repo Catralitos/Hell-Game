@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: EdibleBook
   m_EditorClassIdentifier: 
   name: Edible Book
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: e8f8ba5df0016e14498f95e636b8a07a, type: 3}
   hpRestoreValue: 0

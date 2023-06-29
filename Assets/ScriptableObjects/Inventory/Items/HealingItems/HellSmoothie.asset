@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: HellSmoothie
   m_EditorClassIdentifier: 
   name: "Hell\u2019s Smoothie of Hot Brimstone  "
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 7510ac1389eabca42b4a3afedf1d0264, type: 3}
   hpRestoreValue: 0

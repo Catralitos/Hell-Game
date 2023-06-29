@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: HellFruit
   m_EditorClassIdentifier: 
   name: Hell Fruit
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 15e0c4d627ff62b438557800a0c22161, type: 3}
   hpRestoreValue: 0

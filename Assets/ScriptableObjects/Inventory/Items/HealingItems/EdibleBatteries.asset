@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: EdibleBatteries
   m_EditorClassIdentifier: 
   name: Edible Batteries
-  itemSprite: {fileID: 0}
-  isKeyItem: 0
+  itemSprite: {fileID: 21300000, guid: 5b6fb93979ea4fe42b8c5dcd54c023c7, type: 3}
   hpRestoreValue: 0
