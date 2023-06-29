@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Extensions;
 using Inventory.InstancedItems;
 using UnityEngine;
 
@@ -19,6 +18,7 @@ namespace Inventory.ScriptableObjects
         {
             items ??= new List<Item>();
             items.Clear();
+            keyItems.Clear();
             foreach (ItemSO item in defaultItems)
             {
                 switch (item)
