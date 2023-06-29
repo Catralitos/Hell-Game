@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0fc3052b0343d0889296687bb8295c, type: 3}
-  m_Name: QTT-D03
+  m_Name: QTT-D04 Thanks
   m_EditorClassIdentifier: 
   lines:
   - actorID: 1
@@ -18,13 +18,13 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:9c592d2d4c7fc459f94a645873569195
       m_TableEntryReference:
-        m_KeyId: 347442179050385408
+        m_KeyId: 347442274961534976
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     choices: []
-  dialogueType: 0
+  dialogueType: 1
   endOfDialogueEvent: {fileID: 0}
   references:
     version: 2
