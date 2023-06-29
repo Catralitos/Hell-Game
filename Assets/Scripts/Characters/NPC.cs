@@ -27,6 +27,29 @@ namespace Characters
         
         protected GameObject character;
 
+        private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+        private static readonly int Vertical = Animator.StringToHash("Vertical");
+        private static readonly int Speed = Animator.StringToHash("Speed");
+    
+        private Animator _animator;
+        // Start is called before the first frame update
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+            Vector3 move = ai.velocity;
+            if (_animator != null)
+            {
+                _animator.SetFloat(Horizontal, move.x);
+                _animator.SetFloat(Vertical, move.y);
+                _animator.SetFloat(Speed, move.sqrMagnitude);
+            }
+        }
+        
         private void OnEnable()
         {
             hourPassedEvent.OnEventRaised += CheckNewTarget;
