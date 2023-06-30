@@ -13,23 +13,13 @@ namespace Characters.Enemies
         {
             base.Start();
             this.info.Type = "Angel";
-            // TODO decide if we're keeping rndm rolls  
-            //        this.DmgRoll = () => RandomHelper.RollD10() + 2;
             this.combat.simpleDamage = 5;
             this.combat.DmgRoll = () => this.combat.simpleDamage;
-            this.info.awakeDistance = 10;
+            this.info.awakeDistance = 5;
             this.combat.attackRange = 1;
             this.combat.AC = 20;
             this.combat.attackCooldown = 2;
             this.combat.cooldownLeft = 0;
-        }
-
-        public void Update()
-        {
-            if (this.ai.reachedDestination)
-            {
-                AttackPlayer();
-            }
         }
 
         private void OnDestroy()

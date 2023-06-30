@@ -175,7 +175,7 @@ MonoBehaviour:
         m_LocalVariables: []
       choices: []
   dialogueType: 0
-  endOfDialogueEvent: {fileID: 0}
+  endOfDialogueEvent: {fileID: 11400000, guid: 31f88c98b0ffa0445b66c6af9c07f676, type: 2}
   references:
     version: 2
     RefIds: []
