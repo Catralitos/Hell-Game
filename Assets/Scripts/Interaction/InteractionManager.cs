@@ -79,7 +79,7 @@ namespace Interaction
 				case InteractionType.Talk:
 					if (startTalking != null)
 					{
-						_potentialInteractions.First.Value.interactableObject.GetComponent<StepController>().InteractWithCharacter();
+						_potentialInteractions.First.Value.interactableObject.GetComponent<StepControllerNPC>().InteractWithCharacter();
 						inputReader.EnableDialogueInput();
 					}
 					break;

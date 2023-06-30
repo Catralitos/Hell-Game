@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Quests
 {
-	public class StepController : MonoBehaviour
+	public class StepControllerNPC : MonoBehaviour
 	{
 		public bool isInDialogue; //Consumed by the state machine
 	
@@ -16,7 +16,7 @@ namespace Quests
 		public DialogueDataSO defaultDialogue;
 		public QuestManagerSO questData;
 		public GameStateSO gameStateManager;
-    
+		
 		[Header("Listening to channels")]
 		public VoidEventChannelSO winDialogueEvent;
 		public VoidEventChannelSO loseDialogueEvent;
