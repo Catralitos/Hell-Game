@@ -21,6 +21,8 @@ namespace Gameplay
         /// How many hits the object can take before dying
         /// </summary>
         public int maxHits = 5;
+
+        public bool canBecomeInvincible;
         /// <summary>
         /// The hits left
         /// </summary>
@@ -56,7 +58,7 @@ namespace Gameplay
             if (hitsLeft > 0)
             {
                 if (hitMaterial != null) _renderer.material = hitMaterial;
-                _invincible = true;
+                if (canBecomeInvincible) _invincible = true;
                 Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
             }
             else
@@ -70,7 +72,7 @@ namespace Gameplay
         /// </summary>
         private void RestoreVulnerability()
         {
-            _invincible = false;
+            if (canBecomeInvincible) _invincible = false;
             _renderer.material = _defaultMaterial;
         }
 

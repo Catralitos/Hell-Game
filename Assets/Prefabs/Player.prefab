@@ -206,7 +206,7 @@ Transform:
   - {fileID: 2306047439721703419}
   - {fileID: 5189767263215607725}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -508,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitMaterial: {fileID: 2100000, guid: 09dbcd79d6bbad54cab7b1e57ccd2df2, type: 2}
   maxHits: 20
+  canBecomeInvincible: 1
   hitsLeft: 20
   invincibilityFrames: 180
   damagers:

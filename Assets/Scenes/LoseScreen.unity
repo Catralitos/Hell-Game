@@ -318,7 +318,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -565,10 +565,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Retry
+  m_text: RETRY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
-  m_sharedMaterial: {fileID: -2673123485561961197, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
+  m_sharedMaterial: {fileID: -9136261595920991126, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
+  m_fontSize: 200
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 5, z: 5, w: 5}
+  m_margin: {x: 50, y: 50, z: 50, w: 50}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -844,10 +844,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back to Title
+  m_text: BACK TO TITLE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
-  m_sharedMaterial: {fileID: -2673123485561961197, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
+  m_sharedMaterial: {fileID: -9136261595920991126, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
+  m_fontSize: 155.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 5, z: 5, w: 5}
+  m_margin: {x: 50, y: 50, z: 50, w: 50}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -979,14 +979,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You died in hell no less which is impressive
-
-
-    Do you want to try
-    again'
+  m_text: "Silence.\r\n\r\nHell was now an empty well of silence and light. \r\n\r\nThere
+    was nothing left\u2026\r\n\r\nOne by one, Arlie saw their new friends fall. \r\n\r\n\xC1gathe,
+    Jilaiya, Leonard ... all gone. Everyone was gone.\r\n\r\nWhen Fluffy fell, Arlie
+    knew their ending was near.\r\n\r\nWith a blink of an eye, Arlie didn't exist
+    anymore\u2026\r\n\r\nThere is no more Hell to go to.\r\n\r\nThe end.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
-  m_sharedMaterial: {fileID: -2673123485561961197, guid: fa86b3574ecfecd4a8890c17544b2a6e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
+  m_sharedMaterial: {fileID: -9136261595920991126, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 269.05
+  m_fontSize: 54.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
