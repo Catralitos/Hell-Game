@@ -22,7 +22,7 @@ TagManager:
   - PlayerAttack
   - Wall
   - Pickable
-  - TTest
+  - Interactable
   - 
   - 
   - 

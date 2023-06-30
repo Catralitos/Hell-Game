@@ -20,7 +20,7 @@ namespace Quests.ScriptableObjects
     public class StepSO : ScriptableObject
     {
         
-        public Pair<TimeStep, TimeStep> availableWindow;
+        public Pair<TimeStep, TimeStep> availableWindow = new Pair<TimeStep, TimeStep>(new TimeStep(1,0,0), new TimeStep(3,24,59));
         
         [Tooltip("The Character this step will need interaction with")]
         public ActorSO actor;
