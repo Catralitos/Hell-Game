@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3a067643624c92a213a0a0221e3a4d, type: 3}
   m_Name: QTT-S02 TalkAgathe
   m_EditorClassIdentifier: 
+  availableWindow:
+    FirstMember:
+      day: 0
+      hour: 0
+      minute: 0
+    SecondMember:
+      day: 3
+      hour: 24
+      minute: 0
   actor: {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
   dialogueBeforeStep: {fileID: 11400000, guid: 2f1ad6f04449a94419e9a370f5ac4cf3, type: 2}
   completeDialogue: {fileID: 0}

@@ -30,5 +30,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80874c8c47538be4a8fd3111c757c1e2, type: 2}
   - {fileID: 11400000, guid: 43e44d247df191a4db0e1a216b2f197a, type: 2}
   endQuestEvent: {fileID: 11400000, guid: 4604d73d0838a294e9144d2697085c09, type: 2}
-  currentStep: {fileID: 11400000, guid: 06ea107cb049b5340ad736dce012ff65, type: 2}
-  currentStepIndex: 2
+  currentStep: {fileID: 11400000, guid: b6b4f8bd6450798418ec3e9d3e4459d0, type: 2}
+  currentStepIndex: 1
