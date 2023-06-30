@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 09dbcd79d6bbad54cab7b1e57ccd2df2, type: 2}
     - target: {fileID: 8051185239355364116, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
       propertyPath: invincibilityFrames
-      value: 120
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8537431291700789406, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
       propertyPath: m_RootOrder
