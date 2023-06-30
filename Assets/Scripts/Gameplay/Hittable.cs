@@ -37,7 +37,7 @@ namespace Gameplay
         /// <summary>
         /// Starts this instance.
         /// </summary>
-        private void Start()
+        public virtual void Start()
         {
             hitsLeft = maxHits;
             _renderer = GetComponent<SpriteRenderer>();
@@ -55,9 +55,9 @@ namespace Gameplay
             hitsLeft = Mathf.Clamp(hitsLeft - damage, 0, maxHits);
             if (hitsLeft > 0)
             {
-                _renderer.material = hitMaterial;
+                if (hitMaterial != null) _renderer.material = hitMaterial;
                 _invincible = true;
-                Invoke(nameof(RestoreVulnerability), invincibilityFrames * Time.deltaTime);
+                Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
             }
             else
             {

@@ -19,31 +19,31 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 87619184212434944
-    m_Localized: Protagonist
+    m_Localized: Arlie
     m_Metadata:
       m_Items: []
   - m_Id: 340307486520078336
-    m_Localized: Leonard, the NPC
+    m_Localized: Leonard
     m_Metadata:
       m_Items: []
   - m_Id: 347565674842918912
-    m_Localized: Fluffy, the NPC pet rock
+    m_Localized: Fluffy, the pet rock
     m_Metadata:
       m_Items: []
   - m_Id: 347565671885934592
-    m_Localized: Jilaiya, the NPC
+    m_Localized: Jilaiya
     m_Metadata:
       m_Items: []
   - m_Id: 347565507683127296
-    m_Localized: "\xC1gathe, the NPC"
+    m_Localized: "\xC1gathe"
     m_Metadata:
       m_Items: []
   - m_Id: 347565679066583040
-    m_Localized: Petey, the NPC
+    m_Localized: Petey
     m_Metadata:
       m_Items: []
   - m_Id: 347566866604068864
-    m_Localized: TestNPC, the NPC
+    m_Localized: TestNPC
     m_Metadata:
       m_Items: []
   references:

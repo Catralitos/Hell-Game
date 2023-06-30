@@ -37,7 +37,6 @@ namespace UI.Inventory
 
         [Header("Listening on")] public VoidEventChannelSO updateInventoryEvent;
         
-        //TODO passar estes dois eventos para a parte de usar items
         [Header("Broadcasting on")]
         //To remove the correct amount on the inventory
         public ItemEventChannelSO useItemEvent;
@@ -45,6 +44,7 @@ namespace UI.Inventory
         public IntEventChannelSO restoreHealth;
         //To attack
         public VoidEventChannelSO attackEvent;
+        
         private static readonly int Heal = Animator.StringToHash("Heal");
 
         private void Start()
@@ -105,6 +105,12 @@ namespace UI.Inventory
                         slot.rightText.text = weapon.usesLeft.ToString();
                         break;
                 }
+            }
+
+            if (currentInventory.items.Count == 0)
+            {
+                _equippedItemSo = null;
+                heldItem.item = null;
             }
             _radialMenu.CalculateRadial();
         }
@@ -188,6 +194,7 @@ namespace UI.Inventory
 
         private void UseItem()
         {
+            if (_equippedItemSo == null) return;
             switch (_equippedItemSo)
             {
                 case HealingItem item:

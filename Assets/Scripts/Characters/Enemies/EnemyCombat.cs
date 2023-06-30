@@ -24,7 +24,6 @@ namespace Characters.Enemies
         private void Start()
         {
             _animator = GetComponent<Animator>();
-            Debug.Log(_animator);
         }
 
         private void Update()

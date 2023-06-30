@@ -26,10 +26,12 @@ namespace Management
         {
             if (listensToGeneralEvent)
             {
+                Debug.Log(gameObject.name + " subscribed to general event.");
                 spawnAngelsEvent.OnEventRaised += SpawnAngels;
             }
             else
             {
+                Debug.Log(gameObject.name + " subscribed to specific event.");
                 specificSpawnAngelsEvent.OnEventRaised += SpawnAngels;
             }
         }

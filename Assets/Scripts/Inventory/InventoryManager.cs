@@ -64,7 +64,11 @@ namespace Inventory
                 //Raise event for combat
                 weapon.usesLeft--;
                 //_saveSystem.SaveDataToDisk();
-                if (weapon.usesLeft > 0) return;
+                if (weapon.usesLeft > 0)
+                {
+                    updateInventoryEvent.RaiseEvent();
+                    return;
+                }
             }
             RemoveItem(item);
         }

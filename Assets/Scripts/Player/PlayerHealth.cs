@@ -28,8 +28,9 @@ namespace Player
 
         private AudioManager _audioManager;
 
-        private void Start()
+        public override void Start()
         {
+            base.Start();
             _audioManager = GetComponent<AudioManager>();
         }
         
@@ -71,7 +72,7 @@ namespace Player
         protected override void Die()
         {
             _audioManager.Play("Death");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
            base.Die();
         }
     }

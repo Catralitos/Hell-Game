@@ -58,12 +58,13 @@ namespace Inventory.ScriptableObjects
 
         public bool Remove(Item item)
         {
-            if (!items.Contains(item) || !keyItems.Contains(item)) return false;
             if (item is KeyItem keyItem)
             {
+                if (!keyItems.Contains(item)) return false;
                 keyItems.Remove(keyItem);
                 return true;
             }
+            if (!items.Contains(item)) return false;
             items.Remove(item);
             return true;
 
