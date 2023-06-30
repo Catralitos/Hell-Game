@@ -545,6 +545,538 @@ MonoBehaviour:
     m_Localized: "Hey Lennie,\r Had to borrow your glasses for a thing. \xC1gathe."
     m_Metadata:
       m_Items: []
+  - m_Id: 8381804242235392
+    m_Localized: "\xC1gathe took the glasses? Really?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381822093193216
+    m_Localized: You have got to be kidding me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381879035064320
+    m_Localized: Uh..uh.. Arlie? Why..are you here? Are you in danger?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381922257367040
+    m_Localized: "No, I\u2019m fine! I need Leonard\u2019s glasses urgently! I know
+      you have them!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381960371007488
+    m_Localized: "Can\u2019t he come and get them himself? Does he need to read a
+      book right now?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381998220406784
+    m_Localized: " It\u2019s for some rare night owl! If he doesn\u2019t have his
+      glasses, he won\u2019t be able to see!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382046035472384
+    m_Localized: "\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382058119262208
+    m_Localized: "Did you just say\u2026rare night owl? That\u2026No, it couldn\u2019t
+      be."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382143343325184
+    m_Localized: "\xC1gathe?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382184447504384
+    m_Localized: "Here\u2019s the glasses."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382217129521152
+    m_Localized: What 's wrong?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382254576267264
+    m_Localized: "I don\u2019t know. But this isn\u2019t good."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382300579393536
+    m_Localized: Do you have the glasses?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382346150506496
+    m_Localized: Great, hand them over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382348662894592
+    m_Localized: I need those to see, please get them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382507341803520
+    m_Localized: "\xC1gathe told me that something is wrong. What\u2019s going on?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383329555410944
+    m_Localized: "Did \xC1gathe have my glasses? Why? Either way, give me the glasses.
+      Please."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383410887159808
+    m_Localized: "I will give you the glasses, when you tell me what\u2019s with
+      this owl."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383460149260288
+    m_Localized: '*sigh* The history books say that the last time this owl appeared,
+      Hell was filled with light. Now, my glasses please.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383756803993600
+    m_Localized: "History books? Didn\u2019t you say you saw it? What does that mean?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383787439190016
+    m_Localized: "\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383823677976576
+    m_Localized: Leonard! Answer me!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383872701001728
+    m_Localized: "\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383905110388736
+    m_Localized: LEONARD!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383941315620864
+    m_Localized: Have this. Thank you for the glasses. Please leave.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383976983982080
+    m_Localized: What even is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384008227352576
+    m_Localized: "Uh\u2026 Tiny rock, are you cold?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384677667631104
+    m_Localized: Woof woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384718100721664
+    m_Localized: AHH! You barked!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384774572830720
+    m_Localized: Woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384817790939136
+    m_Localized: "Sorry, I didn\u2019t mean to get so scared."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384850938523648
+    m_Localized: Woof woof woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384881779240960
+    m_Localized: "Yes, yes. I know. I said I\u2019m sorry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384958551781376
+    m_Localized: Woof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384989556076544
+    m_Localized: "You\u2019re shaking an awful lot. Is everything alright?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385028076564480
+    m_Localized: ' Woof, woof woof woof. Wooooof.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385078643093504
+    m_Localized: "Oh, I\u2019m sorry you\u2019re not feeling well. What can I do
+      to help?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385138298679296
+    m_Localized: Woof. Woof, woof woof woof woof woof woof, woof woof. Woof woof,
+      woof woof woof, woof woof. Woof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385177762885632
+    m_Localized: "You want cocaine?! I-I can\u2019t get you that."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385276106731520
+    m_Localized: WOOF WOOF WOOF!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385315604492288
+    m_Localized: "Oh, pfff. I\u2019m so sorry. My dog-rockish has been somewhat rusty.
+      I\u2019ll get you your blankie. Do you have any idea where you could have left
+      it?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385371137077248
+    m_Localized: Woof, woof. Woooof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385406297927680
+    m_Localized: "The new house? Oh, that\u2019s probably my house. I\u2019ll go
+      find it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385445053296640
+    m_Localized: Woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385581825355776
+    m_Localized: Woof?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385700608045056
+    m_Localized: Woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385743117316096
+    m_Localized: Woof...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385873677611008
+    m_Localized: Woof! Woof!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385902836412416
+    m_Localized: "Look! You\u2019re much warmer already!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385934713122816
+    m_Localized: Woof. Woof woof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385964446543872
+    m_Localized: "Oh, what\u2019s this?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8386002090422272
+    m_Localized: Woof woof woof.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415612274438144
+    m_Localized: Where could he be? He must be terrified.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415680780005376
+    m_Localized: Did you lose something? You look a little frantic.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415716414812160
+    m_Localized: "Uh? No, no. I didn\u2019t lose anything. I found something. I found
+      this bouncy ball in the middle of the woods."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415775265091584
+    m_Localized: "The initials on it. They\u2019re the ones from my great-great-grandson."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415777051865088
+    m_Localized: "I believe he died and came down here. He\u2019s probably cooped
+      up in some corner. He\u2019s not used to demons."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416525143732224
+    m_Localized: "Wait. Great-great grandson? How\u2026how old are you, Jilaiya?
+      You look a bit-"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416543191822336
+    m_Localized: "Young? Haha. I am young down here. Time in hell doesn\u2019t work
+      the same way it does up there. It\u2019s not exactly linear."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416581779419136
+    m_Localized: I grew up on the surface, you know. A long time ago for you, almost
+      a century. For me, it was a couple of decades ago.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416646338146304
+    m_Localized: "Time is weird down here. If you haven\u2019t noticed it, you will
+      soon.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416686976757760
+    m_Localized: So, you had a family up there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416796259348480
+    m_Localized: Not exactly, but I did have a daughter. She had her own children
+      and so on. Which brings us to my great-great grandson. Could you help me look
+      for him?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416859442343936
+    m_Localized: Of course! Do you have any idea on where to look?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416897287548928
+    m_Localized: "Well, go look in the forest. Another pair of eyes scouring that
+      area won\u2019t hurt. I\u2019ll search this way."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416945874366464
+    m_Localized: '*gasping* Oof, those were a tough bunch. Oh, this one dropped a
+      piece of paper.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417359537598464
+    m_Localized: "The house in this drawing\u2026 looks familiar. Oh, isn\u2019t
+      this\u2026 that grumpy man\u2019s house? Let me see if he\u2019s nicer this
+      time."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417400205570048
+    m_Localized: "What is it? Why are you here? If it\u2019s not an emergency, go
+      away."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417564823613440
+    m_Localized: "Could you let me in? I\u2019m looking for something."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417602165501952
+    m_Localized: What? No.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417648508366848
+    m_Localized: "Wait. Please, it\u2019s about a missing child, I have to look for
+      him."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417836576763904
+    m_Localized: The kid drew your house!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417882210791424
+    m_Localized: Uh, there goes being nice. I have to speak with Jilaiya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417918483132416
+    m_Localized: " You\u2019re back already? I haven\u2019t found anything. I really
+      hope he\u2019s ok. Have you?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418155306119168
+    m_Localized: There were some angels around. One dropped this.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418207755890688
+    m_Localized: Oh, yeah, this was certainly done by a child.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418334323208192
+    m_Localized: Does it look like something your great grandson would draw?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418379118374912
+    m_Localized: "Great-GREAT grandson. Uh. I don\u2019t know. I\u2019ve never actually
+      met him. I just know he exists. This drawing\u2026 It looks an awful lot like
+      Leonard\u2019s house."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418420855894016
+    m_Localized: " Yeah. I went there, but he wouldn\u2019t let me in. He barely
+      spoke to me. Not the nicest, is he?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418461628723200
+    m_Localized: "Well, you get used to him. He\u2019s a bit of a recluse. Doesn\u2019t
+      allow anyone to get too close. He usually isn\u2019t that rude though."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418517660430336
+    m_Localized: "Maybe he is hiding something. Hmm. I know the only person to ever
+      enter his house was \xC1gathe. And she wasn\u2019t exactly allowed in."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418559578304512
+    m_Localized: She broke in?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418624669708288
+    m_Localized: "Technically\u2026 yes. But it was an accident. She told me that
+      when she was a kid, she was trying to build this flying machine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418708350267392
+    m_Localized: "Well, it worked. She flew right into Leonard\u2019s house. Through
+      the roof."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418751803256832
+    m_Localized: "She said that his house had birds everywhere. Portraits of birds,
+      bird motifs, bird\u2019s albums, bird everything."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418784950841344
+    m_Localized: "That is the only thing we know about him, you know. That he loves
+      birds.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419208676208640
+    m_Localized: "Hmm, what if\u2026 we gave him a bird, and in exchange, he would
+      share his secret."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419638776918016
+    m_Localized: Haha, good luck with that. Hell-birds are notoriously feisty. If
+      you try to grab one, you risk losing a hand.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419707328622592
+    m_Localized: "Well, you could try to give them some food to lure them out. That\u2019s
+      what Leonard does. But he is an expert at it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419750316044288
+    m_Localized: "That\u2019s a good idea! Do you have any bird food?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419818762891264
+    m_Localized: "I guess I could give you some seeds from \xC1gathe\u2019s garden.
+      Don\u2019t tell her anything!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8420146694549504
+    m_Localized: "I\u2019ll leave the seeds here and return tomorrow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421654265819136
+    m_Localized: "Oh, there\u2019s only one."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421740186136576
+    m_Localized: Got you! Hmm, that was surprisingly easy. I still have a hand.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421800651223040
+    m_Localized: Chirp chirp...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421872319295488
+    m_Localized: Mr. Leonard! I have a birdie for you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421954598957056
+    m_Localized: "Oh, just go away you! Catching wild birds while they are just living
+      their lives\u2026 That bird looks ill. Really ill. Hand me the bird, please.
+      I\u2019ll treat him.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422643270119424
+    m_Localized: "No can do, Mr. Leonard. I\u2019ll give you the bird, if you show
+      me your secret."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422700375568384
+    m_Localized: "You have so many birds\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422845464932352
+    m_Localized: "Come on little birdie, you will be fine. Kid! Get out of bed! They\u2019re
+      probably looking for you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422928310824960
+    m_Localized: "Are you gonna put me in the lava river? WAH-WAH! Please don\u2019t
+      hurt me.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423071328202752
+    m_Localized: ' No, no one is here to hurt you. Your great-great grandmother has
+      been looking for you. You are safe now.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423190740037632
+    m_Localized: My great-great grandmother?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423549566939136
+    m_Localized: "She\u2019s never met you, but she\u2019s worried sick about you.
+      Let\u2019s go find her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423581577867264
+    m_Localized: '*snif* Ok.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423658547539968
+    m_Localized: "Oh, sweetheart. I\u2019m so glad he\u2019s ok! I can\u2019t thank
+      you enough.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423731801059328
+    m_Localized: "Don\u2019t worry. I\u2019m happy Leonard took good care of him."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424504454770688
+    m_Localized: "He\u2019s a good person, he just likes staying in his own bubble.
+      Ohh\u2026could you talk to him a bit? I need some fresh air. Too many emotions
+      today.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424572708679680
+    m_Localized: "Is she my\u2026 Great-great grandma?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424640421523456
+    m_Localized: "Yes, she\u2019s  here to keep you safe. You don\u2019t have to
+      worry. Here\u2019s your ball."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424670180110336
+    m_Localized: Can I go home? I miss mommy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424703164116992
+    m_Localized: "Oh\u2026 oh\u2026. Uh, I\u2019m sorry. Your mother is taking care
+      of some stuff up there. You\u2019re going to have to stay with Jilaiya for
+      a while, ok?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424759573311488
+    m_Localized: '*sniff*'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425100956102656
+    m_Localized: "Will he be ok? I dont think he understands what has happened\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425155310088192
+    m_Localized: " I\u2019ll try my best\u2026 Thank you for bringing him. I have
+      to be as gentle as possible. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425191079112704
+    m_Localized: "Can\u2019t he go up to see his mom? You said you had been up there
+      before.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425237082238976
+    m_Localized: "I was born down here. He\u2026he\u2026didn't come down voluntarily.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425270573756416
+    m_Localized: "Oh\u2026 If you need anything, I\u2019m here to help!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425324424425472
+    m_Localized: "Don\u2019t concern yourself about that. You\u2019ve done enough.
+      Here. While I was out looking, I found this box. You can have it.\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
