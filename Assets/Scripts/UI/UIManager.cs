@@ -66,10 +66,12 @@ namespace UI
             dialogueController.SetDialogue(dialogueLine, actor, isProtagonistTalking);
             //interactionPanel.gameObject.SetActive(false);
             dialogueController.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
 
         private void CloseUIDialogue(int dialogueType)
         {
+            Time.timeScale = 1;
             selectionHandler.Unselect();
             dialogueController.gameObject.SetActive(false);
             onInteractionEndedEvent.RaiseEvent();
