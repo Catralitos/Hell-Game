@@ -1,12 +1,8 @@
 ﻿using System;
-using Events.ScriptableObjects;
 using Gameplay;
-using Inventory;
-using Inventory.ScriptableObjects;
-using Projectiles;
 using UnityEngine;
 
-namespace Enemies
+namespace Characters.Enemies
 {
     public class EnemyCombat : MonoBehaviour
     {

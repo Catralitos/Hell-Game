@@ -1,15 +1,8 @@
 using System;
-using System.Collections;
-using UnityEngine;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.AI;
-using Events.ScriptableObjects;
 using Management;
-using Random = UnityEngine.Random;
-using Pathfinding;
+using UnityEngine;
 
-namespace CharacterPathfinding
+namespace Characters.CharacterPathfinding
 {
     [Serializable]
     public class TimedPathfindingPair

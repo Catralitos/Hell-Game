@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Utils
+namespace Utils
 {
     public static class RandomHelper
     {

@@ -2,6 +2,7 @@
 using Events.ScriptableObjects;
 using Inventory.ScriptableObjects;
 using Management;
+using Management.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

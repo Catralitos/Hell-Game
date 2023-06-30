@@ -5,6 +5,7 @@ using Events.ScriptableObjects.UI;
 using Gameplay.ScriptableObjects;
 using Inputs;
 using Management;
+using Management.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Localization;
 

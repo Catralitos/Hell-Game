@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using Characters.CharacterPathfinding;
 using UnityEngine.AI;
 using Events.ScriptableObjects;
 using Management;
 using Random = UnityEngine.Random;
 using Pathfinding;
-using CharacterPathfinding;
 
 namespace Characters
 {
@@ -33,8 +33,9 @@ namespace Characters
     
         private Animator _animator;
         // Start is called before the first frame update
-        private void Start()
+        public override void Start()
         {
+            base.Start();
             _animator = GetComponent<Animator>();
         }
 

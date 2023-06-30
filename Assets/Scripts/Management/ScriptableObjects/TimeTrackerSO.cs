@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Management
+namespace Management.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Time Tracker")]
     public class TimeTrackerSO : ScriptableObject

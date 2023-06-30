@@ -1,7 +1,6 @@
 using Gameplay;
 
-
-namespace Enemies
+namespace Characters.Enemies
 {
     /// <summary>
     /// This class handles enemy health and getting hit

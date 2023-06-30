@@ -1,45 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
-using System;
-using Characters;
-using Assets.Scripts.Utils;
 using Events.ScriptableObjects;
-using Pathfinding;
 
-public class Angel : Enemy
+namespace Characters.Enemies
 {
-    public int angelBatch;
+    public class Angel : Enemy
+    {
+        public int angelBatch;
 
-    public IntEventChannelSO angelDiedEvent;
+        public IntEventChannelSO angelDiedEvent;
     
-    // Start is called before the first frame update
-    public override void Start()
-    {
-        base.Start();
-        this.info.Type = "Angel";
-        // TODO decide if we're keeping rndm rolls  
-        //        this.DmgRoll = () => RandomHelper.RollD10() + 2;
-        this.combat.simpleDamage = 5;
-        this.combat.DmgRoll = () => this.combat.simpleDamage;
-        this.info.awakeDistance = 10;
-        this.combat.attackRange = 1;
-        this.combat.AC = 20;
-        this.combat.attackCooldown = 2;
-        this.combat.cooldownLeft = 0;
-    }
-
-    public void Update()
-    {
-        if (this.ai.reachedDestination)
+        // Start is called before the first frame update
+        public override void Start()
         {
-            AttackPlayer();
+            base.Start();
+            this.info.Type = "Angel";
+            // TODO decide if we're keeping rndm rolls  
+            //        this.DmgRoll = () => RandomHelper.RollD10() + 2;
+            this.combat.simpleDamage = 5;
+            this.combat.DmgRoll = () => this.combat.simpleDamage;
+            this.info.awakeDistance = 10;
+            this.combat.attackRange = 1;
+            this.combat.AC = 20;
+            this.combat.attackCooldown = 2;
+            this.combat.cooldownLeft = 0;
         }
-    }
 
-    private void OnDestroy()
-    {
-        angelDiedEvent.RaiseEvent(angelBatch);
+        public void Update()
+        {
+            if (this.ai.reachedDestination)
+            {
+                AttackPlayer();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            angelDiedEvent.RaiseEvent(angelBatch);
+        }
     }
 }
