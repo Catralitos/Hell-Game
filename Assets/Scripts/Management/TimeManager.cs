@@ -1,6 +1,4 @@
-﻿using System;
-using Events;
-using Events.ScriptableObjects;
+﻿using Events.ScriptableObjects;
 using Management.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -41,7 +39,6 @@ namespace Management
         {
             _currentMinutes++;
             timeTracker.time = new TimeStep(_currentDay, _currentHour, _currentMinutes);
-            //minutePassedEvent.RaiseEvent(new TimeStep(_currentDay, _currentHour, _currentMinutes));
             ControlPPV();
         }
 

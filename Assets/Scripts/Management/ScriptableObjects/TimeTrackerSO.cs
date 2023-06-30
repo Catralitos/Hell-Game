@@ -6,5 +6,10 @@ namespace Management.ScriptableObjects
     public class TimeTrackerSO : ScriptableObject
     {
         public TimeStep time;
+
+        public void Init()
+        {
+            time = new TimeStep(1, 6, 0);
+        }
     }
 }

@@ -77,7 +77,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7591615110692221127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: -10}
+  m_LocalPosition: {x: 6.71, y: -1.12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -259,7 +259,7 @@ Transform:
   - {fileID: 7335730581130594591}
   - {fileID: 6951908278385776004}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8149316047559065230
 MonoBehaviour:
@@ -277,6 +277,7 @@ MonoBehaviour:
   questManager: {fileID: 11400000, guid: 3538fcf9cc09acb46a7a694423659aae, type: 2}
   inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
   enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
 --- !u!114 &5849559484832737469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +294,11 @@ MonoBehaviour:
   actorsList:
   - {fileID: 11400000, guid: c19c12603accc6d40a6538cf35a01949, type: 2}
   - {fileID: 11400000, guid: a47dade50654b414982da7d18a5fb6d3, type: 2}
+  - {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
+  - {fileID: 11400000, guid: 3d34c7da615e83f40a7a288a7bcc4185, type: 2}
+  - {fileID: 11400000, guid: 8f946eaf8c4ad85499b92f975cf52fd8, type: 2}
+  - {fileID: 11400000, guid: cd35cb06afd0f5e46b930b6eabe28ccb, type: 2}
+  - {fileID: 11400000, guid: e6180cb9d098b7c4a99aa500fd51f206, type: 2}
   inputReader: {fileID: 11400000, guid: d35246d6bdac6b44592ca35c0e916f0c, type: 2}
   gameState: {fileID: 11400000, guid: 73ab1dff21e8c284cbaa0a5945d9a758, type: 2}
   startDialogue: {fileID: 11400000, guid: b676ba6791c816848b074fc0a758ef76, type: 2}

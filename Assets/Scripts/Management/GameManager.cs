@@ -15,7 +15,8 @@ namespace Management
         public QuestManagerSO questManager;
         public InventorySO inventory;
         public EnemyTrackerSO enemyTracker;
-
+        public TimeTrackerSO timeTracker;
+        
         private AudioManager _audioManager;
         private void Awake()
         {
@@ -23,6 +24,7 @@ namespace Management
             inventory.Init();
             enemyTracker.Init();
             questManager.Init();
+            timeTracker.Init();
         }
 
         private void Start()
