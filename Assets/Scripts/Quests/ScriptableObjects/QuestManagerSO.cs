@@ -319,6 +319,7 @@ namespace Quests.ScriptableObjects
             if (quest.currentStepIndex >= quest.steps.Count)
             {
                 EndQuest(quest);
+                rewardItemSoEvent.RaiseEvent(quest.reward);
             }
             else
             {
