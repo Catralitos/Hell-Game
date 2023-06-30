@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 8051185239355364116, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
       propertyPath: hitMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 09dbcd79d6bbad54cab7b1e57ccd2df2, type: 2}
+      objectReference: {fileID: 2100000, guid: fa00cf6429f890840bef5036ab3b9ba1, type: 2}
     - target: {fileID: 8051185239355364116, guid: 95403b1d4e65aaa438de22031da0280e, type: 3}
       propertyPath: invincibilityFrames
       value: 60

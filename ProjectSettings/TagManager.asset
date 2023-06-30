@@ -6,7 +6,6 @@ TagManager:
   tags:
   - NPC
   - Pickable
-  - TTest
   layers:
   - Default
   - TransparentFX
