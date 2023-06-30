@@ -4,6 +4,7 @@ using Events.ScriptableObjects;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using Inventory;
+using Inventory.ScriptableObjects;
 
 namespace Management
 {
@@ -15,7 +16,8 @@ namespace Management
         public bool hasTimedRespawns = true;
         public bool listensToGeneralEvent = true;
         public LayerMask spawnObstacles;
-        public List<GameObject> itemReferences;
+        public List<ItemSO> itemsToSpawn;
+        public GameObject pickupPrefab;
         
         private List<CollectableItem> _spawnedItems;
         private int _numOfRespawns;
@@ -81,11 +83,12 @@ namespace Management
                 if (collider2Ds.Length == 0)
                 {
                     int itemId = listensToGeneralEvent?
-                                 Mathf.RoundToInt(Random.Range(0, itemReferences.Count)) :
+                                 Mathf.RoundToInt(Random.Range(0, itemsToSpawn.Count)) :
                                  0;
 
-                    GameObject spawnedItem = Instantiate(itemReferences[itemId], positionToSpawn, Quaternion.identity, transform);
-                    CollectableItem item = spawnedItem.GetComponentInChildren<CollectableItem>();
+                    GameObject spawnedItem = Instantiate(pickupPrefab, positionToSpawn, Quaternion.identity, transform);
+                    CollectableItem item = spawnedItem.GetComponent<CollectableItem>();
+                    item.currentItem = itemsToSpawn[itemId];
                     _spawnedItems.Add(item);
                     numSpawnedItems++;
                 }
