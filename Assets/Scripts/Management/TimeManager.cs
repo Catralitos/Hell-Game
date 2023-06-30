@@ -55,7 +55,6 @@ namespace Management
             TimeStep ts = new TimeStep(_currentDay, _currentHour, _currentMinutes);
             timeTracker.time = ts;
             hourPassedEvent.RaiseEvent(ts);
-            Debug.Log("Passed hour. It's " + _currentHour + " of the " + _currentDay + "th day.");
         }
         
         private void ControlPPV() // used to adjust the post processing slider.

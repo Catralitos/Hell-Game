@@ -57742,15 +57742,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161017540692166348, guid: b36c6a680f0b43b438ea7c5ab6a43671, type: 3}
       propertyPath: m_Color.b
-      value: 0.15619439
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6161017540692166348, guid: b36c6a680f0b43b438ea7c5ab6a43671, type: 3}
       propertyPath: m_Color.g
-      value: 0.54604775
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6161017540692166348, guid: b36c6a680f0b43b438ea7c5ab6a43671, type: 3}
       propertyPath: m_Color.r
-      value: 0.735849
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681495153329548170, guid: b36c6a680f0b43b438ea7c5ab6a43671, type: 3}
       propertyPath: m_Name
@@ -57769,6 +57769,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 443424406555257663, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811758623517568667, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811758623517568667, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811758623517568667, guid: adeb8adef1f373f429899b86c1206942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2819429049786188024, guid: adeb8adef1f373f429899b86c1206942, type: 3}
       propertyPath: damagers.m_Bits
       value: 1792
