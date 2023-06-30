@@ -29,7 +29,7 @@ MonoBehaviour:
   item: {fileID: 0}
   hasReward: 0
   rewardItem: {fileID: 0}
-  angelCount: 0
-  angelBatch: 1
+  angelCount: 1
+  angelBatch: 0
   isDone: 0
   endStepEvent: {fileID: 0}

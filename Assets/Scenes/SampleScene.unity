@@ -4027,6 +4027,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
+      propertyPath: maxAngels
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
+      propertyPath: angelBatch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelPrefab
       value: 
       objectReference: {fileID: 9006868311407313348, guid: 32be4142e5be1aa4d8288f864e3b76d8, type: 3}
@@ -57849,18 +57857,6 @@ PrefabInstance:
     - target: {fileID: 5687278140031598877, guid: 0ce77fe8e64ce824a8eb07031543ac5f, type: 3}
       propertyPath: m_Name
       value: NPCCaseLeonard
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382237288421958319, guid: 0ce77fe8e64ce824a8eb07031543ac5f, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382237288421958319, guid: 0ce77fe8e64ce824a8eb07031543ac5f, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382237288421958319, guid: 0ce77fe8e64ce824a8eb07031543ac5f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

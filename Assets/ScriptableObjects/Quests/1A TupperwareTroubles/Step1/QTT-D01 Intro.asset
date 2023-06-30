@@ -124,17 +124,6 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       choices: []
-    - actorID: 0
-      textList:
-      - m_TableReference:
-          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
-        m_TableEntryReference:
-          m_KeyId: 7684710841937920
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-      choices: []
   dialogueType: 0
   endOfDialogueEvent: {fileID: 0}
   references:
