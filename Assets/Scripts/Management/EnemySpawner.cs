@@ -58,8 +58,7 @@ namespace Management
             if (_numOfRespawns > 0 && !hasTimedRespawns) return;
             int numAngelsToSpawn;
 
-            if (_spawnedAngels == null)
-                _spawnedAngels = new List<Angel>();
+            _spawnedAngels ??= new List<Angel>();
 
             if (_spawnedAngels.Count > 0)
             {
@@ -76,7 +75,7 @@ namespace Management
 
             while (numSpawnedAngels < numAngelsToSpawn && cycleAttempts < 1000)
             {
-                Vector2 positionToSpawn = Random.insideUnitCircle * spawnerRange;
+                Vector2 positionToSpawn = new Vector2(transform.position.x, transform.position.y) + (Random.insideUnitCircle * spawnerRange);
                 Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(positionToSpawn, 0.5f, spawnObstacles);
                 if (collider2Ds.Length == 0)
                 {

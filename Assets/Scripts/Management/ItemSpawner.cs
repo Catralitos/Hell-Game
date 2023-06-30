@@ -78,7 +78,7 @@ namespace Management
 
             while (numSpawnedItems < numItemsToSpawn && cycleAttempts < 1000)
             {
-                Vector2 positionToSpawn = Random.insideUnitCircle * spawnerRange;
+                Vector2 positionToSpawn = new Vector2(transform.position.x, transform.position.y) + (Random.insideUnitCircle * spawnerRange);
                 Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(positionToSpawn, 0.5f, spawnObstacles);
                 if (collider2Ds.Length == 0)
                 {
