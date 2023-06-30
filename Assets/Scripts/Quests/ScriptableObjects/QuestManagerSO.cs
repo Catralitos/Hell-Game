@@ -19,10 +19,6 @@ namespace Quests.ScriptableObjects
         public InventorySO inventory;
         public EnemyTrackerSO enemyTracker;
         public TimeTrackerSO timeTracker;
-        /*[Tooltip("Item the NPC gives out on winning")]
-        public ItemSO winningItem;
-        [Tooltip("Item the NPC gives out on losing")]
-        public ItemSO losingItem;*/
 
         [Header("Listening to channels")]
         public DialogueChoiceChannelSO continueWithStepEvent;
@@ -75,7 +71,7 @@ namespace Quests.ScriptableObjects
 
         private StepSO HasStep(ActorSO actorToCheckWith)
         {
-            return (from quest in quests where !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
+            return (from quest in quests where !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.currentStep.StepIsAvailable(timeTracker.time) && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
         }
 
         private QuestSO GetStepQuest(StepSO step)
@@ -153,7 +149,6 @@ namespace Quests.ScriptableObjects
             if (currentStep != null)
             {
                 _lastStepChecked = currentStep;
-                //currentStep.item = winningItem;
                 CheckStepValidity(currentStep);
             }
         }
@@ -164,14 +159,10 @@ namespace Quests.ScriptableObjects
             if (currentStep != null)
             {
                 _lastStepChecked = currentStep;
-                //currentStep.item = losingItem;
                 CheckStepValidity(currentStep);
             }
         }
-
-        // um evento que passa algo. que podemos passar?
-        //este evento é raised no dialogue manager em:
-        //MakeDialogueChoice, que tem parametro choice
+        
         private void CheckStepValidity(Choice currentChoice)
         {
             StepSO currentStep = GetStepWithChoice(currentChoice);
@@ -301,7 +292,6 @@ namespace Quests.ScriptableObjects
 
         private void EndDialogue(int dialogueType)
         {
-
             //depending on the dialogue that ended, do something 
             switch ((DialogueType)dialogueType)
             {

@@ -1,6 +1,8 @@
 ﻿using Dialogues.ScriptableObjects;
 using Events.ScriptableObjects;
+using Extensions;
 using Inventory.ScriptableObjects;
+using Management;
 using UnityEngine;
 
 namespace Quests.ScriptableObjects
@@ -17,6 +19,8 @@ namespace Quests.ScriptableObjects
     [CreateAssetMenu(menuName = "Quests/Step")]
     public class StepSO : ScriptableObject
     {
+        
+        public Pair<TimeStep, TimeStep> availableWindow;
         
         [Tooltip("The Character this step will need interaction with")]
         public ActorSO actor;
@@ -39,7 +43,11 @@ namespace Quests.ScriptableObjects
         public bool isDone;
         [Tooltip("Specific event which happens when step is done")]
         public VoidEventChannelSO endStepEvent;
-
+        
+        public bool StepIsAvailable(TimeStep time)
+        {
+            return availableWindow.FirstMember.Compare(time) >= 0 && availableWindow.SecondMember.Compare(time) <= 0;
+        }
         
         public void FinishStep()
         {
