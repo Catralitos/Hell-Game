@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Practice Weapon
   itemSprite: {fileID: 21300000, guid: 638fa30076b8a264abd4269f5668c4c4, type: 3}
   damage: 1
-  usesLeft: 8
+  usesLeft: 81
   weaponType: 1

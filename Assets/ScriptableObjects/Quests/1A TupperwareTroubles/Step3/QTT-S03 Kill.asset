@@ -31,5 +31,5 @@ MonoBehaviour:
   rewardItem: {fileID: 0}
   angelCount: 1
   angelBatch: 0
-  isDone: 0
+  isDone: 1
   endStepEvent: {fileID: 0}
