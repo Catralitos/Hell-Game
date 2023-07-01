@@ -21,7 +21,6 @@ namespace UI.Inventory
         public GameObject inventorySlotPrefab;
         
         [Header("Items")]
-        private Item _equippedItemSo;
         public HeldItem heldItem;
         
         [Header("Inventory")]
@@ -52,7 +51,7 @@ namespace UI.Inventory
             _animator = GetComponent<Animator>();
             _radialMenu = inventoryMenu.gameObject.GetComponent<RadialLayout>();
             _currentItem = 0;
-            _equippedItemSo = currentInventory.items[_currentItem];
+            currentInventory.equippedItem = currentInventory.items[_currentItem];
             UpdateUI();
             inventoryCanvas.SetActive(false);
         }
@@ -109,7 +108,7 @@ namespace UI.Inventory
 
             if (currentInventory.items.Count == 0)
             {
-                _equippedItemSo = null;
+                currentInventory.equippedItem = null;
                 heldItem.item = null;
             }
             _radialMenu.CalculateRadial();
@@ -149,7 +148,7 @@ namespace UI.Inventory
             }
             else
             {
-                heldItem.item = _equippedItemSo;
+                heldItem.item = currentInventory.equippedItem;
             }
         }
         
@@ -187,15 +186,15 @@ namespace UI.Inventory
                 inventoryMenu.GetChild(i).transform.localRotation = Quaternion.Euler(targetCounterRotation);
             }
 
-            _equippedItemSo = currentInventory.items[_currentItem];
-            heldItem.item = _equippedItemSo;
+            currentInventory.equippedItem = currentInventory.items[_currentItem];
+            heldItem.item = currentInventory.equippedItem;
             _isRotating = false;
         }
 
         private void UseItem()
         {
-            if (_equippedItemSo == null) return;
-            switch (_equippedItemSo)
+            if (currentInventory.equippedItem == null) return;
+            switch (currentInventory.equippedItem)
             {
                 case HealingItem item:
                     UseHealItem(item);

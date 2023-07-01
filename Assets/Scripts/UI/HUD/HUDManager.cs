@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using Events.ScriptableObjects;
+using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
 using Management;
 using Management.ScriptableObjects;
 using TMPro;
+using UI.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +20,8 @@ namespace UI.HUD
         public TextMeshProUGUI timeText;
         public Image timeImage;
 
+        public InventorySlot equippedItem;
+        
         public List<KeyItemDisplayer> keyItems;
         
         private const int StartingHours = 24 + 24 + 18;
@@ -62,6 +66,20 @@ namespace UI.HUD
             string niceTime = $"{hours:00}:{minutes:00}";
             
             timeText.text = "Day " + timeTracker.time.day + " - " + niceTime;
+
+            equippedItem.item = inventory.equippedItem;
+            equippedItem.itemImage.sprite = equippedItem.item.itemSprite;
+            switch (equippedItem.item)
+            {
+                case Weapon w:
+                    equippedItem.leftText.text = w.damage.ToString();
+                    equippedItem.rightText.text = w.usesLeft.ToString();
+                    break;
+                case HealingItem h:
+                    equippedItem.leftText.text = h.hpRestoreValue.ToString();
+                    equippedItem.rightText.text = "HP";
+                    break;
+            }
         }
 
         private void UpdateTimeFillEvent(TimeStep time)
