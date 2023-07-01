@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed88fbb170d43dc89101be90a7096cb, type: 3}
-  m_Name: FluffyBlanket
+  m_Script: {fileID: 11500000, guid: cdfdc7d8419c0dd4aa717f3302e2f9d5, type: 3}
+  m_Name: QPMP-EventSpawnItem
   m_EditorClassIdentifier: 
-  name: Fluffy's Blanket
-  itemSprite: {fileID: 7482667652216324306, guid: 4543bd0aa5034b04b805968e230ad67b, type: 3}

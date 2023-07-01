@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a067643624c92a213a0a0221e3a4d, type: 3}
+  m_Name: QPMP-ST01
+  m_EditorClassIdentifier: 
+  availableWindow:
+    FirstMember:
+      day: 1
+      hour: 0
+      minute: 0
+    SecondMember:
+      day: 3
+      hour: 24
+      minute: 59
+  actor: {fileID: 11400000, guid: 3d34c7da615e83f40a7a288a7bcc4185, type: 2}
+  dialogueBeforeStep: {fileID: 11400000, guid: 51b4c7ff2eb86bd43a9d755eb9884f41, type: 2}
+  completeDialogue: {fileID: 0}
+  incompleteDialogue: {fileID: 0}
+  type: 0
+  item: {fileID: 0}
+  hasReward: 0
+  rewardItem: {fileID: 0}
+  angelCount: 0
+  angelBatch: 0
+  isDone: 1
+  endStepEvent: {fileID: 11400000, guid: 8b6880f672f158b4da7a4f4c17c37211, type: 2}

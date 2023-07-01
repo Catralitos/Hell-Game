@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a067643624c92a213a0a0221e3a4d, type: 3}
+  m_Name: QPMP-S02 ReturnBlankie
+  m_EditorClassIdentifier: 
+  availableWindow:
+    FirstMember:
+      day: 0
+      hour: 0
+      minute: 0
+    SecondMember:
+      day: 3
+      hour: 24
+      minute: 0
+  actor: {fileID: 11400000, guid: 3d34c7da615e83f40a7a288a7bcc4185, type: 2}
+  dialogueBeforeStep: {fileID: 11400000, guid: cc142203977ab6843ba8d746172d1c04, type: 2}
+  completeDialogue: {fileID: 11400000, guid: a2dd54e18a3d1c348b407efcc6649279, type: 2}
+  incompleteDialogue: {fileID: 11400000, guid: b8c314a695256db46960832d6d59c49c, type: 2}
+  type: 1
+  item: {fileID: 11400000, guid: 5919226da2478ee4bbd5b08ddf815642, type: 2}
+  hasReward: 0
+  rewardItem: {fileID: 0}
+  angelCount: 0
+  angelBatch: 0
+  isDone: 0
+  endStepEvent: {fileID: 0}
