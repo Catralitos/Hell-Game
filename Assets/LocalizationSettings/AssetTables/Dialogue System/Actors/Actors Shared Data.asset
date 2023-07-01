@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: TestNPC
     m_Metadata:
       m_Items: []
+  - m_Id: 348244897854091264
+    m_Key: BirdFountain
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: TestNPC
     m_Metadata:
       m_Items: []
+  - m_Id: 348244897854091264
+    m_Localized: Bird Fountain
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
