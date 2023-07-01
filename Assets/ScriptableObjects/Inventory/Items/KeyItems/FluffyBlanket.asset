@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FluffyBlanket
   m_EditorClassIdentifier: 
   name: Fluffy's Blanket
-  itemSprite: {fileID: 7482667652216324306, guid: 4543bd0aa5034b04b805968e230ad67b, type: 3}
+  itemSprite: {fileID: 21300000, guid: 09b31c223f2005a428817d4f6b7ff923, type: 3}

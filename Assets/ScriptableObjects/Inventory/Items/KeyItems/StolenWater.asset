@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StolenWater
   m_EditorClassIdentifier: 
   name: Water Stolen from Leonard's Bird Fountain
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: f9aa9cc148e837342b4738bc1e75079c, type: 3}

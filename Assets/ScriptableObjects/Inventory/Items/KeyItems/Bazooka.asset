@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bazooka
   m_EditorClassIdentifier: 
   name: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 50cb0bb4669c4654e9098213a42b8e8d, type: 3}
