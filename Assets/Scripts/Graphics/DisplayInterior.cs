@@ -13,7 +13,15 @@ namespace Graphics
         {
             if (playerMask.HasLayer(other.gameObject.layer))
             {
-                outside.SetActive(!outside.activeSelf);
+                outside.SetActive(false);
+            }
+        }
+        
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (playerMask.HasLayer(other.gameObject.layer))
+            {
+                outside.SetActive(true);
             }
         }
     }
