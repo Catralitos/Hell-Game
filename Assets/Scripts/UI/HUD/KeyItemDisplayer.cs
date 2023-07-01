@@ -26,7 +26,7 @@ namespace UI.HUD
                 _image.sprite = keyItem.itemSprite;
             }
 
-            _image.color = inInventory ? Color.white : Color.gray;
+            if (_image != null) _image.color = inInventory ? Color.white : Color.gray;
         }
     }
 }

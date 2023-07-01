@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.5
+  m_fontSize: 127.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2754,7 +2754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To Hell With It is a game where you have until the end of the your third
+  m_text: 'To Hell With It is a game where you have until the end of  your third
     day to gather enough resources for a big final battle.
 
     To do this you must
@@ -2762,7 +2762,7 @@ MonoBehaviour:
     quests throughout the 3 days.
 
     Gather resources, and manage your limited
-    inventory to save up to the huge final battle.
+    inventory to save up for the huge final battle.
 
     Weapons have a set number
     of uses before breaking, and healing items are only good once. So be frugal.'

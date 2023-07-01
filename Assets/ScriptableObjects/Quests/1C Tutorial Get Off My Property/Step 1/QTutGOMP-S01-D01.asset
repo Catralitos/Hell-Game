@@ -100,7 +100,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       choices: []
-    - actorID: 0
+    - actorID: 3
       textList:
       - m_TableReference:
           m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
@@ -121,40 +121,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         nextDialogue: {fileID: 0}
-        actionType: 1
-      - response:
-          m_TableReference:
-            m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
-          m_TableEntryReference:
-            m_KeyId: 154449965056
-            m_Key: 
-          m_FallbackState: 0
-          m_WaitForCompletion: 0
-          m_LocalVariables: []
-        nextDialogue: {fileID: 0}
-        actionType: 4
-    - actorID: 3
-      textList:
-      - m_TableReference:
-          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
-        m_TableEntryReference:
-          m_KeyId: 8610740433641472
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-      choices:
-      - response:
-          m_TableReference:
-            m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
-          m_TableEntryReference:
-            m_KeyId: 191896711168
-            m_Key: 
-          m_FallbackState: 0
-          m_WaitForCompletion: 0
-          m_LocalVariables: []
-        nextDialogue: {fileID: 0}
-        actionType: 1
+        actionType: 2
       - response:
           m_TableReference:
             m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d

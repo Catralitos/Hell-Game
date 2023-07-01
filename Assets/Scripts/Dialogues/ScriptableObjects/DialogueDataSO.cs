@@ -4,7 +4,6 @@ using System.Linq;
 using Events.ScriptableObjects;
 using Extensions;
 using Management;
-using UnityEditor.Localization;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Metadata;
@@ -106,66 +105,5 @@ namespace Dialogues.ScriptableObjects
         {
             actorID = (ActorID)Enum.Parse(typeof(ActorID), comment.CommentText);
         }
-
-#if UNITY_EDITOR
-        public Line(string name)
-        {
-            StringTableCollection collection =
-                LocalizationEditorSettings.GetStringTableCollection("Questline Dialogue");
-            textList = null;
-            if (collection != null)
-            {
-
-                int lineIndex = 0;
-                LocalizedString dialogueLine = null;
-                do
-                {
-                    lineIndex++;
-                    string key = "L" + lineIndex + "-" + name;
-                    if (collection.SharedData.Contains(key))
-                    {
-
-                        SetActor(collection.SharedData.GetEntry(key).Metadata.GetMetadata<Comment>());
-                        dialogueLine = new LocalizedString()
-                            { TableReference = "Questline Dialogue", TableEntryReference = key };
-                        textList ??= new List<LocalizedString>();
-                        textList.Add(dialogueLine);
-                    }
-                    else
-                    {
-                        dialogueLine = null;
-                    }
-
-                } while (dialogueLine != null);
-
-                int choiceIndex = 0;
-                Choice choice = null;
-                do
-                {
-                    choiceIndex++;
-                    string key = "C" + choiceIndex + "-" + name;
-
-                    if (collection.SharedData.Contains(key))
-                    {
-                        LocalizedString choiceLine = new LocalizedString()
-                            { TableReference = "Questline Dialogue", TableEntryReference = key };
-                        choice = new Choice(choiceLine);
-                        choice.SetChoiceAction(collection.SharedData.GetEntry(key).Metadata.GetMetadata<Comment>());
-
-                        choices ??= new List<Choice>();
-                        choices.Add(choice);
-                    }
-                    else
-                    {
-                        choice = null;
-                    }
-                } while (choice != null);
-            }
-            else
-            {
-                textList = null;
-            }
-        }
-#endif
     }
 }

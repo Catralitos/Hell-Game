@@ -71,7 +71,7 @@ namespace Quests.ScriptableObjects
 
         private StepSO HasStep(ActorSO actorToCheckWith)
         {
-            return (from quest in quests where !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.currentStep.StepIsAvailable(timeTracker.time) && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
+            return (from quest in quests where !quest.isDone && quest.QuestIsAvailable(timeTracker.time) && quest.currentStep.actor == actorToCheckWith select quest.currentStep).FirstOrDefault();
         }
 
         private QuestSO GetStepQuest(StepSO step)

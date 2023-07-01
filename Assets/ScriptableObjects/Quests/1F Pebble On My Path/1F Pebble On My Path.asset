@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableWindow:
     FirstMember:
-      day: 1
-      hour: 0
+      day: 3
+      hour: 7
       minute: 0
     SecondMember:
       day: 3
@@ -28,5 +28,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8e13696337050ce479d628f2566d3fb8, type: 2}
   - {fileID: 11400000, guid: 1efe4804547c1f44fa2c3e494d2d4df7, type: 2}
   endQuestEvent: {fileID: 0}
-  currentStep: {fileID: 11400000, guid: 8e13696337050ce479d628f2566d3fb8, type: 2}
-  currentStepIndex: 0
+  currentStep: {fileID: 11400000, guid: 1efe4804547c1f44fa2c3e494d2d4df7, type: 2}
+  currentStepIndex: 1

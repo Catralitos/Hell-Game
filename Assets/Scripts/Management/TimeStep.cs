@@ -6,8 +6,8 @@ namespace Management
     [Serializable]
     public class TimeStep
     {
-        [Range(1,3)] public int day;
-        [Range(1,24)] public int hour;
+        public int day;
+        public int hour;
         [HideInInspector] public int minute;
 
         public TimeStep(int day, int hour, int minute)

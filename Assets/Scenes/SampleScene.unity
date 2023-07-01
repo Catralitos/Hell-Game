@@ -58628,7 +58628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8259870680758976584, guid: 7811ad441016c0642ae404f556b9720e, type: 3}
       propertyPath: itemsToSpawn.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8259870680758976584, guid: 7811ad441016c0642ae404f556b9720e, type: 3}
       propertyPath: itemsToSpawn.Array.data[3]
@@ -58666,6 +58666,10 @@ PrefabInstance:
       propertyPath: itemsToSpawn.Array.data[11]
       value: 
       objectReference: {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
+    - target: {fileID: 8259870680758976584, guid: 7811ad441016c0642ae404f556b9720e, type: 3}
+      propertyPath: itemsToSpawn.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b4556bbb4e30ac49be8166b9301d641, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

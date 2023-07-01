@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableWindow:
     FirstMember:
-      day: 1
-      hour: 0
+      day: 2
+      hour: 22
       minute: 0
     SecondMember:
       day: 3
-      hour: 24
+      hour: 7
       minute: 59
   questName: Blind Night
   isDone: 0
@@ -30,5 +30,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c1aaa9ed2836874ca02d5e5923c6aeb, type: 2}
   - {fileID: 11400000, guid: be4eade3fcab33544ae489b21345a1f5, type: 2}
   endQuestEvent: {fileID: 0}
-  currentStep: {fileID: 0}
+  currentStep: {fileID: 11400000, guid: f59a4027fe3eddb428364b03d826d23a, type: 2}
   currentStepIndex: 0

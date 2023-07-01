@@ -10,7 +10,7 @@ namespace Events.ScriptableObjects.UI
         public UnityAction<Choice> OnEventRaised;
         public void RaiseEvent(Choice choice)
         {
-            if (OnEventRaised != null)
+            if (OnEventRaised != null) 
                 OnEventRaised.Invoke(choice);
         }
     }

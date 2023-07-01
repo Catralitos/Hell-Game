@@ -10,7 +10,7 @@ namespace Quests.ScriptableObjects
     [CreateAssetMenu(menuName = "Quests/Quest")]
     public class QuestSO : ScriptableObject
     {
-        public Pair<TimeStep, TimeStep> availableWindow = new Pair<TimeStep, TimeStep>(new TimeStep(1,0,0), new TimeStep(3,24,59));
+        public Pair<TimeStep, TimeStep> availableWindow;
         public string questName;
         public bool isDone;
         public ItemSO reward;
@@ -23,7 +23,7 @@ namespace Quests.ScriptableObjects
 
         public bool QuestIsAvailable(TimeStep time)
         {
-            return availableWindow.FirstMember.Compare(time) <= 0 && availableWindow.SecondMember.Compare(time) >= 0;
+              return availableWindow.FirstMember.Compare(time) <= 0 && availableWindow.SecondMember.Compare(time) >= 0;
         }
         
         public void FinishQuest()

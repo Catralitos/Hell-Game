@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableWindow:
     FirstMember:
-      day: 1
-      hour: 0
+      day: 2
+      hour: 7
       minute: 0
     SecondMember:
-      day: 3
-      hour: 24
+      day: 2
+      hour: 22
       minute: 59
   questName: Burn Baby Burn
   isDone: 0
@@ -29,5 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be9d02bd0bb795545a4c4a908f9fe9c2, type: 2}
   - {fileID: 11400000, guid: 4f51ef937fad70e41b6a1fca3912c8e0, type: 2}
   endQuestEvent: {fileID: 0}
-  currentStep: {fileID: 0}
+  currentStep: {fileID: 11400000, guid: 24de8d078595cca4ba7a3b750d4d4125, type: 2}
   currentStepIndex: 0

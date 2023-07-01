@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: QuestManager
   m_EditorClassIdentifier: 
   quests:
-  - {fileID: 11400000, guid: 34bde46172528d04ca347ddaabdf8b41, type: 2}
-  - {fileID: 11400000, guid: c1587b1bfb487ba40ad82213a0a06038, type: 2}
-  - {fileID: 11400000, guid: fc8e137840e9b7c479fc730a6609492c, type: 2}
-  - {fileID: 11400000, guid: 6af536237e36ac542b5794e7a3a72bde, type: 2}
   - {fileID: 11400000, guid: 359d3a0f06a459c4baf035384eb26e3a, type: 2}
   inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
   enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
