@@ -50,6 +50,10 @@ MonoBehaviour:
     m_Localized: Bird Fountain
     m_Metadata:
       m_Items: []
+  - m_Id: 348306757932511232
+    m_Localized: Handwritten Note
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

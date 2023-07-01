@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: BirdFountain
     m_Metadata:
       m_Items: []
+  - m_Id: 348306757932511232
+    m_Key: AgatheNote
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

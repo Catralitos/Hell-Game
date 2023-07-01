@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8380372613033984
-    m_Localized: "Hey Lennie,\r Had to borrow your glasses for a thing. \xC1gathe."
+    m_Localized: "Hey Lennie, had to borrow your glasses for a thing. \xC1gathe."
     m_Metadata:
       m_Items: []
   - m_Id: 8381804242235392
@@ -1135,6 +1135,14 @@ MonoBehaviour:
     m_Localized: "Well, I can\u2019t let you leave empty handed after all your efforts.
       Hmm, well\u2026 have this! It\u2019s all I have right now, sorry. Come back
       tomorrow and I\u2019ll give you some burgers!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8747449936998400
+    m_Localized: Do you want to take the glasses?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8748053174382592
+    m_Localized: I can give them to you later.
     m_Metadata:
       m_Items: []
   references:

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a067643624c92a213a0a0221e3a4d, type: 3}
+  m_Name: QBN-ST3
+  m_EditorClassIdentifier: 
+  availableWindow:
+    FirstMember:
+      day: 1
+      hour: 0
+      minute: 0
+    SecondMember:
+      day: 3
+      hour: 24
+      minute: 59
+  actor: {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
+  dialogueBeforeStep: {fileID: 11400000, guid: 91adb64c627e445429060a18f329bd79, type: 2}
+  completeDialogue: {fileID: 11400000, guid: d116e3fa9a868ba44a1f31f5ce0675d1, type: 2}
+  incompleteDialogue: {fileID: 11400000, guid: 7c6fc320915cd58408115035e5c7d0ad, type: 2}
+  type: 0
+  item: {fileID: 0}
+  hasReward: 1
+  rewardItem: {fileID: 11400000, guid: 19b47d52292b9f047af5a677d7f20ee7, type: 2}
+  angelCount: 0
+  angelBatch: 0
+  isDone: 1
+  endStepEvent: {fileID: 0}
