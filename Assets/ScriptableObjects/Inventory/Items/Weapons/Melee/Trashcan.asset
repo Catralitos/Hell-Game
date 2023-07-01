@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Trashcan
   itemSprite: {fileID: 0}
-  isKeyItem: 0
-  damage: 5
-  usesLeft: 5
+  damage: 6
+  usesLeft: 15
   weaponType: 1

@@ -28,7 +28,7 @@ MonoBehaviour:
   type: 1
   item: {fileID: 11400000, guid: 9294a32009de302428cdd3302268f991, type: 2}
   hasReward: 0
-  rewardItem: {fileID: 11400000, guid: 9679c63040bb82f4cab26e2ab256e87a, type: 2}
+  rewardItem: {fileID: 0}
   angelCount: 0
   angelBatch: 0
   isDone: 1

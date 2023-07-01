@@ -21,6 +21,7 @@ namespace UI.HUD
         public Image timeImage;
 
         public InventorySlot equippedItem;
+        public TextMeshProUGUI itemName;
         
         public List<KeyItemDisplayer> keyItems;
         
@@ -69,6 +70,7 @@ namespace UI.HUD
 
             equippedItem.item = inventory.equippedItem;
             equippedItem.itemImage.sprite = equippedItem.item.itemSprite;
+            itemName.text = equippedItem.item.itemName;
             switch (equippedItem.item)
             {
                 case Weapon w:

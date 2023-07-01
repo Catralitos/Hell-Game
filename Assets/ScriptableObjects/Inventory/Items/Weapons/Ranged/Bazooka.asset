@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bazooka
   itemSprite: {fileID: 21300000, guid: 50cb0bb4669c4654e9098213a42b8e8d, type: 3}
-  damage: 5
+  damage: 20
   usesLeft: 5
   weaponType: 0

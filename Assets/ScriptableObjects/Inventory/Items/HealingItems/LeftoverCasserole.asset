@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Leftover Casserole
   itemSprite: {fileID: 21300000, guid: 9bb622f62dfcd244db0a4dedd4c79e19, type: 3}
-  hpRestoreValue: 1
+  hpRestoreValue: 10
