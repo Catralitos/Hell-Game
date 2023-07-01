@@ -9,7 +9,9 @@ namespace Inventory.ScriptableObjects
     public class InventorySO : ScriptableObject
     {
         public int maxInventoryItems;
+
         [Tooltip("The collection of items and their quantities.")]
+        public Item equippedItem;
         public List<Item> items = new List<Item>();
         public List<KeyItem> keyItems = new List<KeyItem>();
         public List<ItemSO> defaultItems = new List<ItemSO>();
@@ -33,6 +35,11 @@ namespace Inventory.ScriptableObjects
                         keyItems.Add(new KeyItem(keyItem.name, keyItem.itemSprite));
                         break;
                 }
+            }
+
+            if (items.Count > 0)
+            {
+                equippedItem = items[0];
             }
         }
 
