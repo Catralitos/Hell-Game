@@ -17,22 +17,28 @@ namespace Management
             this.minute = minute;
         }
 
+        /* -1: current timestep is before timestep it is being compared to
+         * 1: current timestep is after timestep it is being compared to
+         * 0: current timestep is same timestep it is being compared to
+         */
         public int Compare(TimeStep time)
         {
             if (day == time.day)
             {
+                /* hour < time.hour: -1
+                 * hour > time.hour: 1
+                 * hour = time.hour: 0
+                 */
                 return hour.CompareTo(time.hour);
             } 
-            if (day > time.day)
+            else if (day < time.day)
             {
                 return -1;
             } 
-            if (day < time.day)
+            else // if (day > time.day)
             {
                 return 1;
             }
-
-            return -1;
         }
     }
 }

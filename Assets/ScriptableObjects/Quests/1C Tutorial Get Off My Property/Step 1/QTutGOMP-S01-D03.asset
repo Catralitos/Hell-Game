@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0fc3052b0343d0889296687bb8295c, type: 3}
-  m_Name: QTT-D03 No
+  m_Name: QTutGOMP-S01-D03
   m_EditorClassIdentifier: 
-  lines:
-  - actorID: 1
-    textList:
-    - m_TableReference:
-        m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
-      m_TableEntryReference:
-        m_KeyId: 154449965056
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    choices: []
+  dialoguePerTime:
+  - FirstMember: 1
+    SecondMember:
+    - actorID: 0
+      textList:
+      - m_TableReference:
+          m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
+        m_TableEntryReference:
+          m_KeyId: 8614651898945536
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      choices: []
   dialogueType: 2
   endOfDialogueEvent: {fileID: 0}
   references:

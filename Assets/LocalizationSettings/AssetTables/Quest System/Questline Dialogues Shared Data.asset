@@ -967,6 +967,38 @@ MonoBehaviour:
     m_Key: D1-L1-NT-Petey
     m_Metadata:
       m_Items: []
+  - m_Id: 8607206707355648
+    m_Key: QGP-ST1-NL-Cue-Her
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608416952803328
+    m_Key: QGP-ST1-NL-Cue-Him
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608521567133696
+    m_Key: QGP-ST1-NL00-Cue-Them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8610740433641472
+    m_Key: QGP-ST1-NL01-So
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8614651898945536
+    m_Key: QGP-ST1-NL02-Keep-Going
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8616073180798976
+    m_Key: QGP-ST1-NL03-I-Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8617998844485632
+    m_Key: QGP-ST2-NL04-Spirit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8618221188734976
+    m_Key: QGP-ST2-NL04-Not-Spirit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

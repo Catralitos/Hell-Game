@@ -23,7 +23,7 @@ namespace Quests.ScriptableObjects
 
         public bool QuestIsAvailable(TimeStep time)
         {
-            return availableWindow.FirstMember.Compare(time) >= 0 && availableWindow.SecondMember.Compare(time) <= 0;
+            return availableWindow.FirstMember.Compare(time) <= 0 && availableWindow.SecondMember.Compare(time) >= 0;
         }
         
         public void FinishQuest()

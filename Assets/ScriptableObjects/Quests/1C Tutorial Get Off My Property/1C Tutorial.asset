@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b584d4df3e7c240ba3793930b9a536, type: 3}
+  m_Name: 1C Tutorial
+  m_EditorClassIdentifier: 
+  availableWindow:
+    FirstMember:
+      day: 1
+      hour: 0
+      minute: 0
+    SecondMember:
+      day: 3
+      hour: 24
+      minute: 59
+  questName: Get Off My Property
+  isDone: 0
+  reward: {fileID: 11400000, guid: ebf215da02068534d9bf34f57441f119, type: 2}
+  steps:
+  - {fileID: 11400000, guid: fe21631b177114643aee60df6abc7fc8, type: 2}
+  - {fileID: 11400000, guid: c9899a0e71871e445ad102dcea100f00, type: 2}
+  - {fileID: 11400000, guid: cc35e2082fe282548a36120e17a64d5c, type: 2}
+  endQuestEvent: {fileID: 0}
+  currentStep: {fileID: 0}
+  currentStepIndex: 0

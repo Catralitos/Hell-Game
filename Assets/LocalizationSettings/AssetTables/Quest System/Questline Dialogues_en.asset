@@ -1085,6 +1085,38 @@ MonoBehaviour:
     m_Localized: ..........
     m_Metadata:
       m_Items: []
+  - m_Id: 8607206707355648
+    m_Localized: I feel like I should try to speak to her again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608416952803328
+    m_Localized: I feel like I should try to speak to him again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608521567133696
+    m_Localized: I feel like I should try to speak to them again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8610740433641472
+    m_Localized: So?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8614651898945536
+    m_Localized: ...Are you going to keep helping me out, or...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8616073180798976
+    m_Localized: I'll be ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8617998844485632
+    m_Localized: That's the spirit :D
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8618221188734976
+    m_Localized: That's...not the spirit.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
