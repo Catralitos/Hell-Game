@@ -44,15 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36af0b5e951ace4293a963975b66545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerRange: 1
-  maxItems: 1
+  spawnerRange: 20
+  maxItems: 5
   itemBatch: 0
   hasTimedRespawns: 1
   listensToGeneralEvent: 1
   spawnObstacles:
     serializedVersion: 2
-    m_Bits: 5312
-  itemsToSpawn: []
+    m_Bits: 21696
+  itemsToSpawn:
+  - {fileID: 11400000, guid: 2f67de4b4ce1d0a4baff24d2135b1606, type: 2}
+  - {fileID: 11400000, guid: bcc4ccc3b189ce844956d3555651ec14, type: 2}
+  - {fileID: 11400000, guid: 4b87a8302a976a049a70540969dc03f2, type: 2}
   pickupPrefab: {fileID: 3622711837362677912, guid: 595f73306be6ced4ca01c2326b1ceefa, type: 3}
   spawnItemEvent: {fileID: 11400000, guid: f22c83cf773fb37458097e5d4556b054, type: 2}
   specificSpawnItemEvent: {fileID: 0}

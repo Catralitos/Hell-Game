@@ -46,6 +46,8 @@ namespace UI.Inventory
         
         private static readonly int Heal = Animator.StringToHash("Heal");
 
+        private bool _justUpdated;
+        
         private void Start()
         {
             _animator = GetComponent<Animator>();
@@ -108,7 +110,7 @@ namespace UI.Inventory
 
             _radialMenu.CalculateRadial();
             inventoryMenu.rotation = Quaternion.identity;
-
+            
             if (currentInventory.items.Count == 0)
             {
                 currentInventory.equippedItem = null;
@@ -132,10 +134,21 @@ namespace UI.Inventory
                     heldItem.item = currentInventory.equippedItem;
                 }
             }
+            _justUpdated = true;
         }
  
         private void Update()
         {
+            if (_justUpdated)
+            {
+                for (int i = 0; i < inventoryMenu.childCount; i++)
+                {
+                    inventoryMenu.GetChild(i).transform.localRotation = Quaternion.identity;
+                }
+
+                _justUpdated = false;
+            }
+            
             if (inventoryCanvas.activeSelf)
             {
                 int children = inventoryMenu.childCount;
