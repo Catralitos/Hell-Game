@@ -72,7 +72,7 @@ namespace Player
         protected override void Die()
         {
             _audioManager.Play("Death");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
            base.Die();
         }
     }

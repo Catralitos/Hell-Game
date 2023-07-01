@@ -2,6 +2,7 @@
 using Management.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 namespace Management
 {
@@ -50,6 +51,7 @@ namespace Management
             {
                 _currentDay++;
                 _currentHour = 1;
+                if (_currentDay > 3) SceneManager.LoadScene(2);
             }
 
             TimeStep ts = new TimeStep(_currentDay, _currentHour, _currentMinutes);
