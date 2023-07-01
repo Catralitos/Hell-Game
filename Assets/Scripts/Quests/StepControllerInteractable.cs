@@ -30,7 +30,7 @@ namespace Quests
 		//start a dialogue when interaction
 		//some Steps need to be instantaneous. And do not need the interact button.
 		//when interaction again, restart same dialogue.
-		public void InteractWithCharacter()
+		public bool InteractWithCharacter()
 		{
 			if (gameStateManager.currentGameState == GameState.Gameplay)
 			{
@@ -40,9 +40,12 @@ namespace Quests
 				{
 					_currentDialogue = displayDialogue;
 					StartDialogue();
+					return true;
 				}
+				EndDialogue(0);
+					return false;
 			}
-
+			return false;
 		}
 
 		private void StartDialogue()

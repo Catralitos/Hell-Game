@@ -28,12 +28,10 @@ namespace Management
         {
             if (listensToGeneralEvent)
             {
-                Debug.Log(gameObject.name + " subscribed to general event.");
                 spawnItemEvent.OnEventRaised += SpawnItems;
             }
             else
             {
-                Debug.Log(gameObject.name + " subscribed to specific event.");
                 specificSpawnItemEvent.OnEventRaised += SpawnItems;
             }
         }

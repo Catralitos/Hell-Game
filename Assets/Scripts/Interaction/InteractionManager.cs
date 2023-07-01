@@ -83,9 +83,10 @@ namespace Interaction
 							.GetComponent<StepControllerNPC>();
 						StepControllerInteractable scI = _potentialInteractions.First.Value.interactableObject
 							.GetComponent<StepControllerInteractable>();
-						if (scNPC != null) scNPC.InteractWithCharacter();
-						if (scI != null) scI.InteractWithCharacter();
-						inputReader.EnableDialogueInput();
+						bool interacted = false;
+						if (scNPC != null) interacted = scNPC.InteractWithCharacter();
+						if (scI != null) interacted = scI.InteractWithCharacter();
+						if (interacted) inputReader.EnableDialogueInput();
 					}
 					break;
                case InteractionType.PickUp:

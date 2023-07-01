@@ -19,7 +19,7 @@ namespace Management
         private void Start()
         {
             enemyTracker.angelsKilled = new int[numAngelBatches + 1];
-            spawnAngelsEvent.RaiseEvent();
+            //spawnAngelsEvent.RaiseEvent();
         }
 
         private void OnEnable()
