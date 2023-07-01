@@ -228,7 +228,27 @@ MonoBehaviour:
     transform: {fileID: 0}
   - time:
       day: 1
-      hour: 10
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 18
       minute: 0
     transform: {fileID: 0}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}

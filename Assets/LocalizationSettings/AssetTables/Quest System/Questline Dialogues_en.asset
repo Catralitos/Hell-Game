@@ -1077,6 +1077,14 @@ MonoBehaviour:
       Here. While I was out looking, I found this box. You can have it.\r\n"
     m_Metadata:
       m_Items: []
+  - m_Id: 8582202531831808
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8582379678261248
+    m_Localized: ..........
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

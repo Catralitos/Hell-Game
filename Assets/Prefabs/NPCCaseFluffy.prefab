@@ -109,7 +109,27 @@ MonoBehaviour:
     transform: {fileID: 0}
   - time:
       day: 1
-      hour: 10
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 18
       minute: 0
     transform: {fileID: 0}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
@@ -129,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInDialogue: 0
   actor: {fileID: 11400000, guid: 3d34c7da615e83f40a7a288a7bcc4185, type: 2}
-  defaultDialogue: {fileID: 11400000, guid: 05ee9d07aaa90ed4eb74967d4fafa38c, type: 2}
+  defaultDialogue: {fileID: 11400000, guid: b45c8da17272cdd40baf4c84ba748343, type: 2}
   questData: {fileID: 11400000, guid: 3538fcf9cc09acb46a7a694423659aae, type: 2}
   gameStateManager: {fileID: 11400000, guid: 73ab1dff21e8c284cbaa0a5945d9a758, type: 2}
   winDialogueEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
@@ -262,7 +282,7 @@ Transform:
   m_Children:
   - {fileID: 1593983814480787384}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2590785716372619933
 MonoBehaviour:

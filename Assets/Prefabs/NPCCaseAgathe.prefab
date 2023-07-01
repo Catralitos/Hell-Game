@@ -109,7 +109,27 @@ MonoBehaviour:
     transform: {fileID: 0}
   - time:
       day: 1
-      hour: 10
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 2
+      hour: 18
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 7
+      minute: 0
+    transform: {fileID: 0}
+  - time:
+      day: 3
+      hour: 18
       minute: 0
     transform: {fileID: 0}
   hourPassedEvent: {fileID: 11400000, guid: f2e89eefe4ba2a54e950ea2a34c880ac, type: 2}
@@ -129,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInDialogue: 0
   actor: {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
-  defaultDialogue: {fileID: 11400000, guid: 05ee9d07aaa90ed4eb74967d4fafa38c, type: 2}
+  defaultDialogue: {fileID: 11400000, guid: d864eef792c002d458eebb6aed8ee521, type: 2}
   questData: {fileID: 11400000, guid: 3538fcf9cc09acb46a7a694423659aae, type: 2}
   gameStateManager: {fileID: 11400000, guid: 73ab1dff21e8c284cbaa0a5945d9a758, type: 2}
   winDialogueEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
@@ -255,14 +275,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7681495153329548170}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.57, y: -1.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7915906167718160587}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2326962359815694313
 MonoBehaviour:
