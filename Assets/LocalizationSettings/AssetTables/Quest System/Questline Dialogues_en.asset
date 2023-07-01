@@ -1117,6 +1117,14 @@ MonoBehaviour:
     m_Localized: That's...not the spirit.
     m_Metadata:
       m_Items: []
+  - m_Id: 8652872062132224
+    m_Localized: So? Did you kill them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8653876115595264
+    m_Localized: Well, what are you waiting for?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

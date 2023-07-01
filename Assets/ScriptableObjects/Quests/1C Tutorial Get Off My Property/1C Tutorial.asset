@@ -20,14 +20,15 @@ MonoBehaviour:
     SecondMember:
       day: 3
       hour: 24
-      minute: 59
+      minute: 0
   questName: Get Off My Property
-  isDone: 0
+  isDone: 1
   reward: {fileID: 11400000, guid: ebf215da02068534d9bf34f57441f119, type: 2}
   steps:
   - {fileID: 11400000, guid: fe21631b177114643aee60df6abc7fc8, type: 2}
   - {fileID: 11400000, guid: c9899a0e71871e445ad102dcea100f00, type: 2}
   - {fileID: 11400000, guid: cc35e2082fe282548a36120e17a64d5c, type: 2}
+  - {fileID: 11400000, guid: 244b704f40562ce4aba03bdca8814a33, type: 2}
   endQuestEvent: {fileID: 0}
-  currentStep: {fileID: 0}
-  currentStepIndex: 0
+  currentStep: {fileID: 11400000, guid: cc35e2082fe282548a36120e17a64d5c, type: 2}
+  currentStepIndex: 3

@@ -22,9 +22,9 @@ MonoBehaviour:
       hour: 24
       minute: 0
   actor: {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
-  dialogueBeforeStep: {fileID: 11400000, guid: d0be94e9c32191348bcef599cc37dc13, type: 2}
-  completeDialogue: {fileID: 11400000, guid: 32a7bdbd180db6f42a9d6e019dac9547, type: 2}
-  incompleteDialogue: {fileID: 11400000, guid: e74ef92c44634ac4fa3ff8f392afe974, type: 2}
+  dialogueBeforeStep: {fileID: 11400000, guid: 87105cd8b3c1d02448c2fd7b77eff744, type: 2}
+  completeDialogue: {fileID: 11400000, guid: 750e1e969c4f9f449a01f98bfe383557, type: 2}
+  incompleteDialogue: {fileID: 11400000, guid: a9462150982f4914d819f530c77f3fd1, type: 2}
   type: 3
   item: {fileID: 0}
   hasReward: 0
