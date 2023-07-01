@@ -106,12 +106,32 @@ namespace UI.Inventory
                 }
             }
 
+            _radialMenu.CalculateRadial();
+            inventoryMenu.rotation = Quaternion.identity;
+
             if (currentInventory.items.Count == 0)
             {
                 currentInventory.equippedItem = null;
                 heldItem.item = null;
             }
-            _radialMenu.CalculateRadial();
+            else
+            {
+                if (!currentInventory.Contains(currentInventory.equippedItem))
+                {
+                    _currentItem++;
+                    if (_currentItem < 0)
+                    {
+                        _currentItem = currentInventory.items.Count - 1;
+                    }
+
+                    if (_currentItem >= currentInventory.items.Count)
+                    {
+                        _currentItem = 0;
+                    }
+                    currentInventory.equippedItem = currentInventory.items[_currentItem];
+                    heldItem.item = currentInventory.equippedItem;
+                }
+            }
         }
  
         private void Update()
@@ -154,7 +174,6 @@ namespace UI.Inventory
         
         private IEnumerator MenuRotateRoutine(int direction)
         {
-            Debug.Log(_currentItem);
             _isRotating = true;
 
             int children = inventoryMenu.childCount;

@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   maxInventoryItems: 8
+  equippedItem:
+    itemName: Practice Weapon
+    itemSprite: {fileID: 21300000, guid: 638fa30076b8a264abd4269f5668c4c4, type: 3}
+  items:
+  - itemName: Practice Weapon
+    itemSprite: {fileID: 21300000, guid: 638fa30076b8a264abd4269f5668c4c4, type: 3}
+  keyItems: []
   defaultItems:
   - {fileID: 11400000, guid: c3b2ee2cf2eda5f40a040c7c34bd674e, type: 2}
-  keyItems: []
+  - {fileID: 11400000, guid: bcc4ccc3b189ce844956d3555651ec14, type: 2}

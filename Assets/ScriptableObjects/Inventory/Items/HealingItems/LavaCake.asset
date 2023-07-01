@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Lava Cake
   itemSprite: {fileID: 21300000, guid: 33a1903711c99b44daa158a7d21fa41d, type: 3}
-  hpRestoreValue: 0
+  hpRestoreValue: 1
