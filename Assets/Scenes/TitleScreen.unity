@@ -1322,8 +1322,8 @@ MonoBehaviour:
   sounds:
   - name: MenuMusc
     clip: {fileID: 8300000, guid: 3ecc2abb7ee89334ca106127f1d1342f, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     loop: 1
     source: {fileID: 0}
 --- !u!1 &1184034177
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.7
+  m_fontSize: 127.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
