@@ -22,12 +22,12 @@ namespace UI.Menus
 
         private static void RetryGame()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
 
         private static void BackToTitle()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         
     }

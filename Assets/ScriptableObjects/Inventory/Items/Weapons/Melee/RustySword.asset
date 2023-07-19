@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Rusty Old Sword
   itemSprite: {fileID: 21300000, guid: 214eae2cced1e89449e51b5ad6aa685b, type: 3}
   damage: 2
-  usesLeft: 80
+  usesLeft: 120
   weaponType: 1

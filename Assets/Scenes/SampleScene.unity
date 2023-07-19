@@ -2007,7 +2007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: maxAngels
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelBatch
@@ -5582,7 +5582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: maxAngels
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelBatch
@@ -42996,7 +42996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: maxAngels
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelBatch
@@ -55187,7 +55187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: maxAngels
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelBatch
@@ -57148,7 +57148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: maxAngels
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: angelBatch
@@ -59125,6 +59125,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}
+      propertyPath: maxAngels
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310387365684779224, guid: 365fa20e8a6c7bb40beb8be622b5f88e, type: 3}

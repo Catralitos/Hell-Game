@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Totally Normal Pistol
   itemSprite: {fileID: 21300000, guid: e97d49575484fed4d9fcc58e63f26812, type: 3}
   damage: 5
-  usesLeft: 40
+  usesLeft: 60
   weaponType: 0

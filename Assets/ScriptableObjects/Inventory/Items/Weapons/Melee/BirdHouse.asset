@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Bird House
   itemSprite: {fileID: 0}
   damage: 6
-  usesLeft: 10
+  usesLeft: 15
   weaponType: 1

@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Ninja Stars
   itemSprite: {fileID: 21300000, guid: 4080eafa73199b84fbf8460e18b556b8, type: 3}
   damage: 15
-  usesLeft: 10
+  usesLeft: 15
   weaponType: 0

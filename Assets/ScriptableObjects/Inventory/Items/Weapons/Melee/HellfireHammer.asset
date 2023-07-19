@@ -15,5 +15,5 @@ MonoBehaviour:
   name: HellfireHammer
   itemSprite: {fileID: 0}
   damage: 20
-  usesLeft: 5
+  usesLeft: 8
   weaponType: 1

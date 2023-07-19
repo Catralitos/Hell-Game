@@ -57,9 +57,32 @@ namespace Player
 
         public override void DoDamage(int damage)
         {
-            base.DoDamage(damage);
+            if (_invincible) return;
+            //Else deal damage
+            hitsLeft = Mathf.Clamp(hitsLeft - damage, 0, maxHits);
+            if (hitsLeft > 0)
+            {
+                if (hitMaterial != null) renderer.material = hitMaterial;
+                _invincible = true;
+                Physics2D.IgnoreLayerCollision(6, 8, true);
+                Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
+                Debug.Log(transform.name + " got hit");
+            }
+            else
+            {
+                Debug.Log(transform.name + " died");
+                Die();
+            }
             _audioManager.Play("Hit");
             playerHealthEvent.RaiseEvent(hitsLeft);
+        }
+        
+        protected override void RestoreVulnerability()
+        {
+             
+            _invincible = false;
+            Physics2D.IgnoreLayerCollision(6, 8, false);
+            renderer.material = defaultMaterial;
         }
         
         private void RestoreHealth(int amount)

@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Sword That Fires Swords
   itemSprite: {fileID: 21300000, guid: 7bf79e5e7654cec49835d6e5b2b80424, type: 3}
   damage: 8
-  usesLeft: 12
+  usesLeft: 18
   weaponType: 0

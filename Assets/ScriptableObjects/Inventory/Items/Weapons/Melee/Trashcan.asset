@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Trashcan
   itemSprite: {fileID: 0}
   damage: 6
-  usesLeft: 15
+  usesLeft: 23
   weaponType: 1

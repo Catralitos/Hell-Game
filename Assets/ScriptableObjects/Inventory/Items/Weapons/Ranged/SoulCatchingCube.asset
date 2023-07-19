@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Soul Catching Cube
   itemSprite: {fileID: 21300000, guid: 0df7f4a4950ad914aaeeca99c24ffa72, type: 3}
   damage: 20
-  usesLeft: 5
+  usesLeft: 8
   weaponType: 0

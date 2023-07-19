@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Rock
   itemSprite: {fileID: 21300000, guid: a49d6c0a7a0195542b3a61daee835890, type: 3}
   damage: 4
-  usesLeft: 50
+  usesLeft: 75
   weaponType: 0

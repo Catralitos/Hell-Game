@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Flamethrower
   itemSprite: {fileID: 21300000, guid: 30a06e444dc83234da0feb300fa4927e, type: 3}
   damage: 10
-  usesLeft: 15
+  usesLeft: 23
   weaponType: 0
