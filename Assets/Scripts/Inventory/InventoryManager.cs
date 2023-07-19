@@ -43,7 +43,7 @@ namespace Inventory
         {
             if (currentInventory.Add(item))
             {
-                Debug.Log("Added " + item.name + " to inventory");
+                //Debug.Log("Added " + item.name + " to inventory");
                 //_saveSystem.SaveDataToDisk();
                 updateInventoryEvent.RaiseEvent();
             }

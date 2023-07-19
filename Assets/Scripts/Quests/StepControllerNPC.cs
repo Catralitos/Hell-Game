@@ -53,7 +53,7 @@ namespace Quests
                     StartDialogue();
                     return true;
                 }
-                PlayDefaultDialogue();
+                 PlayDefaultDialogue();
                 return true;
             }
 

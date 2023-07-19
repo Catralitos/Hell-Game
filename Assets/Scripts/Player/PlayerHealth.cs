@@ -66,11 +66,11 @@ namespace Player
                 _invincible = true;
                 Physics2D.IgnoreLayerCollision(6, 8, true);
                 Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
-                Debug.Log(transform.name + " got hit");
+                //Debug.Log(transform.name + " got hit");
             }
             else
             {
-                Debug.Log(transform.name + " died");
+                //Debug.Log(transform.name + " died");
                 Die();
             }
             _audioManager.Play("Hit");

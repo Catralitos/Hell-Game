@@ -60,11 +60,11 @@ namespace Gameplay
                 if (hitMaterial != null) renderer.material = hitMaterial;
                 if (canBecomeInvincible) _invincible = true;
                 Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
-                Debug.Log(transform.name + " got hit");
+                //Debug.Log(transform.name + " got hit");
             }
             else
             {
-                Debug.Log(transform.name + " died");
+                //Debug.Log(transform.name + " died");
                 Die();
             }
         }

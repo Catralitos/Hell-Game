@@ -30,7 +30,6 @@ namespace UI.Dialogue
 
         public void ButtonClicked()
         {
-            Debug.Log("Button clicked");
             onChoiceMade.RaiseEvent(_currentChoice);
         }
     }
