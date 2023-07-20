@@ -214,11 +214,9 @@ namespace Quests.ScriptableObjects
                         if (enemyTracker.GetNumAngels(currentStep.angelBatch) >= currentStep.angelCount)
                         {
                             playCompletionDialogueEvent.RaiseEvent();
-                            EndStep(currentStep);
                         }
                         else
                         {
-                            //trigger lose dialogue
                             playIncompleteDialogueEvent.RaiseEvent();
                         }
                         break;
