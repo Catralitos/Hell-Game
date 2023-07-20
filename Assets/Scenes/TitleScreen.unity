@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.65
+  m_fontSize: 127.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2465,29 +2465,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arlie was born on a normal Tuesday, a great distance away from here. Maybe
-    named with a different name than the one we know them for.\r \nAs time passed,
-    the people around them started to become estranged to the way Arlie was growing
-    up. Arlie came out as non-binary, but no one around them understood what it meant.\r\n\rArlie
-    hoped they would eventually come around, but they never did. When they realized
-    Arlie wasn't changing, they started telling them to\u2026\r\n- \u201CGo to Hell!\u201D\r\nOne
-    day, they had had enough. \r\n-\u201CWell, if everyone insists, I might as well
-    go to Hell. It\u2019s probably warmer down there.\u201D\r\nSo in search of Hell,
-    Arlie went.\r\nOne night, they went inside a Burger King.\r\n-\u201CErgh, the
-    burger-making machine is broken\u201D said the poor soul working at the late-night
-    Burger King, \u201CNot again\u2026\u201D\r\n\r-\u201CHey, could you help me knock
-    some sense into this thing?\u201D\r\n\rAs they kicked the machine, Arlie saw
-    something form inside of it. A portal! They, without hesitation, jumped into
-    it.\r\n\rThey fell. And kept falling and falling, for what it seemed like an
-    eternity. Then they landed, with a harsh thump.\r\n\r-\u201COh, is this\u2026Hell?
-    Did I make it?\u201D\r\n\rArlie tried to figure out where they were, but all
-    they could feel was the massive, suffocating heat. Slowly, they started making
-    out the houses and the gardens and\u2026people?\r\n-\r\u201CHey! We got a newcomer!
-    They look a bit\u2026uh, run-down. You okay kiddo? Oh, they smiled! Can you hear
-    me?\u201D\r\n\r-\u201CMaybe Hell isn\u2019t so bad after all\u201D\r"
+  m_text: "Arlie was born on a normal Tuesday, with a different name than the one
+    we know them for. When Arlie came out as non-binary, no one around them understood
+    what it meant.\r\n\rArlie hoped they would eventually come around, but they never
+    did. When they realized Arlie wasn't changing, they began telling them to\u2026\r\n\r\u201CGo
+    to Hell!\u201D\r\n\rOne day, they had had enough. \r\n\r\u201CWell, I might as
+    well go to Hell. It\u2019s probably warmer down there.\u201D\r\n\rSo in search
+    of Hell, Arlie went.\r\n\rOne night, they went inside a Burger King.\r\n\u201CErgh,
+    this thing is broken\u201D said the poor soul working at late-night Burger King,
+    \u201CNot again\u2026\u201D\r\n\r\u201CCould you help me knock some sense into
+    this thing?\u201D\r\n\rAs they kicked the machine, Arlie saw something form inside
+    of it. A portal! Arlie jumped in.\r\n\rThey fell for an eternity, landing with
+    a harsh thump.\r\n\rArlie didn't know where they were, the suffocating heat was
+    too strong. Slowly, they started making out houses and\u2026 people?\r\n\r\u201CHey!
+    We got a newcomer! They look a bit\u2026uh. You okay kiddo? Can you hear me?\u201D\r\n\r\u201CMaybe
+    Hell isn\u2019t so bad after all\u201D\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
+  m_sharedMaterial: {fileID: -9136261595920991126, guid: d4d9dbc8d49b2c54f9400ac8ce269399, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2511,21 +2506,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.75
+  m_fontSize: 26.55
   m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 300
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 75
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 50
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -2792,7 +2787,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.55
+  m_fontSize: 33.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2803,10 +2798,10 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_wordSpacing: 75
+  m_lineSpacing: 15
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 15
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4

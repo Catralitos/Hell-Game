@@ -21,7 +21,7 @@ MonoBehaviour:
       day: 3
       hour: 24
       minute: 59
-  actor: {fileID: 11400000, guid: 012414f67d4eba946874109ec8c7dfa3, type: 2}
+  actor: {fileID: 11400000, guid: 8f946eaf8c4ad85499b92f975cf52fd8, type: 2}
   dialogueBeforeStep: {fileID: 11400000, guid: 3c0a839f65124b8499d0d7108b53e503, type: 2}
   completeDialogue: {fileID: 0}
   incompleteDialogue: {fileID: 0}
@@ -31,5 +31,5 @@ MonoBehaviour:
   rewardItem: {fileID: 0}
   angelCount: 0
   angelBatch: 0
-  isDone: 1
+  isDone: 0
   endStepEvent: {fileID: 0}

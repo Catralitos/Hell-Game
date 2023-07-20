@@ -36,7 +36,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         nextDialogue: {fileID: 0}
-        actionType: 3
+        actionType: 2
       - response:
           m_TableReference:
             m_TableCollectionName: GUID:1588b729d6c3c564289a7e8eaf005b8d
@@ -47,7 +47,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         nextDialogue: {fileID: 0}
-        actionType: 2
+        actionType: 3
   dialogueType: 0
   endOfDialogueEvent: {fileID: 0}
   references:
