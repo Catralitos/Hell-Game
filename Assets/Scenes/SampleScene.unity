@@ -59152,7 +59152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7024490861761706356, guid: e68389803647d8f479f01ac00c5014a2, type: 3}
       propertyPath: dayInMinutes
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8195222313727358193, guid: e68389803647d8f479f01ac00c5014a2, type: 3}
       propertyPath: m_Name
