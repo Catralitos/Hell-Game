@@ -73,8 +73,8 @@ namespace Inventory.ScriptableObjects
             }
             if (!items.Contains(item)) return false;
             items.Remove(item);
+            equippedItem = null;
             return true;
-
         }
         
         public bool Contains(Item item)

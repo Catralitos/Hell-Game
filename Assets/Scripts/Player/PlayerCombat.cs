@@ -62,9 +62,11 @@ namespace Player
                 switch (weapon.weaponType)
                 {
                     case WeaponType.MELEE:
+                        weapon.usesLeft--;
                         MeleeAttack(weapon);
                         break;
                     case WeaponType.RANGED:
+                        weapon.usesLeft--;
                         RangedAttack(weapon);
                         break;
                     default:

@@ -62,7 +62,7 @@ namespace Interaction
 				onObjectPickUp.RaiseEvent(currentItem);
 			}
 
-			Destroy(itemObject); //TODO: maybe move this destruction in a more general manger, to implement a removal SFX
+			Destroy(itemObject); 
 
 			RequestUpdateUI(false);
 		}

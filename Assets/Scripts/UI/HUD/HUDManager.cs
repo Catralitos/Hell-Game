@@ -67,18 +67,18 @@ namespace UI.HUD
             string niceTime = $"{hours:00}:{minutes:00}";
             
             timeText.text = "Day " + timeTracker.time.day + " - " + niceTime;
-
+                
             equippedItem.item = inventory.equippedItem;
-            equippedItem.itemImage.sprite = equippedItem.item.itemSprite;
-            itemName.text = equippedItem.item.itemName;
+            equippedItem.itemImage.sprite = equippedItem.item?.itemSprite;
+            itemName.text = equippedItem.item?.itemName;
             switch (equippedItem.item)
             {
                 case Weapon w:
-                    equippedItem.leftText.text = w.damage.ToString();
-                    equippedItem.rightText.text = w.usesLeft.ToString();
+                    equippedItem.leftText.text = w?.damage.ToString();
+                    equippedItem.rightText.text = w?.usesLeft.ToString();
                     break;
                 case HealingItem h:
-                    equippedItem.leftText.text = h.hpRestoreValue.ToString();
+                    equippedItem.leftText.text = h?.hpRestoreValue.ToString();
                     equippedItem.rightText.text = "HP";
                     break;
             }

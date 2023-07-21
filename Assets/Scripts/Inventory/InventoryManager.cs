@@ -60,16 +60,10 @@ namespace Inventory
         
         private void UseItemEventRaised(Item item)
         {
-            if (item is Weapon weapon)
+            if (item is Weapon { usesLeft: > 0 })
             {
-                //Raise event for combat
-                weapon.usesLeft--;
-                //_saveSystem.SaveDataToDisk();
-                if (weapon.usesLeft > 0)
-                {
-                    updateInventoryEvent.RaiseEvent();
-                    return;
-                }
+                updateInventoryEvent.RaiseEvent();
+                return;
             }
             RemoveItem(item);
         }

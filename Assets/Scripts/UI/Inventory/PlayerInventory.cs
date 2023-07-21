@@ -87,6 +87,18 @@ namespace UI.Inventory
                 Destroy(c.gameObject);
             }
 
+            if (currentInventory.equippedItem != null)
+            {
+                currentInventory.items.Remove(currentInventory.equippedItem);
+                currentInventory.items.Insert(0, currentInventory.equippedItem);
+            }
+            else
+            {
+                _currentItem = 0;
+                currentInventory.equippedItem = currentInventory.items[_currentItem];
+                heldItem.item = currentInventory.equippedItem;
+            }
+
             //Create the new ones
             foreach (Item item in currentInventory.items)
             {
@@ -108,9 +120,9 @@ namespace UI.Inventory
                 }
             }
 
-            _radialMenu.CalculateRadial();
             inventoryMenu.rotation = Quaternion.identity;
-            
+            _radialMenu.CalculateRadial();
+
             if (currentInventory.items.Count == 0)
             {
                 currentInventory.equippedItem = null;
