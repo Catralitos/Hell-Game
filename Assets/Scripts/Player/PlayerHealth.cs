@@ -96,7 +96,7 @@ namespace Player
         {
             _audioManager.Play("Death");
             SceneManager.LoadScene(4);
-           base.Die();
+           //base.Die();
         }
     }
 }

@@ -47,11 +47,13 @@ namespace UI.Dialogue
         {
             choicesManager.FillChoices(choices);
             choicesManager.gameObject.SetActive(true);
+            Cursor.visible = true;
         }
 
         private void HideChoices()
         {
             choicesManager.gameObject.SetActive(false);
+            Cursor.visible = false;
         }
     }
 }

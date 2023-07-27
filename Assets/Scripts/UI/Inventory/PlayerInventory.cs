@@ -6,6 +6,7 @@ using Inputs;
 using Inventory;
 using Inventory.InstancedItems;
 using Inventory.ScriptableObjects;
+using TMPro;
 using UnityEngine;
 
 namespace UI.Inventory
@@ -19,6 +20,7 @@ namespace UI.Inventory
         public float rotateTime = 0.3f;
         private bool _isRotating;
         public GameObject inventorySlotPrefab;
+        public TextMeshProUGUI slotsNumber;
         
         [Header("Items")]
         public HeldItem heldItem;
@@ -146,6 +148,8 @@ namespace UI.Inventory
                     heldItem.item = currentInventory.equippedItem;
                 }
             }
+
+            slotsNumber.text = currentInventory.items.Count + "/" + currentInventory.maxInventoryItems;
             _justUpdated = true;
         }
  
@@ -263,14 +267,14 @@ namespace UI.Inventory
         
         private void UseHealItem(HealingItem item)
         {
-            _animator.SetTrigger(Heal);
+            if (_animator != null) _animator.SetTrigger(Heal);
             restoreHealth.RaiseEvent(item.hpRestoreValue);
             useItemEvent.RaiseEvent(item);
         }
         
         private void UseMeleeWeapon(Weapon weapon)
         {
-            _animator.SetTrigger(Attack);
+            if (_animator != null) _animator.SetTrigger(Attack);
             attackEvent.RaiseEvent();
             useItemEvent.RaiseEvent(weapon);
         }

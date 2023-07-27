@@ -61,6 +61,7 @@ namespace UI.Menus
         /// </summary>
         private void Start()
         {
+            Cursor.visible = true;
             startButton.onClick.AddListener(StartGame);
             storyButton.onClick.AddListener(ShowStory);
             tutorialButton.onClick.AddListener(ShowTutorial);

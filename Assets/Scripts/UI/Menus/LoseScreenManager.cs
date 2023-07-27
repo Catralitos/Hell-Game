@@ -14,6 +14,7 @@ namespace UI.Menus
         
         private void Start()
         {
+            Cursor.visible = true;
             retryButton.onClick.AddListener(RetryGame);
             backToTitleButton.onClick.AddListener(BackToTitle);
             _audioManager = GetComponent<AudioManager>();

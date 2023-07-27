@@ -31,6 +31,7 @@ namespace UI.Dialogue
         public void ButtonClicked()
         {
             onChoiceMade.RaiseEvent(_currentChoice);
+            //Cursor.visible = false;
         }
     }
 }

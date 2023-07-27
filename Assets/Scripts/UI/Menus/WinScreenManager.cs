@@ -13,6 +13,7 @@ namespace UI.Menus
         
         private void Start()
         {
+            Cursor.visible = true;
             creditsButton.onClick.AddListener(ShowCredits);
             _audioManager = GetComponent<AudioManager>();
             _audioManager.Play("MenuMusic");

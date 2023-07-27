@@ -25,6 +25,7 @@ namespace Management
             enemyTracker.Init();
             questManager.Init();
             timeTracker.Init();
+            Cursor.visible = true;
         }
 
         private void Start()
