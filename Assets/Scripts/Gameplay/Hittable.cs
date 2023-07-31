@@ -8,7 +8,7 @@ namespace Gameplay
         /// <summary>
         /// The sprite renderer
         /// </summary>
-        protected SpriteRenderer renderer;
+        protected SpriteRenderer spriteRenderer;
         /// <summary>
         /// The default material
         /// </summary>
@@ -42,8 +42,8 @@ namespace Gameplay
         public virtual void Start()
         {
             hitsLeft = maxHits;
-            renderer = GetComponent<SpriteRenderer>();
-            defaultMaterial = renderer.material;
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            defaultMaterial = spriteRenderer.material;
         }
         
         
@@ -57,7 +57,7 @@ namespace Gameplay
             hitsLeft = Mathf.Clamp(hitsLeft - damage, 0, maxHits);
             if (hitsLeft > 0)
             {
-                if (hitMaterial != null) renderer.material = hitMaterial;
+                if (hitMaterial != null) spriteRenderer.material = hitMaterial;
                 if (canBecomeInvincible) _invincible = true;
                 Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
                 //Debug.Log(transform.name + " got hit");
@@ -75,7 +75,7 @@ namespace Gameplay
         protected virtual void RestoreVulnerability()
         {
             if (canBecomeInvincible) _invincible = false;
-            renderer.material = defaultMaterial;
+            spriteRenderer.material = defaultMaterial;
         }
 
         /// <summary>

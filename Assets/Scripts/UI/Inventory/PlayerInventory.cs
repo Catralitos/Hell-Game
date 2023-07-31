@@ -49,6 +49,7 @@ namespace UI.Inventory
         private static readonly int Heal = Animator.StringToHash("Heal");
 
         private bool _justUpdated;
+        private bool _toClose;
         
         private void Start()
         {
@@ -165,10 +166,19 @@ namespace UI.Inventory
                 _justUpdated = false;
             }
             
+            
             if (inventoryCanvas.activeSelf)
             {
+                
+                
                 int children = inventoryMenu.childCount;
                 if (_isRotating || children < 2 || currentInventory.items.Count < 2) return;
+
+                if (_toClose && !_isRotating)
+                {
+                    inventoryCanvas.SetActive(false);
+                    return;
+                }
                 
                 float x = _menuInput.x;
                 switch (x)
@@ -297,6 +307,7 @@ namespace UI.Inventory
             if (inputReader.gameStateManager.currentGameState == GameState.Gameplay)
             {
                 inventoryCanvas.SetActive(true);
+                _toClose = false;
             }
         }
 
@@ -304,7 +315,14 @@ namespace UI.Inventory
         {
             if (inputReader.gameStateManager.currentGameState == GameState.Gameplay)
             {
-                inventoryCanvas.SetActive(false);
+                if (!_isRotating)
+                {
+                    inventoryCanvas.SetActive(false);
+                }
+                else
+                {
+                    _toClose = true;
+                }
             }
         }
 

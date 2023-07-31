@@ -62,7 +62,7 @@ namespace Player
             hitsLeft = Mathf.Clamp(hitsLeft - damage, 0, maxHits);
             if (hitsLeft > 0)
             {
-                if (hitMaterial != null) renderer.material = hitMaterial;
+                if (hitMaterial != null) spriteRenderer.material = hitMaterial;
                 _invincible = true;
                 Physics2D.IgnoreLayerCollision(6, 8, true);
                 Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
@@ -82,7 +82,7 @@ namespace Player
              
             _invincible = false;
             Physics2D.IgnoreLayerCollision(6, 8, false);
-            renderer.material = defaultMaterial;
+            spriteRenderer.material = defaultMaterial;
         }
         
         private void RestoreHealth(int amount)

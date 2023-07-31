@@ -3,7 +3,6 @@ using Gameplay.ScriptableObjects;
 using Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -16,7 +15,7 @@ namespace Player
 	{
 		public InputReader inputReader;
 
-		public Vector2 _moveVector;
+		private Vector2 _moveVector;
 		private Vector2 _aimVector;
 
 		/// <summary>
@@ -28,7 +27,8 @@ namespace Player
 		/// The item the player is holding
 		/// </summary>
 		[Header("Attached Objects")] public GameObject itemHolder;
-	
+		public GameObject inventoryMenu;
+		
 		/// <summary>
 		/// The body
 		/// </summary>
@@ -55,7 +55,7 @@ namespace Player
 		[NonSerialized] public ControllerColliderHit lastHit;
 		[NonSerialized] public bool isAiming; // Used when using the keyboard to run, brings the normalised speed to 1
 
-		private bool _menuOpen;
+		//private bool _menuOpen;
 		private static readonly int Horizontal = Animator.StringToHash("Horizontal");
 		private static readonly int Vertical = Animator.StringToHash("Vertical");
 		private static readonly int Speed = Animator.StringToHash("Speed");
@@ -80,8 +80,8 @@ namespace Player
 			inputReader.AimEvent += onAim;
 			inputReader.AimStartedEvent += OnStartedAiming;
 			inputReader.AimCanceledEvent += OnStoppedAiming;
-			inputReader.OpenRadialMenuEvent += OpenMenu;
-			inputReader.CloseRadialMenuEvent += CloseMenu;
+			//inputReader.OpenRadialMenuEvent += OpenMenu;
+			//inputReader.CloseRadialMenuEvent += CloseMenu;
 		}
 
 		//Removes all listeners to the events coming from the InputReader script
@@ -91,13 +91,13 @@ namespace Player
 			inputReader.AimEvent -= onAim;
 			inputReader.AimStartedEvent -= OnStartedAiming;
 			inputReader.AimCanceledEvent -= OnStoppedAiming;
-			inputReader.OpenRadialMenuEvent -= OpenMenu;
-			inputReader.CloseRadialMenuEvent -= CloseMenu;
+			//inputReader.OpenRadialMenuEvent -= OpenMenu;
+			//inputReader.CloseRadialMenuEvent -= CloseMenu;
 		}
 
 		private void Update()
 		{
-			if (_menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
+			if (inventoryMenu.activeSelf || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
 			{
 				_animator.SetFloat(Speed, 0.0f);
 				return;
@@ -121,7 +121,7 @@ namespace Player
 
 		private void FixedUpdate()
 		{
-			if (isAiming || _menuOpen || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
+			if (isAiming || inventoryMenu.activeSelf || inputReader.gameStateManager.currentGameState != GameState.Gameplay || _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeal"))
 			{
 				_body.velocity = Vector2.zero;
 				return;
@@ -187,7 +187,7 @@ namespace Player
 
 		private void OnStoppedAiming() => isAiming = false;
 		
-		private void OpenMenu()
+		/*private void OpenMenu()
 		{
 			if (inputReader.gameStateManager.currentGameState == GameState.Gameplay)
 			{
@@ -201,6 +201,6 @@ namespace Player
 			{
 				_menuOpen = false;
 			}
-		}
+		}*/
 	}
 }

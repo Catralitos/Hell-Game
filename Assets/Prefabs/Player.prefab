@@ -341,7 +341,7 @@ Transform:
   - {fileID: 2306047439721703419}
   - {fileID: 5189767263215607725}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6725695029098165670
 SpriteRenderer:
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: d35246d6bdac6b44592ca35c0e916f0c, type: 2}
-  _moveVector: {x: 0, y: 0}
   runSpeed: 5
   itemHolder: {fileID: 9075220381159163988}
+  inventoryMenu: {fileID: 6606398357034236644}
 --- !u!114 &2690610698775722956
 MonoBehaviour:
   m_ObjectHideFlags: 0

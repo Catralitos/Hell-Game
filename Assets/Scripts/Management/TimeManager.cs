@@ -47,10 +47,10 @@ namespace Management
         {
             _currentHour++;
             _currentMinutes = 0;
-            if (_currentHour > 24)
+            if (_currentHour > 23)
             {
                 _currentDay++;
-                _currentHour = 1;
+                _currentHour = 0;
                 if (_currentDay > 3) SceneManager.LoadScene(2);
             }
 
