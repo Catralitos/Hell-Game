@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 50c4d5ffcadccbe4389e7519f2a35a0d
+  m_SerializeEntries:
+  - m_GUID: 9c592d2d4c7fc459f94a645873569195
+    m_Address: Assets/LocalizationSettings/AssetTables/Dialogue System/Actors/Actors
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1588b729d6c3c564289a7e8eaf005b8d
+    m_Address: Assets/LocalizationSettings/AssetTables/Quest System/Questline Dialogues
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a83381b80fc68542acf31e6f7c77e52
+    m_Address: Assets/LocalizationSettings/AssetTables/TestQuests System/TestQuests
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 007ecb48343055747a659b8e94aa4aa4
+    m_Address: Assets/LocalizationSettings/AssetTables/DefaultDialogue System/Default
+      Dialogues Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 561c072147617754aa3812da2c5d80bd, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 14f87e1f719a7644db2fc6a3cf7cb64b, type: 2}
+    - {fileID: 11400000, guid: 17a86bd36af6e7043a5095e0f61f3d57, type: 2}

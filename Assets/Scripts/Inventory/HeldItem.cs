@@ -1,3 +1,4 @@
+using Inventory.InstancedItems;
 using UnityEngine;
 
 namespace Inventory
@@ -6,17 +7,17 @@ namespace Inventory
     {
         private SpriteRenderer _itemImage;
 
-        public InventoryItem item;
-    
+        public Item item;
+        
         private void Start()
         {
             _itemImage = GetComponent<SpriteRenderer>();
-            _itemImage.sprite = item.itemSprite;
+            if (item != null) _itemImage.sprite = item.itemSprite;
         }
 
         private void Update()
         {
-            _itemImage.sprite = item != null ? item.itemSprite : null;
+            _itemImage.sprite = item?.itemSprite;
         }
     }
 }

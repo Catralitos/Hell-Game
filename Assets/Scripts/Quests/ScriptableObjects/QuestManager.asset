@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f46240f240508347a31751e250d6785, type: 3}
+  m_Name: QuestManager
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 11400000, guid: 34bde46172528d04ca347ddaabdf8b41, type: 2}
+  - {fileID: 11400000, guid: fc8e137840e9b7c479fc730a6609492c, type: 2}
+  - {fileID: 11400000, guid: 6af536237e36ac542b5794e7a3a72bde, type: 2}
+  - {fileID: 11400000, guid: c1587b1bfb487ba40ad82213a0a06038, type: 2}
+  - {fileID: 11400000, guid: 359d3a0f06a459c4baf035384eb26e3a, type: 2}
+  inventory: {fileID: 11400000, guid: 1ababdca1f416b9438a8941a021950bc, type: 2}
+  enemyTracker: {fileID: 11400000, guid: 07db60bb32c727a4bb862ca711360286, type: 2}
+  timeTracker: {fileID: 11400000, guid: 60c5d5be5f5c43e4c95683a6e82e150d, type: 2}
+  continueWithStepEvent: {fileID: 11400000, guid: aa80e53ab7503f3498ad5a5d0bdba51f, type: 2}
+  endDialogueEvent: {fileID: 11400000, guid: 7237c89e92700fb47926160fc0fb7996, type: 2}
+  makeWinningChoiceEvent: {fileID: 11400000, guid: 9441e9a804448454cb16512eab2f27f7, type: 2}
+  makeLosingChoiceEvent: {fileID: 11400000, guid: 673bbb4ef42d65a4c9a1f023e1b70237, type: 2}
+  playCompletionDialogueEvent: {fileID: 11400000, guid: 2d84db53c53b65b4287d4e5fd250bbd4, type: 2}
+  playIncompleteDialogueEvent: {fileID: 11400000, guid: 93450d794085def4bac153bda69de4bf, type: 2}
+  giveItemEvent: {fileID: 11400000, guid: 1526edc5469699749b68c5be948495ea, type: 2}
+  rewardItemSoEvent: {fileID: 11400000, guid: ee88dfd500dc0ff41b84174d15b3b420, type: 2}

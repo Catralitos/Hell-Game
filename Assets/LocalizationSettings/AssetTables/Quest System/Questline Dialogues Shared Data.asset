@@ -1,0 +1,1040 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Questline Dialogues Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Questline Dialogues
+  m_TableCollectionNameGuidString: 1588b729d6c3c564289a7e8eaf005b8d
+  m_Entries:
+  - m_Id: 237832728576
+    m_Key: D1-L1-DT-Agathe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683635552415744
+    m_Key: D1-L1-DT-Fluffy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683034500263936
+    m_Key: D1-L1-DT-Jilaiya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683505331859456
+    m_Key: D1-L1-DT-Leonard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302123020288
+    m_Key: D1-L1-NT-Agathe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683707300179968
+    m_Key: D1-L1-NT-Fluffy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683422515326976
+    m_Key: D1-L1-NT-Jilaiya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683587905122304
+    m_Key: D1-L1-NT-Leonard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8038554368315392
+    m_Key: Default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 154449965056
+    m_Key: L1-No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69557252096
+    m_Key: L1-Thanks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102604173312
+    m_Key: L1-Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191896711168
+    m_Key: L1-Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8376471180505088
+    m_Key: QBBB-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8376533394616320
+    m_Key: QBBB-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690963806810112
+    m_Key: QGP-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693122795433984
+    m_Key: QGP-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693166462332928
+    m_Key: QGP-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691685298401280
+    m_Key: QGP-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691722438963200
+    m_Key: QGP-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691768345620480
+    m_Key: QGP-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691820216578048
+    m_Key: QGP-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7691998424166400
+    m_Key: QGP-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7692719978672128
+    m_Key: QGP-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7692863218348032
+    m_Key: QGP-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693081699643392
+    m_Key: QGP-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693204232040448
+    m_Key: QGP-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693489482461184
+    m_Key: QGP-ST2-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693527398969344
+    m_Key: QGP-ST4-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7693834254249984
+    m_Key: QGP-ST4-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7694037959012352
+    m_Key: QGP-ST4-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7694074130690048
+    m_Key: QGP-ST4-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7695302663303168
+    m_Key: QGP-ST4-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689404867899392
+    m_Key: QHH-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690252285079552
+    m_Key: QHH-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690283255820288
+    m_Key: QHH-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689521779929088
+    m_Key: QHH-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689635995021312
+    m_Key: QHH-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689811413397504
+    m_Key: QHH-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689850470756352
+    m_Key: QHH-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689881370193920
+    m_Key: QHH-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690045619138560
+    m_Key: QHH-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690068104802304
+    m_Key: QHH-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690129542967296
+    m_Key: QHH-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690330232025088
+    m_Key: QHH-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690382207840256
+    m_Key: QHH-ST2-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690461027201024
+    m_Key: QHH-ST2-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690563254972416
+    m_Key: QHH-ST2-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690580950740992
+    m_Key: QHH-ST2-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690611489468416
+    m_Key: QHH-ST2-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7690687955824640
+    m_Key: QHH-ST2-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683886409543680
+    m_Key: QTT-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684850625507328
+    m_Key: QTT-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684885362733056
+    m_Key: QTT-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684948004663296
+    m_Key: QTT-ST1-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684217256243200
+    m_Key: QTT-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684266241519616
+    m_Key: QTT-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684317147787264
+    m_Key: QTT-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684406603902976
+    m_Key: QTT-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684483032510464
+    m_Key: QTT-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684546014179328
+    m_Key: QTT-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684598149378048
+    m_Key: QTT-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7684710841937920
+    m_Key: QTT-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685059891916800
+    m_Key: QTT-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7686953687281664
+    m_Key: QTT-ST2-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7687414263803904
+    m_Key: QTT-ST2-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7687997964120064
+    m_Key: QTT-ST2-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688223651229696
+    m_Key: QTT-ST2-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688274691715072
+    m_Key: QTT-ST2-L14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688326743027712
+    m_Key: QTT-ST2-L15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685084101439488
+    m_Key: QTT-ST2-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685178418753536
+    m_Key: QTT-ST2-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685537346318336
+    m_Key: QTT-ST2-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685649455869952
+    m_Key: QTT-ST2-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685793744121856
+    m_Key: QTT-ST2-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685831220228096
+    m_Key: QTT-ST2-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685903668441088
+    m_Key: QTT-ST2-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7685995070713856
+    m_Key: QTT-ST2-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7905893346500608
+    m_Key: QTT-ST3-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029130765471744
+    m_Key: QTT-ST3-L1-O1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029220842344448
+    m_Key: QTT-ST3-L1-O2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8029248738660352
+    m_Key: QTT-ST3-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688751265312768
+    m_Key: QTT-ST4-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8033813907214336
+    m_Key: QTT--ST4-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688801391439872
+    m_Key: QTT-ST4-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689063048900608
+    m_Key: QTT-ST5-L
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688864352137216
+    m_Key: QTT-ST5-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7688908396523520
+    m_Key: QTT-ST5-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689023152680960
+    m_Key: QTT-ST5-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689204413722624
+    m_Key: QTT-ST5-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7689270679531520
+    m_Key: QTT-ST5-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8377518053617664
+    m_Key: QBbB-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8377602908581888
+    m_Key: QBBB-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8377670818557952
+    m_Key: QBBB-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8377759809105920
+    m_Key: QBBB-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8377802356125696
+    m_Key: QBBB-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378235300573184
+    m_Key: QBBB-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378382843604992
+    m_Key: QBBB-ST2-L2-C1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378474782748672
+    m_Key: QBBB-ST2-L2-C2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378537663754240
+    m_Key: QBBB-ST3-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379245188313088
+    m_Key: QBBB-ST3-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379274317754368
+    m_Key: QBBB-ST3-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379405037432832
+    m_Key: QBN-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379481512177664
+    m_Key: QBN-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379517516083200
+    m_Key: QBN-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379581642797056
+    m_Key: QBN-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379631500488704
+    m_Key: QBN-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379693102231552
+    m_Key: QBN-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379724307853312
+    m_Key: QBN-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8379763268743168
+    m_Key: QBN-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380000867676160
+    m_Key: QBN-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380069956251648
+    m_Key: QBN-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380087169675264
+    m_Key: QBN-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380167259910144
+    m_Key: QBN-ST1-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380255239630848
+    m_Key: QBN-ST1-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380310172430336
+    m_Key: QBN-ST1-L14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8380372613033984
+    m_Key: QBN-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381804242235392
+    m_Key: QBN-ST2-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381822093193216
+    m_Key: QBN-ST2-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381879035064320
+    m_Key: QBN-ST3-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381922257367040
+    m_Key: QBN-ST3-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381960371007488
+    m_Key: QBN-ST3-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8381998220406784
+    m_Key: QBN-ST3-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382046035472384
+    m_Key: QBN-ST3-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382058119262208
+    m_Key: QBN-ST3-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382143343325184
+    m_Key: QBN-ST3-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382184447504384
+    m_Key: QBN-ST3-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382217129521152
+    m_Key: QBN-ST3-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382254576267264
+    m_Key: QBN-ST3-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382300579393536
+    m_Key: QBN-ST4-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382346150506496
+    m_Key: QBN-ST4-L2-C1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382348662894592
+    m_Key: QBN-ST4-L2-C2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382507341803520
+    m_Key: QBN-ST4-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383329555410944
+    m_Key: QBN-ST4-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383410887159808
+    m_Key: QBN-ST4-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383460149260288
+    m_Key: QBN-ST4-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383756803993600
+    m_Key: QBN-ST4-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383787439190016
+    m_Key: QBN-ST4-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383823677976576
+    m_Key: QBN-ST4-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383872701001728
+    m_Key: QBN-ST4-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383905110388736
+    m_Key: QBN-ST4-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383941315620864
+    m_Key: QBN-ST4-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8383976983982080
+    m_Key: QBN-ST4-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384008227352576
+    m_Key: QPMP-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384677667631104
+    m_Key: QPMP-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384718100721664
+    m_Key: QPMP-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384774572830720
+    m_Key: QPMP-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384817790939136
+    m_Key: QPMP-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384850938523648
+    m_Key: QPMP-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384881779240960
+    m_Key: QPMP-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384958551781376
+    m_Key: QPMP-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8384989556076544
+    m_Key: QPMP-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385028076564480
+    m_Key: QPMP-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385078643093504
+    m_Key: QPMP-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385138298679296
+    m_Key: QPMP-ST1-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385177762885632
+    m_Key: QPMP-ST1-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385276106731520
+    m_Key: QPMP-ST1-L14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385315604492288
+    m_Key: QPMP-ST1-L15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385371137077248
+    m_Key: QPMP-ST1-L16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385406297927680
+    m_Key: QPMP-ST1-L17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385445053296640
+    m_Key: QPMP-ST1-L18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385581825355776
+    m_Key: QPMP-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385700608045056
+    m_Key: QPMP-ST2-L2-C1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385743117316096
+    m_Key: QPMP-ST2-L2-C2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385873677611008
+    m_Key: QPMP-ST2-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385902836412416
+    m_Key: QPMP-ST2-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385934713122816
+    m_Key: QPMP-ST2-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8385964446543872
+    m_Key: QPMP-ST2-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8386002090422272
+    m_Key: QPMP-ST2-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415612274438144
+    m_Key: QHYSH-ST1-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415680780005376
+    m_Key: QHYSH-ST1-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415716414812160
+    m_Key: QHYSH-ST1-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415775265091584
+    m_Key: QHYSH-ST1-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8415777051865088
+    m_Key: QHYSH-ST1-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416525143732224
+    m_Key: QHYSH-ST1-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416543191822336
+    m_Key: QHYSH-ST1-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416581779419136
+    m_Key: QHYSH-ST1-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416646338146304
+    m_Key: QHYSH-ST1-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416686976757760
+    m_Key: QHYSH-ST1-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416796259348480
+    m_Key: QHYSH-ST1-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416859442343936
+    m_Key: QHYSH-ST1-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416897287548928
+    m_Key: QHYSH-ST1-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8416945874366464
+    m_Key: QHYSH-ST2-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417359537598464
+    m_Key: QHYSH-ST2-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417400205570048
+    m_Key: QHYSH-ST3-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417564823613440
+    m_Key: QHYSH-ST3-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417602165501952
+    m_Key: QHYSH-ST3-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417648508366848
+    m_Key: QHYSH-ST3-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417836576763904
+    m_Key: QHYSH-ST3-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417882210791424
+    m_Key: QHYSH-ST3-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8417918483132416
+    m_Key: QHYSH-ST4-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418155306119168
+    m_Key: QHYSH-ST4-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418207755890688
+    m_Key: QHYSH-ST4-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418334323208192
+    m_Key: QHYSH-ST4-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418379118374912
+    m_Key: QHYSH-ST4-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418420855894016
+    m_Key: QHYSH-ST4-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418461628723200
+    m_Key: QHYSH-ST4-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418517660430336
+    m_Key: QHYSH-ST4-L8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418559578304512
+    m_Key: QHYSH-ST4-L9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418624669708288
+    m_Key: QHYSH-ST4-L10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418708350267392
+    m_Key: QHYSH-ST4-L11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418751803256832
+    m_Key: QHYSH-ST4-L12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8418784950841344
+    m_Key: QHYSH-ST4-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419208676208640
+    m_Key: QHYSH-ST4-L14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419638776918016
+    m_Key: QHYSH-ST4-L15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419707328622592
+    m_Key: QHYSH-ST4-L16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419750316044288
+    m_Key: QHYSH-ST4-L17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8419818762891264
+    m_Key: QHYSH-ST4-L18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8420146694549504
+    m_Key: QHYSH-ST5-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421654265819136
+    m_Key: QHYSH-ST6-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421740186136576
+    m_Key: QHYSH-ST6-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421800651223040
+    m_Key: QHYSH-ST6-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421872319295488
+    m_Key: QHYSH-ST7-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8421954598957056
+    m_Key: QHYSH-ST7-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422643270119424
+    m_Key: QHYSH-ST7-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422700375568384
+    m_Key: QHYSH-ST7-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422845464932352
+    m_Key: QHYSH-ST7-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8422928310824960
+    m_Key: QHYSH-ST8-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423071328202752
+    m_Key: QHYSH-ST8-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423190740037632
+    m_Key: QHYSH-ST8-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423549566939136
+    m_Key: QHYSH-ST8-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423581577867264
+    m_Key: QHYSH-ST8-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423658547539968
+    m_Key: QHYSH-ST9-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8423731801059328
+    m_Key: QHYSH-ST9-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424504454770688
+    m_Key: QHYSH-ST9-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424572708679680
+    m_Key: QHYSH-ST10-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424640421523456
+    m_Key: QHYSH-ST10-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424670180110336
+    m_Key: QHYSH-ST10-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424703164116992
+    m_Key: QHYSH-ST10-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424759573311488
+    m_Key: QHYSH-ST10-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425100956102656
+    m_Key: QHYSH-ST11-L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425155310088192
+    m_Key: QHYSH-ST11-L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425191079112704
+    m_Key: QHYSH-ST11-L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425237082238976
+    m_Key: QHYSH-ST11-L4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425270573756416
+    m_Key: QHYSH-ST11-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8425324424425472
+    m_Key: QHYSH-ST11-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8582202531831808
+    m_Key: D1-L1-DT-Petey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8582379678261248
+    m_Key: D1-L1-NT-Petey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8607206707355648
+    m_Key: QGP-ST1-NL-Cue-Her
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608416952803328
+    m_Key: QGP-ST1-NL-Cue-Him
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8608521567133696
+    m_Key: QGP-ST1-NL00-Cue-Them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8610740433641472
+    m_Key: QGP-ST1-NL01-So
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8614651898945536
+    m_Key: QGP-ST1-NL02-Keep-Going
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8616073180798976
+    m_Key: QGP-ST1-NL03-I-Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8617998844485632
+    m_Key: QGP-ST2-NL04-Spirit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8618221188734976
+    m_Key: QGP-ST2-NL04-Not-Spirit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8652872062132224
+    m_Key: QGP-ST3-NL04-Is it ded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8653876115595264
+    m_Key: QGP-ST3-NL04-move it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8681573795721216
+    m_Key: QBBB-ST3-L5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8681617080938496
+    m_Key: QBBB-ST3-L6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8681624186089472
+    m_Key: QBBB-ST3-L7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8747449936998400
+    m_Key: QBN-ST3-L13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8748053174382592
+    m_Key: QBN-ST3-L12
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5968424165942755388
+  references:
+    version: 2
+    RefIds:
+    - rid: 5968424165942755388
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1686152697335

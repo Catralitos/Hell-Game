@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
+  - Pickable
   layers:
   - Default
   - TransparentFX
@@ -12,14 +14,14 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC
+  - Enemy
+  - EnemyAttack
+  - Hazard
+  - PlayerAttack
+  - Wall
+  - Pickable
+  - Interactable
   - 
   - 
   - 
@@ -38,6 +40,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3265627581
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 647296755
+    locked: 0
+  - name: PlayerUI
+    uniqueID: 3609445483
     locked: 0

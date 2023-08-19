@@ -1,6 +1,9 @@
 using Audio;
+using Events.ScriptableObjects;
 using Extensions;
+using Gameplay;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -8,50 +11,37 @@ namespace Player
     /// This class handles player health and getting hit
     /// </summary>
     /// <seealso cref="UnityEngine.MonoBehaviour" />
-    public class PlayerHealth : MonoBehaviour
+    public class PlayerHealth : Hittable
     {
         /// <summary>
         /// The layers of the damaging objects
         /// </summary>
         public LayerMask damagers;
 
-        /// <summary>
-        /// The sprite renderer
-        /// </summary>
-        private SpriteRenderer _renderer;
-        /// <summary>
-        /// The default material
-        /// </summary>
-        private Material _defaultMaterial;
-        /// <summary>
-        /// The hit material
-        /// </summary>
-        public Material hitMaterial;
-        /// <summary>
-        /// How many hits the player can take before dying
-        /// </summary>
-        public int playerHits = 5;
-        /// <summary>
-        /// The hits left
-        /// </summary>
-        public int hitsLeft = 5;
-        /// <summary>
-        /// The number of invincibility frames
-        /// </summary>
-        public int invincibilityFrames;
-        /// <summary>
-        /// If the player is currently invincible
-        /// </summary>
-        private bool _invincible;
+        public int collisionDamage;
 
-        /// <summary>
-        /// Starts this instance.
-        /// </summary>
-        private void Start()
+        [Header("Broadcasting on")] 
+        public IntEventChannelSO playerHealthEvent;
+        
+        [Header("Listening on")] 
+        public IntEventChannelSO restoreHealthEvent;
+
+        private AudioManager _audioManager;
+
+        public override void Start()
         {
-            hitsLeft = playerHits;
-            _renderer = GetComponent<SpriteRenderer>();
-            _defaultMaterial = _renderer.material;
+            base.Start();
+            _audioManager = GetComponent<AudioManager>();
+        }
+        
+        public void OnEnable()
+        {
+            restoreHealthEvent.OnEventRaised += RestoreHealth;
+        }
+
+        private void OnDisable()
+        {
+            restoreHealthEvent.OnEventRaised -= RestoreHealth;
         }
 
         /// <summary>
@@ -62,49 +52,51 @@ namespace Player
         {
             //if the collider hits a damaging item, do damage
             if (!damagers.HasLayer(other.gameObject.layer)) return;
-            DoDamage();
+            DoDamage(collisionDamage);
         }
 
-        public void RestoreHealth(int amount)
-        {
-            hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, playerHits);
-        }
-        
-        /// <summary>
-        /// Deals the damage.
-        /// </summary>
-        public void DoDamage()
+        public override void DoDamage(int damage)
         {
             if (_invincible) return;
             //Else deal damage
-            if (hitsLeft > 1)
+            hitsLeft = Mathf.Clamp(hitsLeft - damage, 0, maxHits);
+            if (hitsLeft > 0)
             {
-                hitsLeft--;
-                _renderer.material = hitMaterial;
+                if (hitMaterial != null) spriteRenderer.material = hitMaterial;
                 _invincible = true;
-                Invoke(nameof(RestoreVulnerability), invincibilityFrames * Time.deltaTime);
+                Physics2D.IgnoreLayerCollision(6, 8, true);
+                Invoke(nameof(RestoreVulnerability), invincibilityFrames / 60.0f);
+                //Debug.Log(transform.name + " got hit");
             }
             else
             {
+                //Debug.Log(transform.name + " died");
                 Die();
             }
+            _audioManager.Play("Hit");
+            playerHealthEvent.RaiseEvent(hitsLeft);
         }
-
-        /// <summary>
-        /// Restores the vulnerability.
-        /// </summary>
-        private void RestoreVulnerability()
+        
+        protected override void RestoreVulnerability()
         {
+             
             _invincible = false;
-            _renderer.material = _defaultMaterial;
+            Physics2D.IgnoreLayerCollision(6, 8, false);
+            spriteRenderer.material = defaultMaterial;
         }
-
-        /// <summary>
-        /// Kill the player
-        /// </summary>
-        private void Die()
+        
+        private void RestoreHealth(int amount)
         {
-            Destroy(gameObject);
+            hitsLeft = Mathf.Clamp(hitsLeft + amount, 0, maxHits);
+            _audioManager.Play("Heal");
+            playerHealthEvent.RaiseEvent(hitsLeft);
+        }
+        
+        protected override void Die()
+        {
+            _audioManager.Play("Death");
+            SceneManager.LoadScene(4);
+           //base.Die();
         }
     }
 }

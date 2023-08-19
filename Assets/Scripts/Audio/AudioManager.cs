@@ -9,42 +9,18 @@ namespace Audio
     /// <seealso cref="UnityEngine.MonoBehaviour" />
     public class AudioManager : MonoBehaviour
     {
-        #region SingleTon
-     
-        /// <summary>
-        /// Gets the sole instance.
-        /// </summary>
-        /// <value>
-        /// The instance.
-        /// </value>
-        public static AudioManager Instance { get; private set; }
-     
         /// <summary>
         /// Awakes this instance (if none has been created).
         /// </summary>
         private void Awake()
         {
-            // Needed if we want the audio manager to persist through scenes
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-                return;
-            }
-     
-            DontDestroyOnLoad(gameObject);
-     
             // Add audio source components
             foreach (Sound s in sounds)
             {
                 s.SetSource(gameObject.AddComponent<AudioSource>());
             }
         }
-     
-        #endregion
+    
         /// <summary>
         /// The sounds this object will play
         /// </summary>
